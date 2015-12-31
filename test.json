@@ -1,0 +1,31 @@
+{"Pause": {
+	"Minutes": 0,
+	"Seconds": 3
+	  },
+"Counters" : [
+{
+	"Title": "Some Title",
+	"Minutes": 0,
+	"Seconds": 1 
+},
+{
+	"Title": "Some Title",
+	"Minutes": 0,
+	"Seconds": 2 
+},
+{
+	"Title": "Some Title",
+	"Minutes": 0,
+	"Seconds": 3 
+},
+{
+	"Title": "Some Title",
+	"Minutes": 0,
+	"Seconds": 4 
+},
+{
+	"Title": "Some Title",
+	"Minutes": 0,
+	"Seconds": 5
+}]
+}
