@@ -7,6 +7,9 @@ import (
 	"time"
 )
 
+const spaceChar = 32
+const rChar = 114
+
 type multiCounters struct {
 	Pause    counter
 	Counters []counter
@@ -25,11 +28,15 @@ type counter struct {
 	Title   string
 	Minutes int
 	Seconds int
+	start   time.Time
+	paused  time.Duration
 }
 
-func (c counter) countdown(quiet bool) {
-	start := time.Now()
-	for !c.updateDisplay(start) {
+func (c *counter) countdown(quiet bool) {
+	c.start = time.Now()
+	for !c.isFinished() {
+		c.updateDisplay()
+		c.checkInput()
 		time.Sleep(time.Second)
 	}
 	c.completeDisplay()
@@ -38,37 +45,59 @@ func (c counter) countdown(quiet bool) {
 	}
 }
 
-func (c counter) updateDisplay(start time.Time) bool {
-	elapsed := time.Now().Sub(start)
-	remainder := c.Total() - elapsed + time.Second
+func (c *counter) isFinished() bool {
+	return c.elapsed() >= c.total()
+}
+
+func (c *counter) updateDisplay() {
 	clearDisplay()
 	if c.Title != "" {
 		println(c.Title)
 	}
-	println(inSeconds(elapsed))
-	println(inSeconds(remainder))
-	return elapsed >= c.Total()
+	println(inSeconds(c.elapsed()))
+	println(inSeconds(c.remaining()))
 }
 
-func (c counter) completeDisplay() {
+func (c *counter) completeDisplay() {
 	clearDisplay()
 	if c.Title != "" {
 		println(c.Title)
 	}
-	println(inSeconds(c.Total()))
-	println(inSeconds(c.Total()))
-}
-
-func (c counter) Total() time.Duration {
-	m := time.Duration(c.Minutes) * time.Minute
-	s := time.Duration(c.Seconds) * time.Second
-	return m + s
+	println(inSeconds(c.total()))
+	println(inSeconds(c.total()))
 }
 
 func clearDisplay() {
 	cmd := exec.Command("clear")
 	cmd.Stdout = os.Stdout
 	cmd.Run()
+}
+
+func (c *counter) total() time.Duration {
+	m := time.Duration(c.Minutes) * time.Minute
+	s := time.Duration(c.Seconds) * time.Second
+	return m + s
+}
+
+func (c *counter) elapsed() time.Duration {
+	return time.Now().Sub(c.start)
+}
+
+func (c *counter) remaining() time.Duration {
+	return c.total() - c.elapsed() + time.Second
+}
+
+func (c *counter) checkInput() {
+	select {
+	case c := <-stdinChars:
+		switch {
+		case c == spaceChar:
+			println("Space bar")
+		case c == rChar:
+			println("r")
+		}
+	default:
+	}
 }
 
 func inSeconds(d time.Duration) string {
@@ -78,7 +107,7 @@ func inSeconds(d time.Duration) string {
 	return ((d / time.Second) * time.Second).String()
 }
 
-func (c counter) playSound() {
+func (c *counter) playSound() {
 	clearDisplay()
 	cmd := exec.Command("paplay", "clap.wav")
 	err := cmd.Start()
