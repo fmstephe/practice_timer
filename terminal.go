@@ -7,6 +7,10 @@ import (
 	"time"
 )
 
+const returnChar = 13
+const spaceChar = 32
+const rChar = 114
+
 func replaceText(strings ...string) {
 	clearDisplay()
 	for _, s := range strings {

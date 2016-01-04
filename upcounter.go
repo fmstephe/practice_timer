@@ -6,33 +6,76 @@ type upcounter struct {
 	Title string
 	// Separate these mutable fields
 	start      time.Time
-	paused     time.Duration
+	pauseStart time.Time
+	pauses     []time.Duration
 	isFinished bool
+	isPaused   bool
 }
 
-func (c *upcounter) count(quiet bool) {
+func (c *upcounter) count() {
 	c.start = time.Now()
-	for !c.isFinished {
-		c.checkInput()
-		replaceText(c.Title, inSeconds(c.elapsed()))
+	for f := countup; f != nil; {
+		f = f(c)
 		time.Sleep(time.Second)
 	}
-	replaceText(c.Title, inSeconds(c.elapsed()))
 }
 
 func (c *upcounter) elapsed() time.Duration {
-	return time.Now().Sub(c.start) - c.paused
+	return time.Now().Sub(c.start)
 }
 
-func (c *upcounter) checkInput() {
+func (c *upcounter) totalPaused() time.Duration {
+	var paused time.Duration
+	for _, p := range c.pauses {
+		paused += p
+	}
+	return paused
+}
+
+func (c *upcounter) pauseElapsed() time.Duration {
+	return time.Now().Sub(c.pauseStart)
+}
+
+type upcounterFSM func(*upcounter) upcounterFSM
+
+func countup(c *upcounter) upcounterFSM {
+	replaceText(c.Title, inSeconds(c.elapsed()))
 	select {
-	case c := <-stdinChars:
-		switch {
-		case c == spaceChar:
-			println("Space bar")
-		case c == rChar:
-			println("r")
+	case b := <-stdinChars:
+		switch b {
+		case spaceChar:
+			c.pauseStart = time.Now()
+			return pauseup
+		case rChar:
+			c.start = time.Now()
+			return countup
+		case returnChar:
+			return nil
+		default:
+			return countup
 		}
 	default:
+		return countup
+	}
+}
+
+func pauseup(c *upcounter) upcounterFSM {
+	replaceText(c.Title, inSeconds(c.elapsed()), "PAUSED")
+	select {
+	case b := <-stdinChars:
+		switch b {
+		case spaceChar:
+			c.pauses = append(c.pauses, c.pauseElapsed())
+			return countup
+		case rChar:
+			c.start = time.Now()
+			return pauseup
+		case returnChar:
+			return nil
+		default:
+			return countup
+		}
+	default:
+		return pauseup
 	}
 }

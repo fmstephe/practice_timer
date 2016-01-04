@@ -2,9 +2,6 @@ package main
 
 import "time"
 
-const spaceChar = 32
-const rChar = 114
-
 type downcounter struct {
 	Title   string
 	Minutes int
