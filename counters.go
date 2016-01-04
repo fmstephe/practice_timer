@@ -63,28 +63,28 @@ func (c *downcounter) finish() {
 }
 
 // Counts up - like a stopwatch
-type upcounter struct {
+type upCounter struct {
 	Title string
 	counterData
 }
 
-func newUpcounter(title string) counter {
-	return &upcounter{
+func newUpCounter(title string) counter {
+	return &upCounter{
 		Title: title,
 	}
 }
 
-func (c *upcounter) elapsed() time.Duration {
+func (c *upCounter) elapsed() time.Duration {
 	return time.Now().Sub(c.start)
 }
 
-func (c *upcounter) display() []string {
+func (c *upCounter) display() []string {
 	return []string{c.Title, inSeconds(c.elapsed())}
 }
 
-func (c *upcounter) finished() bool {
+func (c *upCounter) finished() bool {
 	return false
 }
 
-func (c *upcounter) finish() {
+func (c *upCounter) finish() {
 }

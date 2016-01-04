@@ -17,7 +17,7 @@ type JsonCounter struct {
 func (c *JsonCounter) GenerateCounter() counter {
 	switch c.Mode {
 	case upMode:
-		return newUpcounter(c.Title)
+		return newUpCounter(c.Title)
 	case downMode:
 		return newDowncounter(c.Title, c.Minutes, c.Seconds)
 	default:
