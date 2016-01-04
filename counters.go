@@ -23,40 +23,40 @@ func (d *counterData) addPause(gap time.Duration) {
 }
 
 // Counts down - like a timer
-type downcounter struct {
+type downCounter struct {
 	Title   string
 	Minutes int
 	Seconds int
 	counterData
 }
 
-func newDowncounter(title string, mins, secs int) *downcounter {
-	return &downcounter{
+func newDownCounter(title string, mins, secs int) *downCounter {
+	return &downCounter{
 		Title:   title,
 		Minutes: mins,
 		Seconds: secs,
 	}
 }
 
-func (c *downcounter) total() time.Duration {
+func (c *downCounter) total() time.Duration {
 	m := time.Duration(c.Minutes) * time.Minute
 	s := time.Duration(c.Seconds) * time.Second
 	return m + s
 }
 
-func (c *downcounter) remaining() time.Duration {
+func (c *downCounter) remaining() time.Duration {
 	return c.total() - c.elapsed() + time.Second
 }
 
-func (c *downcounter) display() []string {
+func (c *downCounter) display() []string {
 	return []string{c.Title, inSeconds(c.elapsed()), inSeconds(c.remaining())}
 }
 
-func (c *downcounter) finished() bool {
+func (c *downCounter) finished() bool {
 	return c.elapsed() > c.total()
 }
 
-func (c *downcounter) finish() {
+func (c *downCounter) finish() {
 	if !c.quiet {
 		playSound()
 	}

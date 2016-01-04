@@ -19,7 +19,7 @@ func (c *JsonCounter) GenerateCounter() counter {
 	case upMode:
 		return newUpCounter(c.Title)
 	case downMode:
-		return newDowncounter(c.Title, c.Minutes, c.Seconds)
+		return newDownCounter(c.Title, c.Minutes, c.Seconds)
 	default:
 		log.Fatalf("Bad mode: %+v", c)
 		return nil
@@ -27,8 +27,8 @@ func (c *JsonCounter) GenerateCounter() counter {
 }
 
 type multiCounters struct {
-	Pause    downcounter
-	Counters []downcounter
+	Pause    downCounter
+	Counters []downCounter
 }
 
 func (cs multiCounters) countdown() {

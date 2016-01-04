@@ -22,7 +22,7 @@ func main() {
 }
 
 func simple() {
-	c := &downcounter{
+	c := &downCounter{
 		Title:   *title,
 		Minutes: *minutes,
 		Seconds: *seconds,
