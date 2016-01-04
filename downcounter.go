@@ -6,22 +6,14 @@ type downcounter struct {
 	Title   string
 	Minutes int
 	Seconds int
-	// Separate these mutable fields
-	start  time.Time
-	paused time.Duration
+	counterData
 }
 
 func (c *downcounter) count(quiet bool) {
 	c.start = time.Now()
-	for c.elapsed() < c.total() {
-		replaceText(c.Title, inSeconds(c.elapsed()), inSeconds(c.remaining()))
-		c.checkInput()
+	for f := countdown; f != nil; {
+		f = f(c)
 		time.Sleep(time.Second)
-	}
-	replaceText(c.Title, inSeconds(c.total()), inSeconds(c.total()))
-	if !quiet {
-		clearDisplay()
-		playSound()
 	}
 }
 
@@ -39,15 +31,49 @@ func (c *downcounter) remaining() time.Duration {
 	return c.total() - c.elapsed() + time.Second
 }
 
-func (c *downcounter) checkInput() {
+type downcounterFSM func(*downcounter) downcounterFSM
+
+func countdown(c *downcounter) downcounterFSM {
+	if c.elapsed() > c.total() {
+		return nil
+	}
+	replaceText(c.Title, inSeconds(c.elapsed()), inSeconds(c.remaining()))
 	select {
-	case c := <-stdinChars:
-		switch {
-		case c == spaceChar:
-			println("Space bar")
-		case c == rChar:
-			println("r")
+	case b := <-stdinChars:
+		switch b {
+		case spaceChar:
+			c.pauseStart = time.Now()
+			return pausedown
+		case rChar:
+			c.start = time.Now()
+			return countdown
+		case returnChar:
+			return nil
+		default:
+			return countdown
 		}
 	default:
+		return countdown
+	}
+}
+
+func pausedown(c *downcounter) downcounterFSM {
+	replaceText(c.Title, inSeconds(c.elapsed()), inSeconds(c.remaining()), "PAUSED")
+	select {
+	case b := <-stdinChars:
+		switch b {
+		case spaceChar:
+			c.pauses = append(c.pauses, c.pauseElapsed())
+			return countdown
+		case rChar:
+			c.start = time.Now()
+			return pausedown
+		case returnChar:
+			return nil
+		default:
+			return countdown
+		}
+	default:
+		return pausedown
 	}
 }

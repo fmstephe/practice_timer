@@ -4,10 +4,7 @@ import "time"
 
 type upcounter struct {
 	Title string
-	// Separate these mutable fields
-	start      time.Time
-	pauseStart time.Time
-	pauses     []time.Duration
+	counterData
 }
 
 func (c *upcounter) count() {
@@ -20,24 +17,6 @@ func (c *upcounter) count() {
 
 func (c *upcounter) elapsed() time.Duration {
 	return time.Now().Sub(c.start)
-}
-
-func (c *upcounter) totalPaused() time.Duration {
-	var paused time.Duration
-	for _, p := range c.pauses {
-		paused += p
-	}
-	return paused
-}
-
-func (c *upcounter) pauseElapsed() time.Duration {
-	return time.Now().Sub(c.pauseStart)
-}
-
-func (c *upcounter) restart() {
-	c.start = time.Now()
-	c.pauseStart = c.start
-	c.pauses = nil
 }
 
 type upcounterFSM func(*upcounter) upcounterFSM
