@@ -8,8 +8,6 @@ type upcounter struct {
 	start      time.Time
 	pauseStart time.Time
 	pauses     []time.Duration
-	isFinished bool
-	isPaused   bool
 }
 
 func (c *upcounter) count() {
@@ -36,6 +34,12 @@ func (c *upcounter) pauseElapsed() time.Duration {
 	return time.Now().Sub(c.pauseStart)
 }
 
+func (c *upcounter) restart() {
+	c.start = time.Now()
+	c.pauseStart = c.start
+	c.pauses = nil
+}
+
 type upcounterFSM func(*upcounter) upcounterFSM
 
 func countup(c *upcounter) upcounterFSM {
@@ -47,7 +51,7 @@ func countup(c *upcounter) upcounterFSM {
 			c.pauseStart = time.Now()
 			return pauseup
 		case rChar:
-			c.start = time.Now()
+			c.restart()
 			return countup
 		case returnChar:
 			return nil
@@ -68,7 +72,7 @@ func pauseup(c *upcounter) upcounterFSM {
 			c.pauses = append(c.pauses, c.pauseElapsed())
 			return countup
 		case rChar:
-			c.start = time.Now()
+			c.restart()
 			return pauseup
 		case returnChar:
 			return nil
