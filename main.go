@@ -23,12 +23,12 @@ func main() {
 }
 
 func simple() {
-	c := &counter{
+	c := &downcounter{
 		Title:   *title,
 		Minutes: *minutes,
 		Seconds: *seconds,
 	}
-	c.countdown(*quiet)
+	c.count(*quiet)
 }
 
 func fromFile() {

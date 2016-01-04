@@ -10,29 +10,16 @@ import (
 const spaceChar = 32
 const rChar = 114
 
-type multiCounters struct {
-	Pause    counter
-	Counters []counter
-}
-
-func (cs multiCounters) countdown(quiet bool) {
-	for _, c := range cs.Counters {
-		pause := cs.Pause
-		pause.Title = "Up Next: " + c.Title
-		pause.countdown(true)
-		c.countdown(quiet)
-	}
-}
-
-type counter struct {
+type downcounter struct {
 	Title   string
 	Minutes int
 	Seconds int
-	start   time.Time
-	paused  time.Duration
+	// Separate these mutable fields
+	start  time.Time
+	paused time.Duration
 }
 
-func (c *counter) countdown(quiet bool) {
+func (c *downcounter) count(quiet bool) {
 	c.start = time.Now()
 	for !c.isFinished() {
 		c.updateDisplay()
@@ -45,11 +32,11 @@ func (c *counter) countdown(quiet bool) {
 	}
 }
 
-func (c *counter) isFinished() bool {
+func (c *downcounter) isFinished() bool {
 	return c.elapsed() >= c.total()
 }
 
-func (c *counter) updateDisplay() {
+func (c *downcounter) updateDisplay() {
 	clearDisplay()
 	if c.Title != "" {
 		println(c.Title)
@@ -58,7 +45,7 @@ func (c *counter) updateDisplay() {
 	println(inSeconds(c.remaining()))
 }
 
-func (c *counter) completeDisplay() {
+func (c *downcounter) completeDisplay() {
 	clearDisplay()
 	if c.Title != "" {
 		println(c.Title)
@@ -73,21 +60,21 @@ func clearDisplay() {
 	cmd.Run()
 }
 
-func (c *counter) total() time.Duration {
+func (c *downcounter) total() time.Duration {
 	m := time.Duration(c.Minutes) * time.Minute
 	s := time.Duration(c.Seconds) * time.Second
 	return m + s
 }
 
-func (c *counter) elapsed() time.Duration {
+func (c *downcounter) elapsed() time.Duration {
 	return time.Now().Sub(c.start)
 }
 
-func (c *counter) remaining() time.Duration {
+func (c *downcounter) remaining() time.Duration {
 	return c.total() - c.elapsed() + time.Second
 }
 
-func (c *counter) checkInput() {
+func (c *downcounter) checkInput() {
 	select {
 	case c := <-stdinChars:
 		switch {
@@ -107,7 +94,7 @@ func inSeconds(d time.Duration) string {
 	return ((d / time.Second) * time.Second).String()
 }
 
-func (c *counter) playSound() {
+func (c *downcounter) playSound() {
 	clearDisplay()
 	cmd := exec.Command("paplay", "clap.wav")
 	err := cmd.Start()
