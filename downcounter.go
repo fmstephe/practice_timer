@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"os"
 	"os/exec"
 	"time"
 )
@@ -37,27 +36,11 @@ func (c *downcounter) isFinished() bool {
 }
 
 func (c *downcounter) updateDisplay() {
-	clearDisplay()
-	if c.Title != "" {
-		println(c.Title)
-	}
-	println(inSeconds(c.elapsed()))
-	println(inSeconds(c.remaining()))
+	replaceText(c.Title, inSeconds(c.elapsed()), inSeconds(c.remaining()))
 }
 
 func (c *downcounter) completeDisplay() {
-	clearDisplay()
-	if c.Title != "" {
-		println(c.Title)
-	}
-	println(inSeconds(c.total()))
-	println(inSeconds(c.total()))
-}
-
-func clearDisplay() {
-	cmd := exec.Command("clear")
-	cmd.Stdout = os.Stdout
-	cmd.Run()
+	replaceText(c.Title, inSeconds(c.total()), inSeconds(c.total()))
 }
 
 func (c *downcounter) total() time.Duration {
@@ -85,13 +68,6 @@ func (c *downcounter) checkInput() {
 		}
 	default:
 	}
-}
-
-func inSeconds(d time.Duration) string {
-	if d == 0 {
-		return "0s"
-	}
-	return ((d / time.Second) * time.Second).String()
 }
 
 func (c *downcounter) playSound() {
