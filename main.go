@@ -11,7 +11,6 @@ var file = flag.String("f", "", "Optional path to a timer file")
 var title = flag.String("h", "", "An optional title to display above timer")
 var minutes = flag.Int("m", 0, "The number of minutes for the timer to run")
 var seconds = flag.Int("s", 90, "The number of seconds for the timer to run")
-var quiet = flag.Bool("q", false, "If true the applause will not play at end of timer")
 
 func main() {
 	flag.Parse()
@@ -28,7 +27,7 @@ func simple() {
 		Minutes: *minutes,
 		Seconds: *seconds,
 	}
-	c.count(*quiet)
+	runFSM(c)
 }
 
 func fromFile() {
@@ -41,5 +40,5 @@ func fromFile() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	counters.countdown(*quiet)
+	counters.countdown()
 }
