@@ -2,20 +2,6 @@ package main
 
 import "time"
 
-type multiCounters struct {
-	Pause    downcounter
-	Counters []downcounter
-}
-
-func (cs multiCounters) countdown() {
-	for _, c := range cs.Counters {
-		pause := cs.Pause
-		pause.Title = "Up Next: " + c.Title
-		runFSM(&pause)
-		runFSM(&c)
-	}
-}
-
 // Some common mutable data for counters
 type counterData struct {
 	start  time.Time
@@ -42,6 +28,14 @@ type downcounter struct {
 	Minutes int
 	Seconds int
 	counterData
+}
+
+func newDowncounter(title string, mins, secs int) *downcounter {
+	return &downcounter{
+		Title:   title,
+		Minutes: mins,
+		Seconds: secs,
+	}
 }
 
 func (c *downcounter) total() time.Duration {
@@ -72,6 +66,12 @@ func (c *downcounter) finish() {
 type upcounter struct {
 	Title string
 	counterData
+}
+
+func newUpcounter(title string) counter {
+	return &upcounter{
+		Title: title,
+	}
 }
 
 func (c *upcounter) elapsed() time.Duration {
