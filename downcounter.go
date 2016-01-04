@@ -1,10 +1,6 @@
 package main
 
-import (
-	"log"
-	"os/exec"
-	"time"
-)
+import "time"
 
 const spaceChar = 32
 const rChar = 114
@@ -20,27 +16,16 @@ type downcounter struct {
 
 func (c *downcounter) count(quiet bool) {
 	c.start = time.Now()
-	for !c.isFinished() {
-		c.updateDisplay()
+	for c.elapsed() < c.total() {
+		replaceText(c.Title, inSeconds(c.elapsed()), inSeconds(c.remaining()))
 		c.checkInput()
 		time.Sleep(time.Second)
 	}
-	c.completeDisplay()
-	if !quiet {
-		c.playSound()
-	}
-}
-
-func (c *downcounter) isFinished() bool {
-	return c.elapsed() >= c.total()
-}
-
-func (c *downcounter) updateDisplay() {
-	replaceText(c.Title, inSeconds(c.elapsed()), inSeconds(c.remaining()))
-}
-
-func (c *downcounter) completeDisplay() {
 	replaceText(c.Title, inSeconds(c.total()), inSeconds(c.total()))
+	if !quiet {
+		clearDisplay()
+		playSound()
+	}
 }
 
 func (c *downcounter) total() time.Duration {
@@ -67,14 +52,5 @@ func (c *downcounter) checkInput() {
 			println("r")
 		}
 	default:
-	}
-}
-
-func (c *downcounter) playSound() {
-	clearDisplay()
-	cmd := exec.Command("paplay", "clap.wav")
-	err := cmd.Start()
-	if err != nil {
-		log.Fatal(err)
 	}
 }

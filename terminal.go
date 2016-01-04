@@ -10,6 +10,9 @@ import (
 func replaceText(strings ...string) {
 	clearDisplay()
 	for _, s := range strings {
+		if s == "" {
+			continue
+		}
 		println(s)
 	}
 }
