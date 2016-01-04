@@ -16,6 +16,26 @@ func (cs multiCounters) countdown() {
 	}
 }
 
+// Some common mutable data for counters
+type counterData struct {
+	start  time.Time
+	paused time.Duration
+	quiet  bool
+}
+
+func (d *counterData) elapsed() time.Duration {
+	return time.Now().Sub(d.start) - d.paused
+}
+
+func (d *counterData) restart() {
+	d.start = time.Now()
+	d.paused = 0
+}
+
+func (d *counterData) addPause(gap time.Duration) {
+	d.paused += gap
+}
+
 // Counts down - like a timer
 type downcounter struct {
 	Title   string

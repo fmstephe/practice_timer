@@ -10,26 +10,6 @@ type counter interface {
 	finish()
 }
 
-type counterData struct {
-	// Separate these mutable fields
-	start  time.Time
-	paused time.Duration
-	quiet  bool
-}
-
-func (d *counterData) elapsed() time.Duration {
-	return time.Now().Sub(d.start) - d.paused
-}
-
-func (d *counterData) restart() {
-	d.start = time.Now()
-	d.paused = 0
-}
-
-func (d *counterData) addPause(gap time.Duration) {
-	d.paused += gap
-}
-
 func runFSM(c counter) {
 	c.restart()
 	tick := time.Now()
