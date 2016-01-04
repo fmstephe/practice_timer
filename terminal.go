@@ -11,9 +11,15 @@ const returnChar = 13
 const spaceChar = 32
 const rChar = 114
 
-func replaceText(strings ...string) {
+func replaceText(msgs []string, extras ...string) {
 	clearDisplay()
-	for _, s := range strings {
+	for _, s := range msgs {
+		if s == "" {
+			continue
+		}
+		println(s)
+	}
+	for _, s := range extras {
 		if s == "" {
 			continue
 		}
@@ -28,6 +34,7 @@ func clearDisplay() {
 }
 
 func inSeconds(d time.Duration) string {
+	d = ((d / time.Second) * time.Second)
 	if d == 0 {
 		return "0s"
 	}
@@ -35,7 +42,6 @@ func inSeconds(d time.Duration) string {
 }
 
 func playSound() {
-	clearDisplay()
 	cmd := exec.Command("paplay", "clap.wav")
 	err := cmd.Start()
 	if err != nil {
