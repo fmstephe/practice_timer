@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-const returnChar = 10
+const cChar = 99
 const spaceChar = 32
 const rChar = 114
 

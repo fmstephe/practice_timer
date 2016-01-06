@@ -5,15 +5,18 @@ import "time"
 type counter interface {
 	display() []string
 	restart()
+	addElapsed(time.Duration)
 	addPause(time.Duration)
-	finished() bool
 	finish()
+	cancel()
+	finished() bool
 }
 
 func runFSM(c counter) {
 	c.restart()
 	tick := time.Now()
-	for f := countFSM; f != nil; {
+	f := countFSM
+	for !c.finished() {
 		gap := time.Now().Sub(tick)
 		tick = time.Now()
 		f = f(c, gap)
@@ -25,9 +28,7 @@ func runFSM(c counter) {
 type counterFSM func(counter, time.Duration) counterFSM
 
 func countFSM(c counter, gap time.Duration) counterFSM {
-	if c.finished() {
-		return nil
-	}
+	c.addElapsed(gap)
 	replaceText(c.display())
 	select {
 	case b := <-stdinChars:
@@ -37,7 +38,8 @@ func countFSM(c counter, gap time.Duration) counterFSM {
 		case rChar:
 			c.restart()
 			return countFSM
-		case returnChar:
+		case cChar:
+			c.cancel()
 			return nil
 		default:
 			return countFSM
@@ -58,7 +60,8 @@ func pauseFSM(c counter, gap time.Duration) counterFSM {
 		case rChar:
 			c.restart()
 			return pauseFSM
-		case returnChar:
+		case cChar:
+			c.cancel()
 			return nil
 		default:
 			return countFSM

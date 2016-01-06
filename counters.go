@@ -4,22 +4,27 @@ import "time"
 
 // Some common mutable data for counters
 type counterData struct {
-	start  time.Time
-	paused time.Duration
-	quiet  bool
-}
-
-func (d *counterData) elapsed() time.Duration {
-	return time.Now().Sub(d.start) - d.paused
+	elapsed   time.Duration
+	paused    time.Duration
+	cancelled bool
+	quiet     bool
 }
 
 func (d *counterData) restart() {
-	d.start = time.Now()
+	d.elapsed = 0
 	d.paused = 0
 }
 
 func (d *counterData) addPause(gap time.Duration) {
 	d.paused += gap
+}
+
+func (d *counterData) addElapsed(gap time.Duration) {
+	d.elapsed += gap
+}
+
+func (d *counterData) cancel() {
+	d.cancelled = true
 }
 
 // Counts down - like a timer
@@ -29,7 +34,7 @@ type downCounter struct {
 	counterData
 }
 
-func newDownCounter(title string, mins, secs int) *downCounter {
+func newDownCounter(title string, mins, secs int) counter {
 	m := time.Duration(mins) * time.Minute
 	s := time.Duration(secs) * time.Second
 	total := m + s
@@ -40,19 +45,19 @@ func newDownCounter(title string, mins, secs int) *downCounter {
 }
 
 func (c *downCounter) remaining() time.Duration {
-	return c.total - c.elapsed() + time.Second
+	return c.total - c.elapsed + time.Second
 }
 
 func (c *downCounter) display() []string {
-	return []string{c.title, inSeconds(c.elapsed()), inSeconds(c.remaining())}
+	return []string{c.title, inSeconds(c.elapsed), inSeconds(c.remaining())}
 }
 
 func (c *downCounter) finished() bool {
-	return c.elapsed() > c.total
+	return c.cancelled || c.elapsed > c.total
 }
 
 func (c *downCounter) finish() {
-	if !c.quiet {
+	if !c.cancelled && !c.quiet {
 		playSound()
 	}
 }
@@ -69,16 +74,12 @@ func newUpCounter(title string) counter {
 	}
 }
 
-func (c *upCounter) elapsed() time.Duration {
-	return time.Now().Sub(c.start)
-}
-
 func (c *upCounter) display() []string {
-	return []string{c.title, inSeconds(c.elapsed())}
+	return []string{c.title, inSeconds(c.elapsed)}
 }
 
 func (c *upCounter) finished() bool {
-	return false
+	return c.cancelled
 }
 
 func (c *upCounter) finish() {
