@@ -43,3 +43,12 @@ func (cs multiCounters) countdown() {
 		runFSM(genCounter)
 	}
 }
+
+type CounterRecord struct {
+	Mode          string
+	Title         string
+	Minutes       int
+	Seconds       int
+	PausedMinutes int
+	PausedSeconds int
+}

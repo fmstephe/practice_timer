@@ -22,11 +22,7 @@ func main() {
 }
 
 func simple() {
-	c := &downCounter{
-		Title:   *title,
-		Minutes: *minutes,
-		Seconds: *seconds,
-	}
+	c := newDownCounter(*title, *minutes, *seconds)
 	runFSM(c)
 }
 
