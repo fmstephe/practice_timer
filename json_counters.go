@@ -35,13 +35,16 @@ type multiCounters struct {
 }
 
 func (cs multiCounters) countdown() []*CounterRecord {
-	var records []*CounterRecord
+	var counters []counter
 	for _, c := range cs.Counters {
 		genPause := cs.Pause.GenerateTitled("Up Next: " + c.Title)
 		genCounter := c.Generate()
-		pRecord := runFSM(genPause)
-		cRecord := runFSM(genCounter)
-		records = append(records, pRecord)
+		counters = append(counters, genPause)
+		counters = append(counters, genCounter)
+	}
+	var records []*CounterRecord
+	for _, c := range counters {
+		cRecord := runFSM(c)
 		records = append(records, cRecord)
 	}
 	return records
