@@ -1,20 +1,17 @@
 {"Pause": {
 	"Mode": "DOWN",
-	"Minutes": 0,
-	"Seconds": 3
+	"Duration": "2s"
 	  },
 "Counters" : [
 {
 	"Mode": "DOWN",
 	"Title": "First Title",
-	"Minutes": 0,
-	"Seconds": 1 
+	"Duration": "2s"
 },
 {
 	"Mode": "DOWN",
 	"Title": "Second Title",
-	"Minutes": 0,
-	"Seconds": 2 
+	"Duration": "3s"
 },
 {
 	"Mode": "UP",

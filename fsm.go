@@ -7,12 +7,12 @@ type counter interface {
 	restart()
 	addElapsed(time.Duration)
 	addPause(time.Duration)
-	finish()
+	finish() *CounterRecord
 	cancel()
 	finished() bool
 }
 
-func runFSM(c counter) {
+func runFSM(c counter) *CounterRecord {
 	c.restart()
 	tick := time.Now()
 	f := countFSM
@@ -22,7 +22,7 @@ func runFSM(c counter) {
 		f = f(c, gap)
 		time.Sleep(100 * time.Millisecond)
 	}
-	c.finish()
+	return c.finish()
 }
 
 type counterFSM func(counter, time.Duration) counterFSM

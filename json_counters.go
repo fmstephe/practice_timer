@@ -8,10 +8,9 @@ const (
 )
 
 type jsonCounter struct {
-	Mode    string
-	Title   string
-	Minutes int
-	Seconds int
+	Mode     string
+	Title    string
+	Duration string
 }
 
 func (c *jsonCounter) Generate() counter {
@@ -23,7 +22,7 @@ func (c *jsonCounter) GenerateTitled(title string) counter {
 	case upMode:
 		return newUpCounter(title)
 	case downMode:
-		return newDownCounter(title, c.Minutes, c.Seconds)
+		return newDownCounter(title, c.Duration)
 	default:
 		log.Fatalf("Bad mode: %+v", c)
 		return nil
@@ -35,20 +34,22 @@ type multiCounters struct {
 	Counters []jsonCounter
 }
 
-func (cs multiCounters) countdown() {
+func (cs multiCounters) countdown() []*CounterRecord {
+	var records []*CounterRecord
 	for _, c := range cs.Counters {
 		genPause := cs.Pause.GenerateTitled("Up Next: " + c.Title)
 		genCounter := c.Generate()
-		runFSM(genPause)
-		runFSM(genCounter)
+		pRecord := runFSM(genPause)
+		cRecord := runFSM(genCounter)
+		records = append(records, pRecord)
+		records = append(records, cRecord)
 	}
+	return records
 }
 
 type CounterRecord struct {
-	Mode          string
-	Title         string
-	Minutes       int
-	Seconds       int
-	PausedMinutes int
-	PausedSeconds int
+	Mode    string
+	Title   string
+	Elapsed string
+	Paused  string
 }

@@ -9,8 +9,7 @@ import (
 
 var file = flag.String("f", "", "Optional path to a timer file")
 var title = flag.String("h", "", "An optional title to display above timer")
-var minutes = flag.Int("m", 0, "The number of minutes for the timer to run")
-var seconds = flag.Int("s", 90, "The number of seconds for the timer to run")
+var duration = flag.String("d", "1m30s", "The length of time for the countdown timer")
 
 func main() {
 	flag.Parse()
@@ -22,7 +21,7 @@ func main() {
 }
 
 func simple() {
-	c := newDownCounter(*title, *minutes, *seconds)
+	c := newDownCounter(*title, *duration)
 	runFSM(c)
 }
 
@@ -36,5 +35,11 @@ func fromFile() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	counters.countdown()
+	records := counters.countdown()
+	bytes, err = json.Marshal(records)
+	if err != nil {
+		log.Fatal(err)
+	}
+	println(string(bytes))
+
 }

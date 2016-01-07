@@ -29,23 +29,24 @@ func (d *counterData) cancel() {
 
 // Counts down - like a timer
 type downCounter struct {
-	title string
-	total time.Duration
+	title    string
+	duration time.Duration
 	counterData
 }
 
-func newDownCounter(title string, mins, secs int) counter {
-	m := time.Duration(mins) * time.Minute
-	s := time.Duration(secs) * time.Second
-	total := m + s
+func newDownCounter(title, durationStr string) counter {
+	duration, err := time.ParseDuration(durationStr)
+	if err != nil {
+		panic(err)
+	}
 	return &downCounter{
-		title: title,
-		total: total,
+		title:    title,
+		duration: duration,
 	}
 }
 
 func (c *downCounter) remaining() time.Duration {
-	return c.total - c.elapsed + time.Second
+	return c.duration - c.elapsed + time.Second
 }
 
 func (c *downCounter) display() []string {
@@ -53,12 +54,18 @@ func (c *downCounter) display() []string {
 }
 
 func (c *downCounter) finished() bool {
-	return c.cancelled || c.elapsed > c.total
+	return c.cancelled || c.elapsed > c.duration
 }
 
-func (c *downCounter) finish() {
+func (c *downCounter) finish() *CounterRecord {
 	if !c.cancelled && !c.quiet {
 		playSound()
+	}
+	return &CounterRecord{
+		Mode:    downMode,
+		Title:   c.title,
+		Elapsed: inSeconds(c.elapsed),
+		Paused:  inSeconds(c.paused),
 	}
 }
 
@@ -82,5 +89,11 @@ func (c *upCounter) finished() bool {
 	return c.cancelled
 }
 
-func (c *upCounter) finish() {
+func (c *upCounter) finish() *CounterRecord {
+	return &CounterRecord{
+		Mode:    upMode,
+		Title:   c.title,
+		Elapsed: inSeconds(c.elapsed),
+		Paused:  inSeconds(c.paused),
+	}
 }
