@@ -1,155 +1,47 @@
-{"Pause": {
-	"Mode": "DOWN",
-	"Duration": "15s"
-	  },
-"Counters" : [
+{"Pause": {"Mode": "DOWN", "Duration": "15s"},
+	"Counters" : [
 
-	{
-		"Mode": "DOWN",
-		"Title": "G Rhythm",
-		"Duration": "1m"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "C Rhythm",
-		"Duration": "1m"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "A Rhythm",
-		"Duration": "1m"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "D Rhythm",
-		"Duration": "1m"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "F Rhythm",
-		"Duration": "1m"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "Rhythm Progression G,C",
-		"Duration": "1m"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "Rhythm Progression A,D",
-		"Duration": "1m"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "Rhythm Progression F,Am",
-		"Duration": "1m"
-	},
+	{"Mode": "DOWN", "Title": "G Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "C Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "A Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "D Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "F Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Rhythm Progression G,C", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Rhythm Progression A,D", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Rhythm Progression F,Am", "Duration": "1m"},
 
-	{
-		"Mode": "DOWN",
-		"Title": "Brown Eyed Girl",
-		"Duration": "1m30s"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "Rhythm Progression G,C,G,C,G,C,D,Fmaj7,A,C",
-		"Duration": "1m30s"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "Killing Me Softly",
-		"Duration": "1m30s"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "Hey Joe",
-		"Duration": "1m30s"
-	},
+	{"Mode": "UP", "Title": "All positions minor pentatonic 13th fret"},
 
-	{
-		"Mode": "UP",
-		"Title": "All positions minor pentatonic 13th fret"
-	},
+	{"Mode": "DOWN", "Title": "Brown Eyed Girl", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Rhythm Progression G,C,G,C,G,C,D,Fmaj7,A,C", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Killing Me Softly", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Hey Joe", "Duration": "1m30s"},
 
-	{
-		"Mode": "DOWN",
-		"Title": "Rhythm Progression D,F",
-		"Duration": "1m"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "House Of The Rising Sun",
-		"Duration": "1m30s"
-	},
+	{"Mode": "UP", "Title": "All positions minor pentatonic 13th fret"},
 
-	{
-		"Mode": "UP",
-		"Title": "All positions minor pentatonic 1st fret"
-	},
+	{"Mode": "DOWN", "Title": "Rhythm Progression D,F", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "House Of The Rising Sun", "Duration": "1m30s"},
 
-	{
-		"Mode": "DOWN",
-		"Title": "Hallelujah - Barre Chords Down strums only",
-		"Duration": "1m30s"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "Hallelujah - Barre Chords Natural Rhythm",
-		"Duration": "1m30s"
-	},
+	{"Mode": "UP", "Title": "All positions minor pentatonic 1st fret"},
 
-	{
-		"Mode": "UP",
-		"Title": "All positions minor pentatonic 11th fret"
-	},
+	{"Mode": "DOWN", "Title": "Hallelujah - Barre Chords Down strums only", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Hallelujah - Barre Chords Natural Rhythm", "Duration": "1m30s"},
 
-	{
-		"Mode": "DOWN",
-		"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Barre Chords Natural Rhythm",
-		"Duration": "1m30s"
-	},
+	{"Mode": "UP", "Title": "All positions minor pentatonic 11th fret"},
 
-	{
-		"Mode": "UP",
-		"Title": "All positions minor pentatonic 3rd fret"
-	},
+	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Barre Chords Natural Rhythm", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Neck Chords Down Natural Rythm", "Duration": "1m30s"},
 
-	{
-		"Mode": "DOWN",
-		"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Neck Chords Down Natural Rythm",
-		"Duration": "1m30s"
-	},
+	{"Mode": "UP", "Title": "All positions minor pentatonic 7th fret"},
 
-	{
-		"Mode": "UP",
-		"Title": "All positions minor pentatonic 7th fret"
-	},
+	{"Mode": "DOWN", "Title": "Creep - Barre Chords Down Strums Only", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Creep - Barre Chords Natural Rhythm", "Duration": "1m30s"},
 
-	{
-		"Mode": "DOWN",
-		"Title": "Creep - Barre Chords Natural Rhythm",
-		"Duration": "1m30s"
-	},
+	{"Mode": "UP", "Title": "All positions minor pentatonic 5th fret"},
 
-	{
-		"Mode": "UP",
-		"Title": "All positions minor pentatonic 5th fret"
-	},
+	{"Mode": "DOWN", "Title": "C#m,B,Am,G#m,A - Barre Chords Down Strums Only", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "C#m,B,Am,G#m,A - Barre Chords Natural Rhythm", "Duration": "1m30s"}
 
-	{
-		"Mode": "DOWN",
-		"Title": "C#m,B,Am,G#m,A - Barre Chords Down Strums Only",
-		"Duration": "1m30s"
-	},
-
-	{
-		"Mode": "UP",
-		"Title": "All positions minor pentatonic 1st fret"
-	},
-	{
-		"Mode": "DOWN",
-		"Title": "C#m,B,Am,G#m,A - Barre Chords Natural Rhythm",
-		"Duration": "1m30s"
-	}
-]
+	{"Mode": "UP", "Title": "All positions minor pentatonic 1st fret"},
+		]
 }
