@@ -3,6 +3,7 @@
 	"Duration": "15s"
 	  },
 "Counters" : [
+
 	{
 		"Mode": "DOWN",
 		"Title": "G Rhythm",
@@ -43,10 +44,7 @@
 		"Title": "Rhythm Progression F,Am",
 		"Duration": "1m"
 	},
-	{
-		"Mode": "UP",
-		"Title": "All positions minor pentatonic 13th fret"
-	},
+
 	{
 		"Mode": "DOWN",
 		"Title": "Brown Eyed Girl",
@@ -67,6 +65,12 @@
 		"Title": "Hey Joe",
 		"Duration": "1m30s"
 	},
+
+	{
+		"Mode": "UP",
+		"Title": "All positions minor pentatonic 13th fret"
+	},
+
 	{
 		"Mode": "DOWN",
 		"Title": "Rhythm Progression D,F",
@@ -77,10 +81,12 @@
 		"Title": "House Of The Rising Sun",
 		"Duration": "1m30s"
 	},
+
 	{
 		"Mode": "UP",
-		"Title": "All positions minor pentatonic 11th fret"
+		"Title": "All positions minor pentatonic 1st fret"
 	},
+
 	{
 		"Mode": "DOWN",
 		"Title": "Hallelujah - Barre Chords Down strums only",
@@ -91,42 +97,51 @@
 		"Title": "Hallelujah - Barre Chords Natural Rhythm",
 		"Duration": "1m30s"
 	},
+
 	{
 		"Mode": "UP",
-		"Title": "All positions minor pentatonic 9th fret"
+		"Title": "All positions minor pentatonic 11th fret"
 	},
+
 	{
 		"Mode": "DOWN",
 		"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Barre Chords Natural Rhythm",
 		"Duration": "1m30s"
 	},
+
 	{
 		"Mode": "UP",
-		"Title": "All positions minor pentatonic 7th fret"
+		"Title": "All positions minor pentatonic 3rd fret"
 	},
+
 	{
 		"Mode": "DOWN",
 		"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Neck Chords Down Natural Rythm",
 		"Duration": "1m30s"
 	},
+
 	{
 		"Mode": "UP",
-		"Title": "All positions minor pentatonic 5th fret"
+		"Title": "All positions minor pentatonic 7th fret"
 	},
+
 	{
 		"Mode": "DOWN",
 		"Title": "Creep - Barre Chords Natural Rhythm",
 		"Duration": "1m30s"
 	},
+
 	{
 		"Mode": "UP",
-		"Title": "All positions minor pentatonic 3rd fret"
+		"Title": "All positions minor pentatonic 5th fret"
 	},
+
 	{
 		"Mode": "DOWN",
 		"Title": "C#m,B,Am,G#m,A - Barre Chords Down Strums Only",
 		"Duration": "1m30s"
 	},
+
 	{
 		"Mode": "UP",
 		"Title": "All positions minor pentatonic 1st fret"
