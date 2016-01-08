@@ -40,6 +40,7 @@ func fromFile() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	clearDisplay()
 	println(string(bytes))
 
 }

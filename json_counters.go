@@ -5,6 +5,10 @@ import (
 	"time"
 )
 
+var (
+	zeroDuration time.Duration
+)
+
 const (
 	upMode   = "UP"
 	downMode = "DOWN"
@@ -62,8 +66,10 @@ func (cs *multiCounters) generateCounters() []counter {
 
 func (cs *multiCounters) summarise(totalClock time.Duration, records []*CounterRecord) *CountersSummary {
 	summary := &CountersSummary{
-		TotalClock: totalClock.String(),
-		Counters:   records,
+		TotalElapsed: inSeconds(zeroDuration),
+		TotalPaused:  inSeconds(zeroDuration),
+		TotalClock:   inSeconds(totalClock),
+		Counters:     records,
 	}
 	for _, r := range records {
 		summary.TotalElapsed = addStringDurations(summary.TotalElapsed, r.Elapsed)
@@ -81,7 +87,7 @@ func addStringDurations(ds1, ds2 string) string {
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
-	return (d1 + d2).String()
+	return inSeconds(d1 + d2)
 }
 
 type CountersSummary struct {

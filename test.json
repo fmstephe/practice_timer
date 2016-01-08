@@ -9,11 +9,6 @@
 	"Duration": "2s"
 },
 {
-	"Mode": "DOWN",
-	"Title": "Second Title",
-	"Duration": "3s"
-},
-{
 	"Mode": "UP",
 	"Title": "Third Title"
 }
