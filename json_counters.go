@@ -1,6 +1,9 @@
 package main
 
-import "log"
+import (
+	"log"
+	"time"
+)
 
 const (
 	upMode   = "UP"
@@ -34,7 +37,19 @@ type multiCounters struct {
 	Counters []jsonCounter
 }
 
-func (cs multiCounters) countdown() []*CounterRecord {
+func (cs *multiCounters) countdown() *CountersSummary {
+	counters := cs.generateCounters()
+	var records []*CounterRecord
+	start := time.Now()
+	for _, c := range counters {
+		cRecord := runFSM(c)
+		records = append(records, cRecord)
+	}
+	totalClock := time.Now().Sub(start)
+	return cs.summarise(totalClock, records)
+}
+
+func (cs *multiCounters) generateCounters() []counter {
 	var counters []counter
 	for _, c := range cs.Counters {
 		genPause := cs.Pause.GenerateTitled("Up Next: " + c.Title)
@@ -42,12 +57,38 @@ func (cs multiCounters) countdown() []*CounterRecord {
 		counters = append(counters, genPause)
 		counters = append(counters, genCounter)
 	}
-	var records []*CounterRecord
-	for _, c := range counters {
-		cRecord := runFSM(c)
-		records = append(records, cRecord)
+	return counters
+}
+
+func (cs *multiCounters) summarise(totalClock time.Duration, records []*CounterRecord) *CountersSummary {
+	summary := &CountersSummary{
+		TotalClock: totalClock.String(),
+		Counters:   records,
 	}
-	return records
+	for _, r := range records {
+		summary.TotalElapsed = addStringDurations(summary.TotalElapsed, r.Elapsed)
+		summary.TotalPaused = addStringDurations(summary.TotalPaused, r.Paused)
+	}
+	return summary
+}
+
+func addStringDurations(ds1, ds2 string) string {
+	d1, err := time.ParseDuration(ds1)
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+	d2, err := time.ParseDuration(ds2)
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+	return (d1 + d2).String()
+}
+
+type CountersSummary struct {
+	TotalClock   string
+	TotalElapsed string
+	TotalPaused  string
+	Counters     []*CounterRecord
 }
 
 type CounterRecord struct {
