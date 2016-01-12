@@ -21,7 +21,7 @@ func main() {
 }
 
 func simple() {
-	c := newDownCounter(*title, *duration)
+	c := newDownCounter(*title, *duration, false)
 	runFSM(c)
 }
 

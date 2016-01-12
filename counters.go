@@ -7,7 +7,7 @@ type counterData struct {
 	elapsed   time.Duration
 	paused    time.Duration
 	cancelled bool
-	quiet     bool
+	silent     bool
 }
 
 func (d *counterData) restart() {
@@ -31,10 +31,11 @@ func (d *counterData) cancel() {
 type downCounter struct {
 	title    string
 	duration time.Duration
+	silent   bool
 	counterData
 }
 
-func newDownCounter(title, durationStr string) counter {
+func newDownCounter(title, durationStr string, silent bool) counter {
 	duration, err := time.ParseDuration(durationStr)
 	if err != nil {
 		panic(err)
@@ -42,6 +43,7 @@ func newDownCounter(title, durationStr string) counter {
 	return &downCounter{
 		title:    title,
 		duration: duration,
+		silent:   silent,
 	}
 }
 
@@ -58,7 +60,7 @@ func (c *downCounter) finished() bool {
 }
 
 func (c *downCounter) finish() *CounterRecord {
-	if !c.cancelled && !c.quiet {
+	if !c.cancelled && !c.silent {
 		playSound()
 	}
 	return &CounterRecord{

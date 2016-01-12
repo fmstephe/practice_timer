@@ -21,15 +21,15 @@ type jsonCounter struct {
 }
 
 func (c *jsonCounter) Generate() counter {
-	return c.GenerateTitled(c.Title)
+	return c.GenerateTitled(c.Title, false)
 }
 
-func (c *jsonCounter) GenerateTitled(title string) counter {
+func (c *jsonCounter) GenerateTitled(title string, silent bool) counter {
 	switch c.Mode {
 	case upMode:
 		return newUpCounter(title)
 	case downMode:
-		return newDownCounter(title, c.Duration)
+		return newDownCounter(title, c.Duration, silent)
 	default:
 		log.Fatalf("Bad mode: %+v", c)
 		return nil
@@ -56,7 +56,7 @@ func (cs *multiCounters) countdown() *CountersSummary {
 func (cs *multiCounters) generateCounters() []counter {
 	var counters []counter
 	for _, c := range cs.Counters {
-		genPause := cs.Pause.GenerateTitled("Up Next: " + c.Title)
+		genPause := cs.Pause.GenerateTitled("Up Next: "+c.Title, true)
 		genCounter := c.Generate()
 		counters = append(counters, genPause)
 		counters = append(counters, genCounter)
