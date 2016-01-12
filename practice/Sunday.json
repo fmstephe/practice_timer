@@ -4,7 +4,7 @@
 	{"Mode": "DOWN", "Title": "G Rhythm", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "F Rhythm", "Duration": "1m"},
 
-	{"Mode": "DOWN", "Title": "All positions minor pentatonic 9th fret", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Single Finger Fret Jumping", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "Dm Rhythm", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "D Rhythm", "Duration": "1m"},
@@ -16,7 +16,7 @@
 	{"Mode": "DOWN", "Title": "Rhythm Progression Am,Dm", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "Rhythm Progression F,D", "Duration": "1m"},
 
-	{"Mode": "DOWN", "Title": "All positions minor pentatonic 3rd fret", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Single Finger Fret Jumping", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "Hallelujah - Barre Chords Down strums only", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Hallelujah - Neck Chords Down strums only", "Duration": "2m"},
@@ -26,7 +26,7 @@
 	{"Mode": "DOWN", "Title": "Hallelujah - Barre Chords Natural Rhythm", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Hallelujah - Neck Chords Natural Rhythm", "Duration": "2m"},
 
-	{"Mode": "DOWN", "Title": "All positions minor pentatonic 11th fret", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "All positions minor pentatonic 3rd fret", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Barre Chords Natural Rhythm", "Duration": "1m30s"},
 	{"Mode": "DOWN", "Title": "House of the rising sun", "Duration": "1m30s"},
