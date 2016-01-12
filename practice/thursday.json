@@ -1,0 +1,51 @@
+{"Pause": {"Mode": "DOWN", "Duration": "15s"},
+	"Counters" : [
+
+	{"Mode": "DOWN", "Title": "Cadd9 Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Cmaj7 Rhythm", "Duration": "1m"},
+
+	{"Mode": "UP", "Title": "All positions minor pentatonic 9th fret"},
+
+	{"Mode": "DOWN", "Title": "A Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "D Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "B7 Rhythm", "Duration": "1m"},
+
+	{"Mode": "UP", "Title": "All positions minor pentatonic 13th fret"},
+
+	{"Mode": "DOWN", "Title": "Rhythm Progression G,Dm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Rhythm Progression Am,Dm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Rhythm Progression F,D", "Duration": "1m"},
+
+	{"Mode": "UP", "Title": "All positions minor pentatonic 3rd fret"},
+
+	{"Mode": "DOWN", "Title": "Hallelujah - Barre Chords Down strums only", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Hallelujah - Neck Chords Down strums only", "Duration": "2m"},
+
+	{"Mode": "UP", "Title": "All positions minor pentatonic 1st fret"},
+
+	{"Mode": "DOWN", "Title": "Hallelujah - Barre Chords Natural Rhythm", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Hallelujah - Neck Chords Natural Rhythm", "Duration": "2m"},
+
+	{"Mode": "UP", "Title": "All positions minor pentatonic 11th fret"},
+
+	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Barre Chords Natural Rhythm", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Talkin' about a revolution - G,Cadd9,Em,D", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Neck Chords Down Natural Rythm", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Talkin' about a revolution - G,Cadd9,Em,D", "Duration": "1m30s"},
+
+	{"Mode": "UP", "Title": "All positions minor pentatonic 7th fret"},
+
+	{"Mode": "DOWN", "Title": "Creep - Barre Chords Down Strums Only", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Killing Me Softly", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Creep - Barre Chords Natural Rhythm", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "Killing Me Softly", "Duration": "1m30s"},
+
+	{"Mode": "UP", "Title": "All positions minor pentatonic 5th fret"},
+
+	{"Mode": "DOWN", "Title": "C#m,B,Am,G#m,A - Barre Chords Down Strums Only", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "St James Infirmary", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "C#m,B,Am,G#m,A - Barre Chords Natural Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "St James Infirmary", "Duration": "1m30s"},
+	{"Mode": "DOWN", "Title": "C#m,B,Am,G#m,A - Barre Chords Natural Rhythm", "Duration": "1m"},
+		]
+}
