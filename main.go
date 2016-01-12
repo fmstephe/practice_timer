@@ -5,18 +5,23 @@ import (
 	"flag"
 	"io/ioutil"
 	"log"
+	"time"
 )
 
 var file = flag.String("f", "", "Optional path to a timer file")
 var title = flag.String("h", "", "An optional title to display above timer")
 var duration = flag.String("d", "1m30s", "The length of time for the countdown timer")
+var pod = flag.Bool("pod", false, "If set the counter will select the practice file for the day of the week")
 
 func main() {
 	flag.Parse()
-	if *file == "" {
+	switch {
+	case *pod:
+		practiceOfTheDay()
+	case *file != "":
+		fromFile(*file)
+	default:
 		simple()
-	} else {
-		fromFile()
 	}
 }
 
@@ -25,8 +30,8 @@ func simple() {
 	runFSM(c)
 }
 
-func fromFile() {
-	bytes, err := ioutil.ReadFile(*file)
+func fromFile(fileName string) {
+	bytes, err := ioutil.ReadFile(fileName)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -42,5 +47,9 @@ func fromFile() {
 	}
 	clearDisplay()
 	println(string(bytes))
+}
 
+func practiceOfTheDay() {
+	day := time.Now().Weekday().String()
+	fromFile("practice/" + day + ".json")
 }
