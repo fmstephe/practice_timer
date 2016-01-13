@@ -1,51 +1,38 @@
 {"Pause": {"Mode": "DOWN", "Duration": "15s"},
 	"Counters" : [
 
-	{"Mode": "DOWN", "Title": "Cadd9 Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "Cmaj7 Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "F", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "B7 neck", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 3", "Duration":"3m"},
 
-	{"Mode": "DOWN", "Title": "Single Finger Fret Jumping", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Am", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Dm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 11", "Duration":"3m"},
 
-	{"Mode": "DOWN", "Title": "A Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "D Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "B7 Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "F,D", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Am,D", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Fret Jumping Exercises", "Duration":"3m"},
 
-	{"Mode": "DOWN", "Title": "Major arpeggio 11th fret", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Hallelujah", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 5", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Natural Rhythm", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Hallelujah", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 1", "Duration":"3m"},
 
-	{"Mode": "DOWN", "Title": "Rhythm Progression G,Dm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "Rhythm Progression Am,Dm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "Rhythm Progression F,D", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "Creep Barre Downstrums", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Brown Eyed Girl", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Fret Jumping Exercises", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Creep Barre Natural Rhythm", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Brown Eyed Girl", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 9", "Duration":"3m"},
 
-	{"Mode": "DOWN", "Title": "Single Finger Fret Jumping", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 13", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "C#m,B,G#m,A Barre Natural Rhythm", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 7", "Duration":"3m"},
 
-	{"Mode": "DOWN", "Title": "Hallelujah - Barre Chords Down strums only", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Hallelujah - Neck Chords Down strums only", "Duration": "2m"},
-
-	{"Mode": "DOWN", "Title": "Major arpeggio 1st fret", "Duration":"3m"},
-
-	{"Mode": "DOWN", "Title": "Hallelujah - Barre Chords Natural Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Hallelujah - Neck Chords Natural Rhythm", "Duration": "2m"},
-
-	{"Mode": "DOWN", "Title": "Major arpeggio 3rd fret", "Duration":"3m"},
-
-	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Barre Chords Natural Rhythm", "Duration": "1m30s"},
-	{"Mode": "DOWN", "Title": "Talkin' about a revolution - G,Cadd9,Em,D", "Duration": "1m30s"},
-	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E - Neck Chords Down Natural Rythm", "Duration": "1m30s"},
-	{"Mode": "DOWN", "Title": "Talkin' about a revolution - G,Cadd9,Em,D", "Duration": "1m30s"},
-
-	{"Mode": "DOWN", "Title": "Major arpeggio 9th fret", "Duration":"3m"},
-
-	{"Mode": "DOWN", "Title": "Creep - Barre Chords Down Strums Only", "Duration": "1m30s"},
-	{"Mode": "DOWN", "Title": "Killing Me Softly", "Duration": "1m30s"},
-	{"Mode": "DOWN", "Title": "Creep - Barre Chords Natural Rhythm", "Duration": "1m30s"},
-	{"Mode": "DOWN", "Title": "Killing Me Softly", "Duration": "1m30s"},
-
-	{"Mode": "DOWN", "Title": "Major arpeggio 5th fret", "Duration":"3m"},
-
-	{"Mode": "DOWN", "Title": "C#m,B,Am,G#m,A - Barre Chords Down Strums Only", "Duration": "1m30s"},
-	{"Mode": "DOWN", "Title": "St James Infirmary", "Duration": "1m30s"},
-	{"Mode": "DOWN", "Title": "C#m,B,Am,G#m,A - Barre Chords Natural Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "St James Infirmary", "Duration": "1m30s"},
-	{"Mode": "DOWN", "Title": "C#m,B,Am,G#m,A - Barre Chords Natural Rhythm", "Duration": "1m"}
 		]
 }

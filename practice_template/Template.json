@@ -1,0 +1,38 @@
+{"Pause": {"Mode": "DOWN", "Duration": "15s"},
+	"Counters" : [
+
+	{"Mode": "DOWN", "Title": "{{.OneChordRhythm1}}", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "{{.OneChordRhythm2}}", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "{{.SingleNote1}}", "Duration":"3m"},
+
+	{"Mode": "DOWN", "Title": "{{.OneChordRhythm3}}", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "{{.OneChordRhythm4}}", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "{{.SingleNote2}}", "Duration":"3m"},
+
+	{"Mode": "DOWN", "Title": "{{.TwoChordRhythm1}}", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "{{.TwoChordRhythm2}}", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "{{.SingleNote3}}", "Duration":"3m"},
+
+	{"Mode": "DOWN", "Title": "{{.Barre1}} Barre Downstrums", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.NeckRhythm1}}", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.SingleNote4}}", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "{{.Barre1}} Barre Natural Rhythm", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.NeckRhythm1}}", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.SingleNote5}}", "Duration":"3m"},
+
+	{"Mode": "DOWN", "Title": "{{.Barre2}} Barre Downstrums", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.NeckRhythm2}}", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.SingleNote6}}", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "{{.Barre2}} Barre Natural Rhythm", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.NeckRhythm2}}", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.SingleNote7}}", "Duration":"3m"},
+
+	{"Mode": "DOWN", "Title": "{{.Barre3}} Barre Downstrums", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.NeckRhythm3}}", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.SingleNote8}}", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "{{.Barre3}} Barre Natural Rhythm", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.NeckRhythm3}}", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "{{.SingleNote9}}", "Duration":"3m"},
+
+		]
+}
