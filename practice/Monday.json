@@ -3,7 +3,7 @@
 
 	{"Mode": "DOWN", "Title": "A", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "D", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 3", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 7", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "F", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "B7 neck", "Duration": "1m"},
@@ -32,7 +32,7 @@
 	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 13", "Duration":"3m"},
 	{"Mode": "DOWN", "Title": "Creep Barre Natural Rhythm", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 7", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 3", "Duration":"3m"},
 
 		]
 }

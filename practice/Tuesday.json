@@ -3,7 +3,7 @@
 
 	{"Mode": "DOWN", "Title": "Am", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "Dm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 3", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 7", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "G", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "C", "Duration": "1m"},
@@ -32,7 +32,7 @@
 	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 13", "Duration":"3m"},
 	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Natural Rhythm", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "House of the rising sun", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 7", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 3", "Duration":"3m"},
 
 		]
 }
