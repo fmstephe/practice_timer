@@ -1,37 +1,37 @@
 {"Pause": {"Mode": "DOWN", "Duration": "15s"},
 	"Counters" : [
 
-	{"Mode": "DOWN", "Title": "A", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "D", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "A Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "D Rhythm", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 7", "Duration":"3m"},
 
-	{"Mode": "DOWN", "Title": "F", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "B7 neck", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "F Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "B7 neck Rhythm", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 11", "Duration":"3m"},
 
-	{"Mode": "DOWN", "Title": "F,Am", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "G,D", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "F,Am Rhythm", "Duration": "1m"},
+	{"Mode": "DOWN", "Title": "G,D Rhythm", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "Fret Jumping Exercises", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Where is my mind - C,Am,E,F", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Where is my mind - C,Am,E,F Neck Downstrums", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 5", "Duration":"3m"},
-	{"Mode": "DOWN", "Title": "C#m,B,G#m,A Barre Natural Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Where is my mind - C,Am,E,F", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "C#m,B,G#m,A Barre Rhythm", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Where is my mind - C,Am,E,F Neck Rhythm", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 1", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "Hallelujah Barre Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "St James Infirmary", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "St James Infirmary Neck Downstrums", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Fret Jumping Exercises", "Duration":"3m"},
-	{"Mode": "DOWN", "Title": "Hallelujah Barre Natural Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "St James Infirmary", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Hallelujah Barre Rhythm", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "St James Infirmary Neck Rhythm", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 9", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Talkin' about a revolution - G,Cadd9,Em,D", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Talkin' about a revolution - G,Cadd9,Em,D Neck Downstrums", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 13", "Duration":"3m"},
-	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Natural Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Talkin' about a revolution - G,Cadd9,Em,D", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Rhythm", "Duration": "2m"},
+	{"Mode": "DOWN", "Title": "Talkin' about a revolution - G,Cadd9,Em,D Neck Rhythm", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 3", "Duration":"3m"},
 
 		]
