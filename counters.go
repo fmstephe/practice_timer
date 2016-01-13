@@ -7,7 +7,7 @@ type counterData struct {
 	elapsed   time.Duration
 	paused    time.Duration
 	cancelled bool
-	silent     bool
+	silent    bool
 }
 
 func (d *counterData) restart() {
@@ -66,8 +66,8 @@ func (c *downCounter) finish() *CounterRecord {
 	return &CounterRecord{
 		Mode:    downMode,
 		Title:   c.title,
-		Elapsed: inSeconds(c.elapsed),
-		Paused:  inSeconds(c.paused),
+		Elapsed: c.elapsed,
+		Paused:  c.paused,
 	}
 }
 
@@ -95,7 +95,7 @@ func (c *upCounter) finish() *CounterRecord {
 	return &CounterRecord{
 		Mode:    upMode,
 		Title:   c.title,
-		Elapsed: inSeconds(c.elapsed),
-		Paused:  inSeconds(c.paused),
+		Elapsed: c.elapsed,
+		Paused:  c.paused,
 	}
 }

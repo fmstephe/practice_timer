@@ -66,40 +66,28 @@ func (cs *multiCounters) generateCounters() []counter {
 
 func (cs *multiCounters) summarise(totalClock time.Duration, records []*CounterRecord) *CountersSummary {
 	summary := &CountersSummary{
-		TotalElapsed: inSeconds(zeroDuration),
-		TotalPaused:  inSeconds(zeroDuration),
-		TotalClock:   inSeconds(totalClock),
+		TotalElapsed: zeroDuration,
+		TotalPaused:  zeroDuration,
+		TotalClock:   totalClock,
 		Counters:     records,
 	}
 	for _, r := range records {
-		summary.TotalElapsed = addStringDurations(summary.TotalElapsed, r.Elapsed)
-		summary.TotalPaused = addStringDurations(summary.TotalPaused, r.Paused)
+		summary.TotalElapsed = summary.TotalElapsed + r.Elapsed
+		summary.TotalPaused = summary.TotalPaused + r.Paused
 	}
 	return summary
 }
 
-func addStringDurations(ds1, ds2 string) string {
-	d1, err := time.ParseDuration(ds1)
-	if err != nil {
-		log.Fatalf(err.Error())
-	}
-	d2, err := time.ParseDuration(ds2)
-	if err != nil {
-		log.Fatalf(err.Error())
-	}
-	return inSeconds(d1 + d2)
-}
-
 type CountersSummary struct {
-	TotalClock   string
-	TotalElapsed string
-	TotalPaused  string
+	TotalClock   time.Duration
+	TotalElapsed time.Duration
+	TotalPaused  time.Duration
 	Counters     []*CounterRecord
 }
 
 type CounterRecord struct {
 	Mode    string
 	Title   string
-	Elapsed string
-	Paused  string
+	Elapsed time.Duration
+	Paused  time.Duration
 }
