@@ -46,8 +46,11 @@ func (cs *multiCounters) countdown() *CountersSummary {
 	var records []*CounterRecord
 	start := time.Now()
 	for _, c := range counters {
-		cRecord := runFSM(c)
+		cRecord, quit := runFSM(c)
 		records = append(records, cRecord)
+		if quit {
+			break
+		}
 	}
 	totalClock := time.Now().Sub(start)
 	return cs.summarise(totalClock, records)

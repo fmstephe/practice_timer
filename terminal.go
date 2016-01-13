@@ -8,6 +8,7 @@ import (
 )
 
 const cChar = 99
+const qChar = 113
 const spaceChar = 32
 const rChar = 114
 
