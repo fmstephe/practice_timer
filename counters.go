@@ -59,10 +59,13 @@ func (c *downCounter) finished() bool {
 	return c.cancelled || c.elapsed > c.duration
 }
 
-func (c *downCounter) finish() *CounterRecord {
+func (c *downCounter) finish() {
 	if !c.cancelled && !c.silent {
 		playSound()
 	}
+}
+
+func (c *downCounter) getRecord() *CounterRecord {
 	return &CounterRecord{
 		Mode:    downMode,
 		Title:   c.title,
@@ -91,7 +94,10 @@ func (c *upCounter) finished() bool {
 	return c.cancelled
 }
 
-func (c *upCounter) finish() *CounterRecord {
+func (c *upCounter) finish() {
+}
+
+func (c *upCounter) getRecord() *CounterRecord {
 	return &CounterRecord{
 		Mode:    upMode,
 		Title:   c.title,

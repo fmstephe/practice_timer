@@ -7,76 +7,116 @@ type counter interface {
 	restart()
 	addElapsed(time.Duration)
 	addPause(time.Duration)
-	finish() *CounterRecord
 	cancel()
+	finish()
 	finished() bool
+	getRecord() *CounterRecord
 }
 
-func runFSM(c counter) (*CounterRecord, bool) {
-	c.restart()
+type fsmCounters struct {
+	idx      int
+	counters []counter
+}
+
+func (cs *fsmCounters) current() counter {
+	return cs.counters[cs.idx]
+}
+
+func (cs *fsmCounters) display() []string {
+	return cs.current().display()
+}
+
+func (cs *fsmCounters) restart() {
+	cs.current().restart()
+}
+
+func (cs *fsmCounters) addElapsed(gap time.Duration) {
+	cs.current().addElapsed(gap)
+}
+
+func (cs *fsmCounters) addPause(gap time.Duration) {
+	cs.current().addPause(gap)
+}
+
+func (cs *fsmCounters) cancel() {
+	cs.current().cancel()
+}
+
+func (cs *fsmCounters) quit() {
+	cs.current().cancel()
+	cs.idx = len(cs.counters)
+}
+
+func (cs *fsmCounters) finished() bool {
+	if cs.idx == len(cs.counters) {
+		return true
+	}
+	if cs.current().finished() {
+		cs.current().finish()
+		cs.idx++
+	}
+	return cs.idx == len(cs.counters)
+}
+
+func runFSM(fsmC *fsmCounters) {
 	tick := time.Now()
 	f := countFSM
-	var quit bool
-	for !c.finished() {
+	for !fsmC.finished() {
 		gap := time.Now().Sub(tick)
 		tick = time.Now()
-		f, quit = f(c, gap)
-		if quit {
-			return c.finish(), true
-		}
+		f = f(fsmC, gap)
 		time.Sleep(100 * time.Millisecond)
 	}
-	return c.finish(), false
 }
 
-type counterFSM func(counter, time.Duration) (counterFSM, bool)
+type counterFSM func(*fsmCounters, time.Duration) counterFSM
 
-func countFSM(c counter, gap time.Duration) (counterFSM, bool) {
-	c.addElapsed(gap)
-	replaceText(c.display())
+func countFSM(fsmC *fsmCounters, gap time.Duration) counterFSM {
+	fsmC.addElapsed(gap)
+	replaceText(fsmC.display())
 	select {
 	case b := <-stdinChars:
 		switch b {
 		case spaceChar:
-			return pauseFSM, false
+			return pauseFSM
 		case qChar:
-			c.cancel()
-			return nil, true
+			fsmC.quit()
+			return nil
 		case rChar:
-			c.restart()
-			return countFSM, false
+			fsmC.restart()
+			return countFSM
 		case cChar:
-			c.cancel()
-			return nil, false
+			fsmC.cancel()
+			return countFSM
 		default:
-			return countFSM, false
+			return countFSM
 		}
 	default:
-		return countFSM, false
+		return countFSM
 	}
 }
 
-func pauseFSM(c counter, gap time.Duration) (counterFSM, bool) {
-	c.addPause(gap)
-	replaceText(c.display(), "PAUSED")
+func pauseFSM(fsmC *fsmCounters, gap time.Duration) counterFSM {
+	fsmC.addPause(gap)
+	replaceText(fsmC.display(), "PAUSED")
 	select {
 	case b := <-stdinChars:
 		switch b {
 		case spaceChar:
-			return countFSM, false
+			return countFSM
 		case qChar:
-			c.cancel()
-			return nil, true
+			fsmC.quit()
+			return nil
 		case rChar:
-			c.restart()
-			return pauseFSM, false
+			fsmC.restart()
+			return pauseFSM
 		case cChar:
-			c.cancel()
-			return nil, false
+			fsmC.cancel()
+			return pauseFSM
 		default:
-			return countFSM, false
+			return pauseFSM
 		}
 	default:
-		return pauseFSM, false
+		return pauseFSM
 	}
 }

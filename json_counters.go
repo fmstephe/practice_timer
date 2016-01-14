@@ -43,17 +43,13 @@ type multiCounters struct {
 
 func (cs *multiCounters) countdown() *CountersSummary {
 	counters := cs.generateCounters()
-	var records []*CounterRecord
-	start := time.Now()
-	for _, c := range counters {
-		cRecord, quit := runFSM(c)
-		records = append(records, cRecord)
-		if quit {
-			break
-		}
+	fsmC := &fsmCounters{
+		counters: counters,
 	}
+	start := time.Now()
+	runFSM(fsmC)
 	totalClock := time.Now().Sub(start)
-	return cs.summarise(totalClock, records)
+	return cs.summarise(totalClock, counters)
 }
 
 func (cs *multiCounters) generateCounters() []counter {
@@ -67,16 +63,21 @@ func (cs *multiCounters) generateCounters() []counter {
 	return counters
 }
 
-func (cs *multiCounters) summarise(totalClock time.Duration, records []*CounterRecord) *CountersSummary {
+func (cs *multiCounters) summarise(totalClock time.Duration, counters []counter) *CountersSummary {
+	var records []*CounterRecord
+	var totalElapsed time.Duration
+	var totalPaused time.Duration
+	for _, c := range counters {
+		r := c.getRecord()
+		totalElapsed = totalElapsed + r.Elapsed
+		totalPaused = totalPaused + r.Paused
+		records = append(records, r)
+	}
 	summary := &CountersSummary{
-		TotalElapsed: zeroDuration,
-		TotalPaused:  zeroDuration,
+		TotalElapsed: totalElapsed,
+		TotalPaused:  totalPaused,
 		TotalClock:   totalClock,
 		Counters:     records,
-	}
-	for _, r := range records {
-		summary.TotalElapsed = summary.TotalElapsed + r.Elapsed
-		summary.TotalPaused = summary.TotalPaused + r.Paused
 	}
 	return summary
 }

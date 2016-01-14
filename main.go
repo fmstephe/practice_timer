@@ -27,7 +27,10 @@ func main() {
 
 func simple() {
 	c := newDownCounter(*title, *duration, false)
-	runFSM(c)
+	fsmC := &fsmCounters{
+		counters: []counter{c},
+	}
+	runFSM(fsmC)
 }
 
 func fromFile(fileName string) {
