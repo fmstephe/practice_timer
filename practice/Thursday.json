@@ -3,11 +3,11 @@
 
 	{"Mode": "DOWN", "Title": "F Rhythm", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "B7 neck Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 7", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 7", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "Am Rhythm", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "Dm Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 11", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 11", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "F,D Rhythm", "Duration": "1m"},
 	{"Mode": "DOWN", "Title": "Am,D Rhythm", "Duration": "1m"},
@@ -15,24 +15,24 @@
 
 	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Mad World - Em,G,D,A|Em,A,Em,A Neck Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 5", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 5", "Duration":"3m"},
 	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Rhythm", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Mad World - Em,G,D,A|Em,A,Em,A Neck Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 1", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 1", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "Creep Barre Downstrums", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Working Class Hero, 3/4 Time - Am,Am,G|Am,G,D Neck Downstrums", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Fret Jumping Exercises", "Duration":"3m"},
 	{"Mode": "DOWN", "Title": "Creep Barre Rhythm", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Working Class Hero, 3/4 Time - Am,Am,G|Am,G,D Neck Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 9", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 9", "Duration":"3m"},
 
 	{"Mode": "DOWN", "Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Sitting On The Dock Of The Bay - G,B7,C,A|G,E Neck Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 13", "Duration":"3m"},
+	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 13", "Duration":"3m"},
 	{"Mode": "DOWN", "Title": "C#m,B,G#m,A Barre Rhythm", "Duration": "2m"},
 	{"Mode": "DOWN", "Title": "Sitting On The Dock Of The Bay - G,B7,C,A|G,E Neck Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Major Arpeggio, Position 1, Fret 3", "Duration":"3m"}
+	{"Mode": "DOWN", "Title": "Minor Pentatonic, All Positions, Fret 3", "Duration":"3m"}
 
 		]
 }
