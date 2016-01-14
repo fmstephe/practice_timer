@@ -1,38 +1,38 @@
-{"Pause": {"Mode": "PAUSE", "Duration": "15s"},
+{"Pause": {"Duration": "15s" "Mode": "PAUSE"},
 	"Counters" : [
 
-	{"Mode": "DOWN", "Title": "A Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "D Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "Minor Scale, All Positions, Fret 7", "Duration":"3m"},
+	{"Title": "A Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "D Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Minor Scale, All Positions, Fret 7", "Duration":"3m", "MODE": "DOWN"},
 
-	{"Mode": "DOWN", "Title": "F Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "B7 neck Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "Minor Scale, All Positions, Fret 11", "Duration":"3m"},
+	{"Title": "F Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "B7 neck Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Minor Scale, All Positions, Fret 11", "Duration":"3m", "MODE": "DOWN"},
 
-	{"Mode": "DOWN", "Title": "F,Am Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "G,D Rhythm", "Duration": "1m"},
-	{"Mode": "DOWN", "Title": "Fret Jumping Exercises", "Duration":"3m"},
+	{"Title": "F,Am Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "G,D Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Fret Jumping Exercises", "Duration":"3m", "MODE": "DOWN"},
 
-	{"Mode": "DOWN", "Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "I Want To Hold Your Hand - C,D,G,Em|C,D,G,G Neck Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Minor Scale, All Positions, Fret 5", "Duration":"3m"},
-	{"Mode": "DOWN", "Title": "C#m,B,G#m,A Barre Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "I Want To Hold Your Hand - C,D,G,Em|C,D,G,G Neck Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Minor Scale, All Positions, Fret 1", "Duration":"3m"},
+	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "I Want To Hold Your Hand - C,D,G,Em|C,D,G,G Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Minor Scale, All Positions, Fret 5", "Duration":"3m", "MODE": "DOWN"},
+	{"Title": "C#m,B,G#m,A Barre Rhythm", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "I Want To Hold Your Hand - C,D,G,Em|C,D,G,G Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Minor Scale, All Positions, Fret 1", "Duration":"3m", "MODE": "DOWN"},
 
-	{"Mode": "DOWN", "Title": "Hallelujah Barre Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "No Woman No Cry - C,G,Am,F Neck Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Fret Jumping Exercises", "Duration":"3m"},
-	{"Mode": "DOWN", "Title": "Hallelujah Barre Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "No Woman No Cry - C,G,Am,F Neck Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Minor Scale, All Positions, Fret 9", "Duration":"3m"},
+	{"Title": "Hallelujah Barre Downstrums", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "No Woman No Cry - C,G,Am,F Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Fret Jumping Exercises", "Duration":"3m", "MODE": "DOWN"},
+	{"Title": "Hallelujah Barre Rhythm", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "No Woman No Cry - C,G,Am,F Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Minor Scale, All Positions, Fret 9", "Duration":"3m", "MODE": "DOWN"},
 
-	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "The Passenger - Am,F,C,G Neck Downstrums", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Minor Scale, All Positions, Fret 13", "Duration":"3m"},
-	{"Mode": "DOWN", "Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "The Passenger - Am,F,C,G Neck Rhythm", "Duration": "2m"},
-	{"Mode": "DOWN", "Title": "Minor Scale, All Positions, Fret 3", "Duration":"3m"}
+	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "The Passenger - Am,F,C,G Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Minor Scale, All Positions, Fret 13", "Duration":"3m", "MODE": "DOWN"},
+	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Rhythm", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "The Passenger - Am,F,C,G Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Minor Scale, All Positions, Fret 3", "Duration":"3m", "Mode": "DOWN"}
 
 		]
 }
