@@ -2,17 +2,6 @@ package main
 
 import "time"
 
-type counter interface {
-	display() []string
-	restart()
-	addElapsed(time.Duration)
-	addPause(time.Duration)
-	cancel()
-	finish()
-	finished() bool
-	getRecord() *CounterRecord
-}
-
 type fsmCounters struct {
 	idx      int
 	counters []counter

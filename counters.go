@@ -2,6 +2,17 @@ package main
 
 import "time"
 
+type counter interface {
+	display() []string
+	restart()
+	addElapsed(time.Duration)
+	addPause(time.Duration)
+	cancel()
+	finish()
+	finished() bool
+	getRecord() *CounterRecord
+}
+
 // Some common mutable data for counters
 type counterData struct {
 	elapsed   time.Duration
