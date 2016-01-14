@@ -1,4 +1,4 @@
-{"Pause": {"Mode": "DOWN", "Duration": "15s"},
+{"Pause": {"Mode": "PAUSE", "Duration": "15s"},
 	"Counters" : [
 
 	{"Mode": "DOWN", "Title": "A Rhythm", "Duration": "1m"},
