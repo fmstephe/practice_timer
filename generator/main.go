@@ -49,11 +49,11 @@ type sessionData struct {
 }
 
 func main() {
-	barre := getTitles("barre.json")
-	oneChordRhythm := getTitles("oneChordRhythm.json")
-	twoChordRhythm := getTitles("twoChordRhythm.json")
-	neckRhythm := getTitles("neckRhythm.json")
-	singleNote := getTitles("singleNote.json")
+	barre := getTitles("rhythm/barre.json")
+	oneChordRhythm := getTitles("rhythm/oneChordRhythm.json")
+	twoChordRhythm := getTitles("rhythm/twoChordRhythm.json")
+	neckRhythm := getTitles("rhythm/neckRhythm.json")
+	singleNote := getTitles("rhythm/singleNote.json")
 	sds := make([]sessionData, 7)
 	for i := range sds {
 		sds[i].OneChordRhythm1 = oneChordRhythm.next()
@@ -106,7 +106,7 @@ func getTitles(fileName string) *titles {
 }
 
 func applyTemplate(sd sessionData, fileName string) string {
-	bytes, err := ioutil.ReadFile("Template.json")
+	bytes, err := ioutil.ReadFile("rhythm/template.json")
 	if err != nil {
 		log.Fatal(err)
 	}
