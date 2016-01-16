@@ -1,0 +1,50 @@
+{"Pause": {"Duration": "15s", "Mode": "PAUSE"},
+	"Counters" : [
+
+	{"Title": "{{.Riff1}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff1}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff1}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff1}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "{{.Classical1}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical2}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical3}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical4}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "{{.Riff2}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff2}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff2}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff2}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "{{.Classical5}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical6}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical7}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical8}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "{{.Riff3}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff3}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff3}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff3}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "{{.Classical1}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical2}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical3}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical4}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "{{.Riff4}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff4}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff4}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff4}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "{{.Classical5}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical6}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical7}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Classical8}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "{{.Riff4}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff4}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff4}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.Riff4}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
+
+		]
+}
