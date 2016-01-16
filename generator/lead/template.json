@@ -33,7 +33,7 @@
 	{"Title": "{{.Riff4}}", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "{{.Riff4}}", "Duration": "1m", "MODE": "DOWN"},
 
-	{"Title": "{{.ClassicalLong}}", "Duration": "4m", "MODE": "DOWN"},
+	{"Title": "{{.ClassicalLong}}", "Duration": "4m", "MODE": "DOWN"}
 
 		]
 }
