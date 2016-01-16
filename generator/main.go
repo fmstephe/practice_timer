@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"text/template"
+	"time"
 )
 
 type titles struct {
@@ -21,6 +22,7 @@ func (t *titles) next() string {
 
 func main() {
 	generateRhythm()
+	generateLead()
 }
 
 func getTitles(fileName string) *titles {
@@ -36,13 +38,17 @@ func getTitles(fileName string) *titles {
 	return ts
 }
 
-func applyTemplate(sessionData interface{}, templateFile, outFile string) string {
-	bytes, err := ioutil.ReadFile(templateFile)
+func applyTemplate(sessionData interface{}, category string, dow time.Weekday) string {
+	bytes, err := ioutil.ReadFile(category + "/template.json")
 	if err != nil {
 		log.Fatal(err)
 	}
 	t := template.Must(template.New("session").Parse(string(bytes)))
-	fd, err := os.Create("../practice/" + outFile)
+	err = os.MkdirAll("../practice/"+category+"/", 0777)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fd, err := os.Create("../practice/" + category + "/" + dow.String() + ".json")
 	if err != nil {
 		log.Fatal(err)
 	}

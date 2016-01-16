@@ -1,5 +1,9 @@
 package main
 
+import (
+	"time"
+)
+
 type rhythmSession struct {
 	OneChordRhythm1 string
 	OneChordRhythm2 string
@@ -64,11 +68,7 @@ func generateRhythm() {
 		sds[i].SingleNote8 = singleNote.next()
 		sds[i].SingleNote9 = singleNote.next()
 	}
-	applyTemplate(sds[0], "rhythm/template.json", "Monday.json")
-	applyTemplate(sds[1], "rhythm/template.json", "Tuesday.json")
-	applyTemplate(sds[2], "rhythm/template.json", "Wednesday.json")
-	applyTemplate(sds[3], "rhythm/template.json", "Thursday.json")
-	applyTemplate(sds[4], "rhythm/template.json", "Friday.json")
-	applyTemplate(sds[5], "rhythm/template.json", "Saturday.json")
-	applyTemplate(sds[6], "rhythm/template.json", "Sunday.json")
+	for i := range sds {
+		applyTemplate(sds[0], "rhythm", time.Weekday(i))
+	}
 }
