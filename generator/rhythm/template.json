@@ -25,7 +25,7 @@
 	{"Title": "{{.SingleNote6}}", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "{{.Barre2}} Barre Rhythm", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "{{.NeckRhythm2}} Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
-	{"Title": "{{.SingleNote7}}", "Duration":"3m", "MODE": "DOWN"},
+	{"Title": "{{.SingleNote7}}", "Duration":"3m", "MODE": "DOWN"}
 
 		]
 }
