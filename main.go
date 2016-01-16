@@ -11,13 +11,16 @@ import (
 var file = flag.String("f", "", "Optional path to a timer file")
 var title = flag.String("h", "", "An optional title to display above timer")
 var duration = flag.String("d", "1m30s", "The length of time for the countdown timer")
-var pod = flag.Bool("pod", false, "If set the counter will select the practice file for the day of the week")
+var rod = flag.Bool("rod", false, "If set the counter will select the rhythm practice file for the day of the week")
+var lod = flag.Bool("lod", false, "If set the counter will select the lead practice file for the day of the week")
 
 func main() {
 	flag.Parse()
 	switch {
-	case *pod:
-		practiceOfTheDay()
+	case *rod:
+		todaysPractice("rhythm")
+	case *lod:
+		todaysPractice("lead")
 	case *file != "":
 		fromFile(*file)
 	default:
@@ -52,7 +55,7 @@ func fromFile(fileName string) {
 	println(string(bytes))
 }
 
-func practiceOfTheDay() {
+func todaysPractice(category string) {
 	day := time.Now().Weekday().String()
-	fromFile("practice/" + day + ".json")
+	fromFile("practice/" + "/" + category + "/" + day + ".json")
 }
