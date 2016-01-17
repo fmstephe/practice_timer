@@ -1,8 +1,6 @@
 package main
 
-import (
-	"time"
-)
+import "time"
 
 type rhythmSession struct {
 	OneChordRhythm1 string
@@ -26,11 +24,6 @@ type rhythmSession struct {
 	NeckRhythm2 string
 	SingleNote6 string
 	SingleNote7 string
-	//
-	Barre3      string
-	NeckRhythm3 string
-	SingleNote8 string
-	SingleNote9 string
 }
 
 func generateRhythm() {
@@ -62,13 +55,8 @@ func generateRhythm() {
 		sds[i].NeckRhythm2 = neckRhythm.next()
 		sds[i].SingleNote6 = singleNote.next()
 		sds[i].SingleNote7 = singleNote.next()
-		//
-		sds[i].Barre3 = barre.next()
-		sds[i].NeckRhythm3 = neckRhythm.next()
-		sds[i].SingleNote8 = singleNote.next()
-		sds[i].SingleNote9 = singleNote.next()
 	}
 	for i := range sds {
-		applyTemplate(sds[0], "rhythm", time.Weekday(i))
+		applyTemplate(sds[i], "rhythm", time.Weekday(i))
 	}
 }
