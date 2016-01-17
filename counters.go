@@ -7,7 +7,6 @@ type counter interface {
 	restart()
 	addElapsed(time.Duration)
 	addPause(time.Duration)
-	cancel()
 	finish()
 	finished() bool
 	getRecord() *CounterRecord
@@ -15,10 +14,9 @@ type counter interface {
 
 // Some common mutable data for counters
 type counterData struct {
-	elapsed   time.Duration
-	paused    time.Duration
-	cancelled bool
-	silent    bool
+	elapsed time.Duration
+	paused  time.Duration
+	silent  bool
 }
 
 func (d *counterData) restart() {
@@ -32,10 +30,6 @@ func (d *counterData) addPause(gap time.Duration) {
 
 func (d *counterData) addElapsed(gap time.Duration) {
 	d.elapsed += gap
-}
-
-func (d *counterData) cancel() {
-	d.cancelled = true
 }
 
 // Counts down - like a timer
@@ -67,11 +61,11 @@ func (c *downCounter) display() []string {
 }
 
 func (c *downCounter) finished() bool {
-	return c.cancelled || c.elapsed > c.duration
+	return c.elapsed > c.duration
 }
 
 func (c *downCounter) finish() {
-	if !c.cancelled && !c.silent {
+	if !c.silent {
 		playSound()
 	}
 }
@@ -102,7 +96,7 @@ func (c *upCounter) display() []string {
 }
 
 func (c *upCounter) finished() bool {
-	return c.cancelled
+	return false
 }
 
 func (c *upCounter) finish() {

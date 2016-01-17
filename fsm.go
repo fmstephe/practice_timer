@@ -1,6 +1,9 @@
 package main
 
-import "time"
+import (
+	"strconv"
+	"time"
+)
 
 type fsmCounters struct {
 	idx      int
@@ -12,11 +15,26 @@ func (cs *fsmCounters) current() counter {
 }
 
 func (cs *fsmCounters) display() []string {
-	return cs.current().display()
+	disp := []string{strconv.Itoa(cs.idx)}
+	disp = append(disp, cs.current().display()...)
+	return disp
 }
 
 func (cs *fsmCounters) restart() {
 	cs.current().restart()
+}
+
+func (cs *fsmCounters) next() {
+	cs.idx++
+	cs.restart()
+}
+
+func (cs *fsmCounters) prev() {
+	cs.idx--
+	if cs.idx < 0 {
+		cs.idx = 0
+	}
+	cs.restart()
 }
 
 func (cs *fsmCounters) addElapsed(gap time.Duration) {
@@ -27,24 +45,20 @@ func (cs *fsmCounters) addPause(gap time.Duration) {
 	cs.current().addPause(gap)
 }
 
-func (cs *fsmCounters) cancel() {
-	cs.current().cancel()
-}
-
 func (cs *fsmCounters) quit() {
-	cs.current().cancel()
 	cs.idx = len(cs.counters)
 }
 
 func (cs *fsmCounters) finished() bool {
-	if cs.idx == len(cs.counters) {
+	if cs.idx >= len(cs.counters) {
 		return true
 	}
 	if cs.current().finished() {
 		cs.current().finish()
 		cs.idx++
+		cs.restart()
 	}
-	return cs.idx == len(cs.counters)
+	return cs.idx >= len(cs.counters)
 }
 
 func runFSM(fsmC *fsmCounters) {
@@ -74,8 +88,11 @@ func countFSM(fsmC *fsmCounters, gap time.Duration) counterFSM {
 		case rChar:
 			fsmC.restart()
 			return countFSM
-		case cChar:
-			fsmC.cancel()
+		case aChar:
+			fsmC.prev()
+			return countFSM
+		case dChar:
+			fsmC.next()
 			return countFSM
 		default:
 			return countFSM
@@ -99,8 +116,11 @@ func pauseFSM(fsmC *fsmCounters, gap time.Duration) counterFSM {
 		case rChar:
 			fsmC.restart()
 			return pauseFSM
-		case cChar:
-			fsmC.cancel()
+		case aChar:
+			fsmC.prev()
+			return pauseFSM
+		case dChar:
+			fsmC.next()
 			return pauseFSM
 		default:
 			return pauseFSM

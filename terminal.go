@@ -7,6 +7,8 @@ import (
 	"time"
 )
 
+const aChar = 97
+const dChar = 100
 const cChar = 99
 const qChar = 113
 const spaceChar = 32
