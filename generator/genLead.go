@@ -36,6 +36,7 @@ func generateLead() {
 	sds := make([]leadSession, 7)
 	for i := range sds {
 		sds[i].Riff1 = riffs.next()
+		println(sds[i].Riff1)
 		sds[i].Riff2 = riffs.next()
 		sds[i].Riff3 = riffs.next()
 		sds[i].Riff4 = riffs.next()
