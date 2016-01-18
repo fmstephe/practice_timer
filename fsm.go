@@ -11,11 +11,14 @@ type fsmCounters struct {
 }
 
 func (cs *fsmCounters) current() counter {
+	if cs.idx >= len(cs.counters) {
+		return &nilCounter{}
+	}
 	return cs.counters[cs.idx]
 }
 
 func (cs *fsmCounters) display() []string {
-	disp := []string{strconv.Itoa(cs.idx)}
+	disp := []string{strconv.Itoa(cs.idx+1) + " of " + strconv.Itoa(len(cs.counters))}
 	disp = append(disp, cs.current().display()...)
 	return disp
 }
@@ -56,7 +59,6 @@ func (cs *fsmCounters) finished() bool {
 	if cs.current().finished() {
 		cs.current().finish()
 		cs.idx++
-		cs.restart()
 	}
 	return cs.idx >= len(cs.counters)
 }

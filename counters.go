@@ -12,6 +12,33 @@ type counter interface {
 	getRecord() *CounterRecord
 }
 
+type nilCounter struct {
+}
+
+func (c *nilCounter) display() []string {
+	return []string{}
+}
+
+func (c *nilCounter) restart() {
+}
+
+func (c *nilCounter) addElapsed(gap time.Duration) {
+}
+
+func (c *nilCounter) addPause(gap time.Duration) {
+}
+
+func (c *nilCounter) finish() {
+}
+
+func (c *nilCounter) finished() bool {
+	return true
+}
+
+func (c *nilCounter) getRecord() *CounterRecord {
+	return nil
+}
+
 // Some common mutable data for counters
 type counterData struct {
 	elapsed time.Duration
