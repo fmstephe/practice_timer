@@ -57,5 +57,5 @@ func fromFile(fileName string) {
 
 func todaysPractice(category string) {
 	day := time.Now().Weekday().String()
-	fromFile("practice/" + "/" + category + "/" + day + ".json")
+	fromFile("../practice/" + "/" + category + "/" + day + ".json")
 }
