@@ -10,26 +10,48 @@ import (
 // means string 1 fret 2, string 2 fret 3, string 3 open
 // - means an empty column
 type Column struct {
-	Notes map[string]string
+	Notes map[int]int
 }
 
 func (c *Column) Print(stringNum string) string {
-	note, ok := c.Notes[stringNum]
+	note, ok := c.Notes[getStringNum(stringNum)]
 	if !ok {
 		return "-"
 	}
-	return note
+	return strconv.Itoa(note)
+}
+
+func getStringNum(stringNum string) int {
+	n, err := strconv.Atoi(stringNum)
+	if err != nil {
+		panic(err)
+	}
+	if n < 1 || n > 6 {
+		panic(fmt.Sprintf("%s bad string number", stringNum))
+	}
+	return n
+}
+
+func getFretNum(fretNum string) int {
+	n, err := strconv.Atoi(fretNum)
+	if err != nil {
+		panic(err)
+	}
+	if n < 0 || n > 24 {
+		panic(fmt.Sprintf("%s bad fret number", fretNum))
+	}
+	return n
 }
 
 func ParseColumn(cStr string) Column {
 	c := Column{
-		Notes: make(map[string]string),
+		Notes: make(map[int]int),
 	}
 	if cStr != "-" {
 		notes := strings.Split(cStr, "|")
 		for i := range notes {
 			pair := strings.Split(notes[i], ":")
-			c.Notes[pair[0]] = pair[1]
+			c.Notes[getStringNum(pair[0])] = getFretNum(pair[1])
 		}
 	}
 	return c
