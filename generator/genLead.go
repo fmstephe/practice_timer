@@ -29,10 +29,10 @@ type leadSession struct {
 }
 
 func generateLead() {
-	riffs := getTitles("lead/riffs.json")
-	classical := getTitles("lead/classical.json")
-	classicalLong := getTitles("lead/classicalLong.json")
-	chordChanges := getTitles("lead/chordChanges.json")
+	riffs := getTitles("lead/riffs.txt")
+	classical := getTitles("lead/classical.txt")
+	classicalLong := getTitles("lead/classicalLong.txt")
+	chordChanges := getTitles("lead/chordChanges.txt")
 	sds := make([]leadSession, 7)
 	for i := range sds {
 		sds[i].Riff1 = riffs.next()

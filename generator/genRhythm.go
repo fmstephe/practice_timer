@@ -27,11 +27,11 @@ type rhythmSession struct {
 }
 
 func generateRhythm() {
-	barre := getTitles("rhythm/barre.json")
-	oneChordRhythm := getTitles("rhythm/oneChordRhythm.json")
-	twoChordRhythm := getTitles("rhythm/twoChordRhythm.json")
-	neckRhythm := getTitles("rhythm/neckRhythm.json")
-	singleNote := getTitles("rhythm/singleNote.json")
+	barre := getTitles("rhythm/barre.txt")
+	oneChordRhythm := getTitles("rhythm/oneChordRhythm.txt")
+	twoChordRhythm := getTitles("rhythm/twoChordRhythm.txt")
+	neckRhythm := getTitles("rhythm/neckRhythm.txt")
+	singleNote := getTitles("rhythm/singleNote.txt")
 	sds := make([]rhythmSession, 7)
 	for i := range sds {
 		sds[i].OneChordRhythm1 = oneChordRhythm.next()

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"encoding/json"
 	"io/ioutil"
 	"log"
 	"os"
+	"strings"
 	"text/template"
 	"time"
 )
@@ -30,12 +30,21 @@ func getTitles(fileName string) *titles {
 	if err != nil {
 		log.Fatal(err)
 	}
-	ts := &titles{}
-	err = json.Unmarshal(bytes, ts)
-	if err != nil {
-		log.Fatal(err)
+	lines := strings.Split(string(bytes), "\n")
+	ts := &titles{
+		Titles: removeEmpty(lines),
 	}
 	return ts
+}
+
+func removeEmpty(ss []string) []string {
+	nss := make([]string, 0, len(ss))
+	for _, s := range ss {
+		if s != "" {
+			nss = append(nss, s)
+		}
+	}
+	return nss
 }
 
 func applyTemplate(sessionData interface{}, category string, dow time.Weekday) string {
