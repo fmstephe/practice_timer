@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"time"
 
 	"github.com/fmstephe/countdown/tab"
@@ -19,17 +18,15 @@ type jsonCounter struct {
 	Tab      string
 }
 
-func (c *jsonCounter) Generate(basicDisplay []string) counter {
-	switch c.Mode {
-	case downMode:
-		return newDownCounter(basicDisplay, c.Duration, false)
-	case pauseMode:
-		basicDisplay[0] = "Up Next: " + basicDisplay[0]
-		return newDownCounter(basicDisplay, c.Duration, true)
-	default:
-		log.Fatalf("Bad mode: %+v", c)
-		return nil
+func (c *jsonCounter) Generate(title, tabStr string) counter {
+	var displayTab string
+	if tabStr != "" {
+		displayTab = tab.ExpandMotif(tabStr)
 	}
+	if c.Mode == pauseMode {
+		title = "Up Next: " + title
+	}
+	return newDownCounter([]string{title, displayTab}, c.Duration, false)
 }
 
 type multiCounters struct {
@@ -51,17 +48,10 @@ func (cs *multiCounters) countdown() *CountersSummary {
 func (cs *multiCounters) generateCounters() []counter {
 	var counters []counter
 	for _, c := range cs.Counters {
-		if c.Tab == "" {
-			genPause := cs.Pause.Generate([]string{c.Title})
-			genCounter := c.Generate([]string{c.Title})
-			counters = append(counters, genPause)
-			counters = append(counters, genCounter)
-		} else {
-			genPause := cs.Pause.Generate([]string{c.Title, tab.ExpandMotif(c.Tab)})
-			genCounter := c.Generate([]string{c.Title, tab.ExpandMotif(c.Tab)})
-			counters = append(counters, genPause)
-			counters = append(counters, genCounter)
-		}
+		genPause := cs.Pause.Generate(c.Title, c.Tab)
+		genCounter := c.Generate(c.Title, c.Tab)
+		counters = append(counters, genPause)
+		counters = append(counters, genCounter)
 	}
 	return counters
 }
