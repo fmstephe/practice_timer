@@ -43,7 +43,7 @@ func (c *nilCounter) getRecord() *CounterRecord {
 type counterData struct {
 	elapsed      time.Duration
 	paused       time.Duration
-	extraDisplay []string
+	basicDisplay []string
 	silent       bool
 }
 
@@ -62,22 +62,22 @@ func (d *counterData) addElapsed(gap time.Duration) {
 
 // Counts down - like a timer
 type downCounter struct {
-	title    string
 	duration time.Duration
 	silent   bool
 	counterData
 }
 
-func newDownCounter(title, durationStr string, silent bool) counter {
+func newDownCounter(basicDisplay []string, durationStr string, silent bool) counter {
 	duration, err := time.ParseDuration(durationStr)
 	if err != nil {
 		panic(err)
 	}
-	return &downCounter{
-		title:    title,
+	c := &downCounter{
 		duration: duration,
 		silent:   silent,
 	}
+	c.basicDisplay = basicDisplay
+	return c
 }
 
 func (c *downCounter) remaining() time.Duration {
@@ -86,10 +86,9 @@ func (c *downCounter) remaining() time.Duration {
 
 func (c *downCounter) display() []string {
 	var d []string
-	d = append(d, c.title)
-	d = append(d, inSeconds(c.elapsed))
+	d = append(d, inSeconds(c.duration))
 	d = append(d, inSeconds(c.remaining()))
-	d = append(d, c.extraDisplay...)
+	d = append(d, c.basicDisplay...)
 	return d
 }
 
@@ -106,39 +105,7 @@ func (c *downCounter) finish() {
 func (c *downCounter) getRecord() *CounterRecord {
 	return &CounterRecord{
 		Mode:    downMode,
-		Title:   c.title,
-		Elapsed: c.elapsed,
-		Paused:  c.paused,
-	}
-}
-
-// Counts up - like a stopwatch
-type upCounter struct {
-	title string
-	counterData
-}
-
-func newUpCounter(title string) counter {
-	return &upCounter{
-		title: title,
-	}
-}
-
-func (c *upCounter) display() []string {
-	return []string{c.title, inSeconds(c.elapsed)}
-}
-
-func (c *upCounter) finished() bool {
-	return false
-}
-
-func (c *upCounter) finish() {
-}
-
-func (c *upCounter) getRecord() *CounterRecord {
-	return &CounterRecord{
-		Mode:    upMode,
-		Title:   c.title,
+		Display: c.basicDisplay,
 		Elapsed: c.elapsed,
 		Paused:  c.paused,
 	}

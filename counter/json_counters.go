@@ -6,7 +6,6 @@ import (
 )
 
 const (
-	upMode    = "UP"
 	downMode  = "DOWN"
 	pauseMode = "PAUSE"
 )
@@ -15,16 +14,16 @@ type jsonCounter struct {
 	Mode     string
 	Title    string
 	Duration string
+	Tab      string
 }
 
-func (c *jsonCounter) Generate(title string) counter {
+func (c *jsonCounter) Generate(basicDisplay []string) counter {
 	switch c.Mode {
-	case upMode:
-		return newUpCounter(c.Title)
 	case downMode:
-		return newDownCounter(c.Title, c.Duration, false)
+		return newDownCounter(basicDisplay, c.Duration, false)
 	case pauseMode:
-		return newDownCounter("Up Next: "+title, c.Duration, true)
+		basicDisplay[0] = "Up Next: " + basicDisplay[0]
+		return newDownCounter(basicDisplay, c.Duration, true)
 	default:
 		log.Fatalf("Bad mode: %+v", c)
 		return nil
@@ -50,8 +49,8 @@ func (cs *multiCounters) countdown() *CountersSummary {
 func (cs *multiCounters) generateCounters() []counter {
 	var counters []counter
 	for _, c := range cs.Counters {
-		genPause := cs.Pause.Generate(c.Title)
-		genCounter := c.Generate("")
+		genPause := cs.Pause.Generate([]string{c.Title})
+		genCounter := c.Generate([]string{c.Title})
 		counters = append(counters, genPause)
 		counters = append(counters, genCounter)
 	}
@@ -86,7 +85,7 @@ type CountersSummary struct {
 
 type CounterRecord struct {
 	Mode    string
-	Title   string
+	Display []string
 	Elapsed time.Duration
 	Paused  time.Duration
 }
