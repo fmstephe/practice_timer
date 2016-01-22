@@ -24,6 +24,7 @@
 	{"Title": "Where Is My Mind - C,Am,E,F Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Minor Pentatonic, All Positions, Fret 9", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"},
+	{"Title": "Creep Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "St James Infirmary - Am,E,Am|Am,Dm,E|Am,E,Am|Dm,E,Am Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
@@ -33,6 +34,7 @@
 	{"Title": "St James Infirmary - Am,E,Am|Am,Dm,E|Am,E,Am|Dm,E,Am Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Minor Pentatonic, All Positions, Fret 3", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"}
+	{"Title": "C#m,B,G#m,A Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 		]
 }

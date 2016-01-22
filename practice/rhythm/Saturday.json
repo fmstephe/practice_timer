@@ -24,6 +24,7 @@
 	{"Title": "G,C,G,C,G,C,D,Fmaj7,Am,C Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Minor Pentatonic, All Positions, Fret 9", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"},
+	{"Title": "Hallelujah Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Baby One More Time - Am,E,C,Dm,E Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
@@ -33,6 +34,7 @@
 	{"Title": "Baby One More Time - Am,E,C,Dm,E Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Minor Pentatonic, All Positions, Fret 3", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"}
+	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 		]
 }

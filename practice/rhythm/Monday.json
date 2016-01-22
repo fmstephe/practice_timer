@@ -24,6 +24,7 @@
 	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Major Arpeggio, Position 1, Fret 9", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"},
+	{"Title": "Creep Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Killing Me Softly Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
@@ -33,6 +34,7 @@
 	{"Title": "Killing Me Softly Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Major Arpeggio, Position 1, Fret 3", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"}
+	{"Title": "C#m,B,G#m,A Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 		]
 }
