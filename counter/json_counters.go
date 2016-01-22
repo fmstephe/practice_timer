@@ -3,6 +3,8 @@ package main
 import (
 	"log"
 	"time"
+
+	"github.com/fmstephe/countdown/tab"
 )
 
 const (
@@ -49,10 +51,17 @@ func (cs *multiCounters) countdown() *CountersSummary {
 func (cs *multiCounters) generateCounters() []counter {
 	var counters []counter
 	for _, c := range cs.Counters {
-		genPause := cs.Pause.Generate([]string{c.Title})
-		genCounter := c.Generate([]string{c.Title})
-		counters = append(counters, genPause)
-		counters = append(counters, genCounter)
+		if c.Tab == "" {
+			genPause := cs.Pause.Generate([]string{c.Title})
+			genCounter := c.Generate([]string{c.Title})
+			counters = append(counters, genPause)
+			counters = append(counters, genCounter)
+		} else {
+			genPause := cs.Pause.Generate([]string{c.Title, tab.ExpandMotif(c.Tab)})
+			genCounter := c.Generate([]string{c.Title, tab.ExpandMotif(c.Tab)})
+			counters = append(counters, genPause)
+			counters = append(counters, genCounter)
+		}
 	}
 	return counters
 }
