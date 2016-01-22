@@ -132,3 +132,8 @@ func ParseMotif(motifStr string) Motif {
 	}
 	return m
 }
+
+func ExpandMotif(motifStr string) string {
+	motif := ParseMotif(motifStr)
+	return motif.String()
+}
