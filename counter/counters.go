@@ -41,9 +41,10 @@ func (c *nilCounter) getRecord() *CounterRecord {
 
 // Some common mutable data for counters
 type counterData struct {
-	elapsed time.Duration
-	paused  time.Duration
-	silent  bool
+	elapsed      time.Duration
+	paused       time.Duration
+	extraDisplay []string
+	silent       bool
 }
 
 func (d *counterData) restart() {
@@ -84,7 +85,12 @@ func (c *downCounter) remaining() time.Duration {
 }
 
 func (c *downCounter) display() []string {
-	return []string{c.title, inSeconds(c.elapsed), inSeconds(c.remaining())}
+	var d []string
+	d = append(d, c.title)
+	d = append(d, inSeconds(c.elapsed))
+	d = append(d, inSeconds(c.remaining()))
+	d = append(d, c.extraDisplay...)
+	return d
 }
 
 func (c *downCounter) finished() bool {
