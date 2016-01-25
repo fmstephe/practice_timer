@@ -67,18 +67,18 @@ func (cs *multiCounters) summarise(totalClock time.Duration, counters []counter)
 		records = append(records, r)
 	}
 	summary := &CountersSummary{
-		TotalElapsed: totalElapsed,
-		TotalPaused:  totalPaused,
-		TotalClock:   totalClock,
+		TotalElapsed: inSeconds(totalElapsed),
+		TotalPaused:  inSeconds(totalPaused),
+		TotalClock:   inSeconds(totalClock),
 		Counters:     records,
 	}
 	return summary
 }
 
 type CountersSummary struct {
-	TotalClock   time.Duration
-	TotalElapsed time.Duration
-	TotalPaused  time.Duration
+	TotalClock   string
+	TotalElapsed string
+	TotalPaused  string
 	Counters     []*CounterRecord
 }
 
