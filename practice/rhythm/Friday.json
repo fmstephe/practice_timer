@@ -25,6 +25,7 @@
 	{"Title": "Minor Scale, All Positions, Fret 9", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"},
 	{"Title": "Creep Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Working Class Hero, 3/4 Time - Am,Am,G|Am,G,D Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Sitting On The Dock Of The Bay - G,B7,C,A|G,E Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
@@ -35,6 +36,7 @@
 	{"Title": "Minor Scale, All Positions, Fret 3", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"},
 	{"Title": "C#m,B,G#m,A Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"}
+	{"Title": "Sitting On The Dock Of The Bay - G,B7,C,A|G,E Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 		]
 }

@@ -25,6 +25,7 @@
 	{"Title": "Minor Scale, All Positions, Fret 9", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"},
 	{"Title": "Hallelujah Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Hey Joe Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "House Of The Rising Sun Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
@@ -35,6 +36,7 @@
 	{"Title": "Minor Scale, All Positions, Fret 3", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"},
 	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"}
+	{"Title": "House Of The Rising Sun Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 		]
 }

@@ -25,6 +25,7 @@
 	{"Title": "{{.SingleNote5}}", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"},
 	{"Title": "{{.Barre1}} Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "{{.NeckRhythm1}} Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 	{"Title": "{{.Barre2}} Barre Downstrums", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "{{.NeckRhythm2}} Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
@@ -35,6 +36,7 @@
 	{"Title": "{{.SingleNote7}}", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises", "Duration":"1m", "MODE": "DOWN"},
 	{"Title": "{{.Barre2}} Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"}
+	{"Title": "{{.NeckRhythm2}} Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 		]
 }
