@@ -62,9 +62,11 @@ func (cs *multiCounters) summarise(totalClock time.Duration, counters []counter)
 	var totalPaused time.Duration
 	for _, c := range counters {
 		r := c.getRecord()
-		totalElapsed = totalElapsed + r.Elapsed
-		totalPaused = totalPaused + r.Paused
-		records = append(records, r)
+		if r.Elapsed+r.Paused > time.Second {
+			totalElapsed = totalElapsed + r.Elapsed
+			totalPaused = totalPaused + r.Paused
+			records = append(records, r)
+		}
 	}
 	summary := &CountersSummary{
 		TotalElapsed: inSeconds(totalElapsed),
