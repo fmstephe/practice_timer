@@ -8,7 +8,6 @@ type leadSession struct {
 	Riff1         string
 	Riff2         string
 	Riff3         string
-	Riff4         string
 	Classical1    string
 	Classical2    string
 	Classical3    string
@@ -24,8 +23,6 @@ type leadSession struct {
 	ChordChanges4 string
 	ChordChanges5 string
 	ChordChanges6 string
-	ChordChanges7 string
-	ChordChanges8 string
 }
 
 func generateLead() {
@@ -38,7 +35,6 @@ func generateLead() {
 		sds[i].Riff1 = riffs.next()
 		sds[i].Riff2 = riffs.next()
 		sds[i].Riff3 = riffs.next()
-		sds[i].Riff4 = riffs.next()
 		sds[i].Classical1 = classical.next()
 		sds[i].Classical2 = classical.next()
 		sds[i].Classical3 = classical.next()
@@ -54,8 +50,6 @@ func generateLead() {
 		sds[i].ChordChanges4 = chordChanges.next()
 		sds[i].ChordChanges5 = chordChanges.next()
 		sds[i].ChordChanges6 = chordChanges.next()
-		sds[i].ChordChanges7 = chordChanges.next()
-		sds[i].ChordChanges8 = chordChanges.next()
 	}
 	for i := range sds {
 		applyTemplate(sds[i], "lead", time.Weekday(i))

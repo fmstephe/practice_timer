@@ -32,16 +32,7 @@
 	{"Title": "{{.ChordChanges5}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
 	{"Title": "{{.ClassicalLong}}", "Duration": "4m", "MODE": "DOWN"},
-	{"Title": "{{.ChordChanges6}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
-
-	{{.Riff4}},
-	{{.Riff4}},
-	{{.Riff4}},
-	{{.Riff4}},
-	{"Title": "{{.ChordChanges7}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
-
-	{"Title": "{{.ClassicalLong}}", "Duration": "4m", "MODE": "DOWN"},
-	{"Title": "{{.ChordChanges8}} Chord Changes", "Duration": "1m", "MODE": "DOWN"}
+	{"Title": "{{.ChordChanges6}} Chord Changes", "Duration": "1m", "MODE": "DOWN"}
 
 		]
 }
