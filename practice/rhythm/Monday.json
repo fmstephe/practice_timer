@@ -16,14 +16,14 @@
 	{"Title": "Major Arpeggio, Position 1, Fret 5", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Fret Jumping Exercises String 6", "Duration":"2m", "MODE": "DOWN"},
 
-	{"Title": "Hey Joe Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Killing Me Softly Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Hey Joe Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Major Arpeggio, Position 1, Fret 1", "Duration":"3m", "MODE": "DOWN"},
-	{"Title": "Hey Joe Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Killing Me Softly Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Hey Joe Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Major Arpeggio, Position 1, Fret 9", "Duration":"3m", "MODE": "DOWN"},
-	{"Title": "Hey Joe Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Killing Me Softly Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
+	{"Title": "Hey Joe Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
 
 	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "House Of The Rising Sun Neck Downstrums", "Duration": "2m", "MODE": "DOWN"},
