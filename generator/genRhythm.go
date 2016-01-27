@@ -15,13 +15,13 @@ type rhythmSession struct {
 	TwoChordRhythm2 string
 	SingleNote3     string
 	//
-	Barre1      string
 	NeckRhythm1 string
+	NeckRhythm2 string
 	SingleNote4 string
 	SingleNote5 string
 	//
-	Barre2      string
-	NeckRhythm2 string
+	Barre1      string
+	NeckRhythm3 string
 	SingleNote6 string
 	SingleNote7 string
 }
@@ -46,13 +46,13 @@ func generateRhythm() {
 		sds[i].TwoChordRhythm2 = twoChordRhythm.next()
 		sds[i].SingleNote3 = singleNote.next()
 		//
-		sds[i].Barre1 = barre.next()
 		sds[i].NeckRhythm1 = neckRhythm.next()
+		sds[i].NeckRhythm2 = neckRhythm.next()
 		sds[i].SingleNote4 = singleNote.next()
 		sds[i].SingleNote5 = singleNote.next()
 		//
-		sds[i].Barre2 = barre.next()
-		sds[i].NeckRhythm2 = neckRhythm.next()
+		sds[i].Barre1 = barre.next()
+		sds[i].NeckRhythm3 = neckRhythm.next()
 		sds[i].SingleNote6 = singleNote.next()
 		sds[i].SingleNote7 = singleNote.next()
 	}
