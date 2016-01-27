@@ -1,38 +1,38 @@
 {"Pause": {"Duration": "15s", "Mode": "PAUSE"},
 	"Counters" : [
 
-	{{.Riff1}},
-	{{.Riff1}},
-	{{.Riff1}},
-	{{.Riff1}},
-	{"Title": "{{.ChordChanges1}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{{.riff1}},
+	{{.riff1}},
+	{{.riff1}},
+	{{.riff1}},
+	{"Title": "{{.chordChanges1}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
-	{"Title": "{{.Classical1}}", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "{{.Classical2}}", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "{{.Classical3}}", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "{{.Classical4}}", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "{{.ChordChanges2}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.classical1}}", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.classical2}}", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.classical3}}", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.classical4}}", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.chordChanges2}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
-	{{.Riff2}},
-	{{.Riff2}},
-	{{.Riff2}},
-	{{.Riff2}},
-	{"Title": "{{.ChordChanges3}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{{.riff2}},
+	{{.riff2}},
+	{{.riff2}},
+	{{.riff2}},
+	{"Title": "{{.chordChanges3}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
-	{"Title": "{{.Classical5}}", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "{{.Classical6}}", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "{{.Classical7}}", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "{{.Classical8}}", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "{{.ChordChanges4}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.classical5}}", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.classical6}}", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.classical7}}", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.classical8}}", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "{{.chordChanges4}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
-	{{.Riff3}},
-	{{.Riff3}},
-	{{.Riff3}},
-	{{.Riff3}},
-	{"Title": "{{.ChordChanges5}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{{.riff3}},
+	{{.riff3}},
+	{{.riff3}},
+	{{.riff3}},
+	{"Title": "{{.chordChanges5}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
-	{"Title": "{{.ClassicalLong}}", "Duration": "4m", "MODE": "DOWN"},
-	{"Title": "{{.ChordChanges6}} Chord Changes", "Duration": "1m", "MODE": "DOWN"}
+	{"Title": "{{.classicalLong}}", "Duration": "4m", "MODE": "DOWN"},
+	{"Title": "{{.chordChanges6}} Chord Changes", "Duration": "1m", "MODE": "DOWN"}
 
 		]
 }
