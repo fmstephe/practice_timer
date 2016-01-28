@@ -25,10 +25,6 @@
 	{"Title": "{{.classical8}}", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "{{.chordChanges4}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
-	{{.riff3}},
-	{{.riff3}},
-	{{.riff3}},
-	{{.riff3}},
 	{"Title": "{{.chordChanges5}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
 	{"Title": "{{.classicalLong}}", "Duration": "4m", "MODE": "DOWN"},

@@ -1,10 +1,10 @@
 {"Pause": {"Duration": "15s", "Mode": "PAUSE"},
 	"Counters" : [
 
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "Dm,B7 Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
 	{"Title": "Prelude In C Major Bar 1", "Duration": "1m", "MODE": "DOWN"},
@@ -13,10 +13,10 @@
 	{"Title": "Prelude In C Major Bar 4", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "D,Dm Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
-	{"Title": "Blues Lick 3 - Freddy King", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Blues Lick 3 - Freddy King", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Blues Lick 3 - Freddy King", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Blues Lick 3 - Freddy King", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Blues Lick 1 - Stevie Ray Vaughn", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Blues Lick 1 - Stevie Ray Vaughn", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Blues Lick 1 - Stevie Ray Vaughn", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Blues Lick 1 - Stevie Ray Vaughn", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "D,Am Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
 	{"Title": "Prelude In C Major Bar 5", "Duration": "1m", "MODE": "DOWN"},
@@ -25,10 +25,6 @@
 	{"Title": "Prelude In C Major Bar 8", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "A,B7 Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
-	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "D,C Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
 	{"Title": "Prelude In G Minor", "Duration": "4m", "MODE": "DOWN"},
