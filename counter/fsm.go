@@ -18,7 +18,7 @@ func (cs *fsmCounters) current() counter {
 }
 
 func (cs *fsmCounters) display() []string {
-	disp := []string{strconv.Itoa(cs.idx+1) + " of " + strconv.Itoa(len(cs.counters))}
+	disp := []string{strconv.Itoa((cs.idx+2)/2) + " of " + strconv.Itoa(len(cs.counters)/2)}
 	disp = append(disp, cs.current().display()...)
 	return disp
 }
