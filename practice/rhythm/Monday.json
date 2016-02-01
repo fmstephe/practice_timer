@@ -1,6 +1,8 @@
 {"Pause": {"Duration": "15s", "Mode": "PAUSE"},
 	"Counters" : [
 
+	{"Title": "Warm up", "Duration": "3m", "MODE": "DOWN"},
+
 	{"Title": "Am Rhythm", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "Dm Rhythm", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "Major Arpeggio, Position 1, Fret 7", "Duration":"3m", "MODE": "DOWN"},

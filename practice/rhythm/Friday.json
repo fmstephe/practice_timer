@@ -1,6 +1,8 @@
 {"Pause": {"Duration": "15s", "Mode": "PAUSE"},
 	"Counters" : [
 
+	{"Title": "Warm up", "Duration": "3m", "MODE": "DOWN"},
+
 	{"Title": "A Rhythm", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "D Rhythm", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "Minor Scale, All Positions, Fret 7", "Duration":"3m", "MODE": "DOWN"},

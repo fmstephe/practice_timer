@@ -1,6 +1,8 @@
 {"Pause": {"Duration": "15s", "Mode": "PAUSE"},
 	"Counters" : [
 
+	{"Title": "Warm up", "Duration": "3m", "MODE": "DOWN"},
+
 	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},

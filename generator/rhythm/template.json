@@ -1,6 +1,8 @@
 {"Pause": {"Duration": "15s", "Mode": "PAUSE"},
 	"Counters" : [
 
+	{"Title": "Warm up", "Duration": "3m", "MODE": "DOWN"},
+
 	{"Title": "{{.oneChordRhythm1}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "{{.oneChordRhythm2}} Rhythm", "Duration": "1m", "MODE": "DOWN"},
 	{"Title": "{{.singleNote1}}", "Duration":"3m", "MODE": "DOWN"},

@@ -1,6 +1,8 @@
 {"Pause": {"Duration": "15s", "Mode": "PAUSE"},
 	"Counters" : [
 
+	{"Title": "Warm up", "Duration": "3m", "MODE": "DOWN"},
+
 	{{.riff1}},
 	{{.riff1}},
 	{{.riff1}},
