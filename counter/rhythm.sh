@@ -1,2 +1,2 @@
 #!/bin/bash
-go build && ./counter -rod
+go build && ./counter -dow ../practice/rhythm/

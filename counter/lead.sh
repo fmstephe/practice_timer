@@ -1,2 +1,2 @@
 #!/bin/bash
-go build && ./counter -lod
+go build && ./counter -dow ../practice/lead
