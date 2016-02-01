@@ -6,13 +6,8 @@ import (
 	"github.com/fmstephe/countdown/tab"
 )
 
-const (
-	downMode  = "DOWN"
-	pauseMode = "PAUSE"
-)
-
 type jsonCounter struct {
-	Mode     string
+	IsRest   bool
 	Title    string
 	Duration string
 	Tab      string
@@ -23,10 +18,10 @@ func (c *jsonCounter) Generate(title, tabStr string) counter {
 	if tabStr != "" {
 		displayTab = tab.ExpandMotif(tabStr)
 	}
-	if c.Mode == pauseMode {
+	if c.IsRest {
 		title = "Up Next: " + title
 	}
-	return newDownCounter([]string{title, displayTab}, c.Duration, false)
+	return newDownCounter([]string{title, displayTab}, c.Duration, false, c.IsRest)
 }
 
 type multiCounters struct {
@@ -61,6 +56,9 @@ func (cs *multiCounters) summarise(totalClock time.Duration, counters []counter)
 	var totalElapsed time.Duration
 	var totalPaused time.Duration
 	for _, c := range counters {
+		if c.isRest() {
+			continue
+		}
 		rs := c.getRecords()
 		for _, r := range rs {
 			totalElapsed = totalElapsed + r.Elapsed

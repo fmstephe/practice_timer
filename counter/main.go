@@ -26,7 +26,7 @@ func main() {
 }
 
 func simple() {
-	c := newDownCounter([]string{*title}, *duration, false)
+	c := newDownCounter([]string{*title}, *duration, false, false)
 	fsmC := &fsmCounters{
 		counters: []counter{c},
 	}
