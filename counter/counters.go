@@ -4,12 +4,11 @@ import "time"
 
 type counter interface {
 	display() []string
-	restart()
 	addElapsed(time.Duration)
 	addPause(time.Duration)
-	finish()
+	finish(silent bool)
 	finished() bool
-	getRecord() *CounterRecord
+	getRecords() CounterRecords
 }
 
 type nilCounter struct {
@@ -19,52 +18,34 @@ func (c *nilCounter) display() []string {
 	return []string{}
 }
 
-func (c *nilCounter) restart() {
-}
-
 func (c *nilCounter) addElapsed(gap time.Duration) {
 }
 
 func (c *nilCounter) addPause(gap time.Duration) {
 }
 
-func (c *nilCounter) finish() {
+func (c *nilCounter) finish(silent bool) {
 }
 
 func (c *nilCounter) finished() bool {
 	return true
 }
 
-func (c *nilCounter) getRecord() *CounterRecord {
+func (c *nilCounter) getRecords() CounterRecords {
 	return nil
-}
-
-// Some common mutable data for counters
-type counterData struct {
-	elapsed      time.Duration
-	paused       time.Duration
-	basicDisplay []string
-	silent       bool
-}
-
-func (d *counterData) restart() {
-	d.elapsed = 0
-	d.paused = 0
-}
-
-func (d *counterData) addPause(gap time.Duration) {
-	d.paused += gap
-}
-
-func (d *counterData) addElapsed(gap time.Duration) {
-	d.elapsed += gap
 }
 
 // Counts down - like a timer
 type downCounter struct {
-	duration time.Duration
-	silent   bool
-	counterData
+	// Config
+	duration     time.Duration
+	silent       bool
+	basicDisplay []string
+	// Current State
+	elapsed time.Duration
+	paused  time.Duration
+	// Recorded State
+	records CounterRecords
 }
 
 func newDownCounter(basicDisplay []string, durationStr string, silent bool) counter {
@@ -78,6 +59,14 @@ func newDownCounter(basicDisplay []string, durationStr string, silent bool) coun
 	}
 	c.basicDisplay = basicDisplay
 	return c
+}
+
+func (c *downCounter) addPause(gap time.Duration) {
+	c.paused += gap
+}
+
+func (c *downCounter) addElapsed(gap time.Duration) {
+	c.elapsed += gap
 }
 
 func (c *downCounter) remaining() time.Duration {
@@ -96,17 +85,24 @@ func (c *downCounter) finished() bool {
 	return c.elapsed > c.duration
 }
 
-func (c *downCounter) finish() {
-	if !c.silent {
+func (c *downCounter) finish(silent bool) {
+	if !silent && !c.silent {
 		playSound()
 	}
+	if c.elapsed+c.paused > time.Second {
+		record := &CounterRecord{
+			Title:   c.basicDisplay[0],
+			Elapsed: c.elapsed,
+			Paused:  c.paused,
+		}
+		c.records = append(c.records, record)
+	}
+	c.elapsed = 0
+	c.paused = 0
 }
 
-func (c *downCounter) getRecord() *CounterRecord {
-	return &CounterRecord{
-		Mode:    downMode,
-		Display: c.basicDisplay,
-		Elapsed: c.elapsed,
-		Paused:  c.paused,
-	}
+func (c *downCounter) getRecords() CounterRecords {
+	records := make(CounterRecords, len(c.records))
+	copy(records, c.records)
+	return records
 }

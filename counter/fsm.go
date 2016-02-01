@@ -24,15 +24,17 @@ func (cs *fsmCounters) display() []string {
 }
 
 func (cs *fsmCounters) restart() {
-	cs.current().restart()
+	cs.current().finish(true)
 }
 
 func (cs *fsmCounters) next() {
+	cs.current().finish(true)
 	cs.idx++
 	cs.restart()
 }
 
 func (cs *fsmCounters) prev() {
+	cs.current().finish(true)
 	cs.idx--
 	if cs.idx < 0 {
 		cs.idx = 0
@@ -49,6 +51,7 @@ func (cs *fsmCounters) addPause(gap time.Duration) {
 }
 
 func (cs *fsmCounters) quit() {
+	cs.current().finish(true)
 	cs.idx = len(cs.counters)
 }
 
@@ -57,7 +60,7 @@ func (cs *fsmCounters) finished() bool {
 		return true
 	}
 	if cs.current().finished() {
-		cs.current().finish()
+		cs.current().finish(false)
 		cs.idx++
 	}
 	return cs.idx >= len(cs.counters)

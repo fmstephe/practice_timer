@@ -44,7 +44,7 @@ func fromFile(fileName string) {
 		log.Fatal(err)
 	}
 	records := counters.countdown()
-	bytes, err = json.Marshal(records)
+	bytes, err = json.MarshalIndent(records, "", "\t")
 	if err != nil {
 		log.Fatal(err)
 	}
