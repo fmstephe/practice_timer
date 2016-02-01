@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"io/ioutil"
 	"log"
 	"os"
@@ -10,9 +11,13 @@ import (
 	"time"
 )
 
+var (
+	path = flag.String("p", "./", "Path to directory with template.json and data files")
+)
+
 func main() {
-	applyTemplate("rhythm")
-	applyTemplate("lead")
+	flag.Parse()
+	applyTemplate(*path)
 }
 
 func applyTemplate(category string) string {
