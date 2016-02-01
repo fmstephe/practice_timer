@@ -30,7 +30,10 @@
 	{"Title": "C,B7 Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
 	{"Title": "Prelude In C Major", "Duration": "4m", "MODE": "DOWN"},
-	{"Title": "G,B7 Chord Changes", "Duration": "1m", "MODE": "DOWN"}
+	{"Title": "G,B7 Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "Rubber Band Exercises", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Warm Down", "Duration": "1m", "MODE": "DOWN"}
 
 		]
 }

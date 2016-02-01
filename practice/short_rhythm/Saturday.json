@@ -12,7 +12,9 @@
 	{"Title": "G,C  Rhythm", "Duration": "30s", "MODE": "DOWN"},
 	{"Title": "G,D  Rhythm", "Duration": "30s", "MODE": "DOWN"},
 	{"Title": "F,Am Rhythm", "Duration": "30s", "MODE": "DOWN"},
-	{"Title": "F,D  Rhythm", "Duration": "30s", "MODE": "DOWN"}
+	{"Title": "F,D  Rhythm", "Duration": "30s", "MODE": "DOWN"},
+
+	{"Title": "Warm Down", "Duration": "1m", "MODE": "DOWN"}
 
 		]
 }

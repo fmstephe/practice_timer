@@ -30,7 +30,10 @@
 	{"Title": "A,Fmaj7 Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
 	{"Title": "Jesu", "Duration": "4m", "MODE": "DOWN"},
-	{"Title": "F,Fmaj7 Chord Changes", "Duration": "1m", "MODE": "DOWN"}
+	{"Title": "F,Fmaj7 Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "Rubber Band Exercises", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Warm Down", "Duration": "1m", "MODE": "DOWN"}
 
 		]
 }

@@ -30,7 +30,10 @@
 	{"Title": "D,G Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
 	{"Title": "Prelude In G Minor", "Duration": "4m", "MODE": "DOWN"},
-	{"Title": "D,A7 Chord Changes", "Duration": "1m", "MODE": "DOWN"}
+	{"Title": "D,A7 Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "Rubber Band Exercises", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Warm Down", "Duration": "1m", "MODE": "DOWN"}
 
 		]
 }

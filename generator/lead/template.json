@@ -30,7 +30,10 @@
 	{"Title": "{{.chordChanges5}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
 
 	{"Title": "{{.classicalLong}}", "Duration": "4m", "MODE": "DOWN"},
-	{"Title": "{{.chordChanges6}} Chord Changes", "Duration": "1m", "MODE": "DOWN"}
+	{"Title": "{{.chordChanges6}} Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+
+	{"Title": "Rubber Band Exercises", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Warm Down", "Duration": "1m", "MODE": "DOWN"}
 
 		]
 }

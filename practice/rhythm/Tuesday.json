@@ -34,7 +34,10 @@
 	{"Title": "Louie Louie - A,D,Em,D Neck Rhythm", "Duration": "2m", "MODE": "DOWN"},
 	{"Title": "Minor Scale, All Positions, Fret 3", "Duration":"3m", "MODE": "DOWN"},
 	{"Title": "Creep Barre Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
-	{"Title": "Louie Louie - A,D,Em,D Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"}
+	{"Title": "Louie Louie - A,D,Em,D Neck Rhythm No Pick", "Duration": "2m", "MODE": "DOWN"},
+
+	{"Title": "Rubber Band Exercises", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Warm Down", "Duration": "1m", "MODE": "DOWN"}
 
 		]
 }
