@@ -32,7 +32,7 @@ func (c *nilCounter) finished() bool {
 }
 
 func (c *nilCounter) getRecords() CounterRecords {
-	return nil
+	return CounterRecords{}
 }
 
 // Counts down - like a timer
@@ -45,7 +45,7 @@ type downCounter struct {
 	elapsed time.Duration
 	paused  time.Duration
 	// Recorded State
-	records CounterRecords
+	times []TimeRecord
 }
 
 func newDownCounter(basicDisplay []string, durationStr string, silent bool) counter {
@@ -90,19 +90,22 @@ func (c *downCounter) finish(silent bool) {
 		playSound()
 	}
 	if c.elapsed+c.paused > time.Second {
-		record := &CounterRecord{
-			Title:   c.basicDisplay[0],
+		time := TimeRecord{
 			Elapsed: c.elapsed,
 			Paused:  c.paused,
 		}
-		c.records = append(c.records, record)
+		c.times = append(c.times, time)
 	}
 	c.elapsed = 0
 	c.paused = 0
 }
 
 func (c *downCounter) getRecords() CounterRecords {
-	records := make(CounterRecords, len(c.records))
-	copy(records, c.records)
+	times := make([]TimeRecord, len(c.times))
+	copy(times, c.times)
+	records := CounterRecords{
+		Title: c.basicDisplay[0],
+		Times: times,
+	}
 	return records
 }

@@ -53,11 +53,11 @@ func (cs *multiCounters) summarise(totalClock time.Duration, counters []counter)
 	var totalPaused time.Duration
 	for i, c := range counters {
 		rs := c.getRecords()
-		for _, r := range rs {
-			totalElapsed = totalElapsed + r.Elapsed
-			totalPaused = totalPaused + r.Paused
+		for _, t := range rs.Times {
+			totalElapsed = totalElapsed + t.Elapsed
+			totalPaused = totalPaused + t.Paused
 		}
-		if len(rs) > 0 && i%2 != 0 {
+		if len(rs.Times) > 0 && i%2 != 0 {
 			records = append(records, rs)
 		}
 	}
@@ -77,10 +77,12 @@ type CountersSummary struct {
 	TotalPaused  string
 }
 
-type CounterRecords []*CounterRecord
+type CounterRecords struct {
+	Title string
+	Times []TimeRecord
+}
 
-type CounterRecord struct {
-	Title   string
+type TimeRecord struct {
 	Elapsed time.Duration
 	Paused  time.Duration
 }
