@@ -4,7 +4,6 @@ import "time"
 
 type counter interface {
 	display() []string
-	isRest() bool
 	addElapsed(time.Duration)
 	addPause(time.Duration)
 	finish(silent bool)
@@ -17,10 +16,6 @@ type nilCounter struct {
 
 func (c *nilCounter) display() []string {
 	return []string{}
-}
-
-func (c *nilCounter) isRest() bool {
-	return false
 }
 
 func (c *nilCounter) addElapsed(gap time.Duration) {
@@ -45,7 +40,6 @@ type downCounter struct {
 	// Config
 	duration     time.Duration
 	silent       bool
-	rest         bool
 	basicDisplay []string
 	// Current State
 	elapsed time.Duration
@@ -54,7 +48,7 @@ type downCounter struct {
 	records CounterRecords
 }
 
-func newDownCounter(basicDisplay []string, durationStr string, silent, rest bool) counter {
+func newDownCounter(basicDisplay []string, durationStr string, silent bool) counter {
 	duration, err := time.ParseDuration(durationStr)
 	if err != nil {
 		panic(err)
@@ -62,7 +56,6 @@ func newDownCounter(basicDisplay []string, durationStr string, silent, rest bool
 	c := &downCounter{
 		duration: duration,
 		silent:   silent,
-		rest:     rest,
 	}
 	c.basicDisplay = basicDisplay
 	return c
@@ -78,10 +71,6 @@ func (c *downCounter) addElapsed(gap time.Duration) {
 
 func (c *downCounter) remaining() time.Duration {
 	return c.duration - c.elapsed + time.Second
-}
-
-func (c *downCounter) isRest() bool {
-	return c.rest
 }
 
 func (c *downCounter) display() []string {

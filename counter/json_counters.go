@@ -7,7 +7,6 @@ import (
 )
 
 type jsonCounter struct {
-	IsRest   bool
 	Title    string
 	Duration string
 	Tab      string
@@ -18,10 +17,7 @@ func (c *jsonCounter) Generate(title, tabStr string) counter {
 	if tabStr != "" {
 		displayTab = tab.ExpandMotif(tabStr)
 	}
-	if c.IsRest {
-		title = "Up Next: " + title
-	}
-	return newDownCounter([]string{title, displayTab}, c.Duration, false, c.IsRest)
+	return newDownCounter([]string{title, displayTab}, c.Duration, false)
 }
 
 type multiCounters struct {
@@ -43,7 +39,7 @@ func (cs *multiCounters) countdown() *CountersSummary {
 func (cs *multiCounters) generateCounters() []counter {
 	var counters []counter
 	for _, c := range cs.Counters {
-		genPause := cs.Pause.Generate(c.Title, c.Tab)
+		genPause := cs.Pause.Generate("Up Next: "+c.Title, c.Tab)
 		genCounter := c.Generate(c.Title, c.Tab)
 		counters = append(counters, genPause)
 		counters = append(counters, genCounter)
@@ -55,16 +51,13 @@ func (cs *multiCounters) summarise(totalClock time.Duration, counters []counter)
 	var records []CounterRecords
 	var totalElapsed time.Duration
 	var totalPaused time.Duration
-	for _, c := range counters {
-		if c.isRest() {
-			continue
-		}
+	for i, c := range counters {
 		rs := c.getRecords()
 		for _, r := range rs {
 			totalElapsed = totalElapsed + r.Elapsed
 			totalPaused = totalPaused + r.Paused
 		}
-		if len(rs) > 0 {
+		if len(rs) > 0 && i%2 != 0 {
 			records = append(records, rs)
 		}
 	}
@@ -78,10 +71,10 @@ func (cs *multiCounters) summarise(totalClock time.Duration, counters []counter)
 }
 
 type CountersSummary struct {
+	Counters     []CounterRecords
 	TotalClock   string
 	TotalElapsed string
 	TotalPaused  string
-	Counters     []CounterRecords
 }
 
 type CounterRecords []*CounterRecord
