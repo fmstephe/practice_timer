@@ -1,39 +1,39 @@
-{"Pause": {"Duration": "15s", "Mode": "PAUSE"},
+{"Pause": {"Duration": "15s"},
 	"Counters" : [
 
-	{"Title": "Warm up", "Duration": "3m", "MODE": "DOWN"},
+	{"Title": "Warm up", "Duration": "3m"},
 
-	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Black Dog Part I", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "A,F Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Black Dog Part I", "Duration": "1m"},
+	{"Title": "Black Dog Part I", "Duration": "1m"},
+	{"Title": "Black Dog Part I", "Duration": "1m"},
+	{"Title": "Black Dog Part I", "Duration": "1m"},
+	{"Title": "A,F Chord Changes", "Duration": "1m"},
 
-	{"Title": "Prelude In C Major Bar 1", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Prelude In C Major Bar 2", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Prelude In C Major Bar 3", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Prelude In C Major Bar 4", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Dm,Fm Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Prelude In C Major Bar 1", "Duration": "1m"},
+	{"Title": "Prelude In C Major Bar 2", "Duration": "1m"},
+	{"Title": "Prelude In C Major Bar 3", "Duration": "1m"},
+	{"Title": "Prelude In C Major Bar 4", "Duration": "1m"},
+	{"Title": "Dm,Fm Chord Changes", "Duration": "1m"},
 
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Dm,C Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m"},
+	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m"},
+	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m"},
+	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m"},
+	{"Title": "Dm,C Chord Changes", "Duration": "1m"},
 
-	{"Title": "Prelude In C Major Bar 5", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Prelude In C Major Bar 6", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Prelude In C Major Bar 7", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Prelude In C Major Bar 8", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "G,F7 Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Prelude In C Major Bar 5", "Duration": "1m"},
+	{"Title": "Prelude In C Major Bar 6", "Duration": "1m"},
+	{"Title": "Prelude In C Major Bar 7", "Duration": "1m"},
+	{"Title": "Prelude In C Major Bar 8", "Duration": "1m"},
+	{"Title": "G,F7 Chord Changes", "Duration": "1m"},
 
-	{"Title": "G,Fm Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "G,Fm Chord Changes", "Duration": "1m"},
 
-	{"Title": "Prelude In C Major", "Duration": "4m", "MODE": "DOWN"},
-	{"Title": "Dm,C7 Chord Changes", "Duration": "1m", "MODE": "DOWN"},
+	{"Title": "Prelude In C Major", "Duration": "4m"},
+	{"Title": "Dm,C7 Chord Changes", "Duration": "1m"},
 
-	{"Title": "Rubber Band Exercises", "Duration": "1m", "MODE": "DOWN"},
-	{"Title": "Warm Down", "Duration": "1m", "MODE": "DOWN"}
+	{"Title": "Rubber Band Exercises", "Duration": "1m"},
+	{"Title": "Warm Down", "Duration": "1m"}
 
 		]
 }
