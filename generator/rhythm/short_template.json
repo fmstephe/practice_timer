@@ -1,0 +1,27 @@
+{"Pause": {"Duration": "15s"},
+	"Counters" : [
+
+	{"Title": "Warm up", "Duration": "1m"},
+
+	{"Title": "{{.oneChordRhythm1}} Rhythm", "Duration": "30s"},
+	{"Title": "{{.oneChordRhythm2}} Rhythm", "Duration": "30s"},
+
+	{"Title": "{{.oneChordRhythm3}} Rhythm", "Duration": "30s"},
+	{"Title": "{{.oneChordRhythm4}} Rhythm", "Duration": "30s"},
+
+	{"Title": "{{.oneChordRhythm5}} Rhythm", "Duration": "30s"},
+	{"Title": "{{.oneChordRhythm6}} Rhythm", "Duration": "30s"},
+
+	{"Title": "{{.twoChordRhythm1}} Rhythm", "Duration": "30s"},
+	{"Title": "{{.twoChordRhythm2}} Rhythm", "Duration": "30s"},
+
+	{"Title": "{{.twoChordRhythm3}} Rhythm", "Duration": "30s"},
+	{"Title": "{{.twoChordRhythm4}} Rhythm", "Duration": "30s"},
+
+	{"Title": "{{.twoChordRhythm5}} Rhythm", "Duration": "30s"},
+	{"Title": "{{.twoChordRhythm6}} Rhythm", "Duration": "30s"},
+
+	{"Title": "Warm Down", "Duration": "1m"}
+
+		]
+}
