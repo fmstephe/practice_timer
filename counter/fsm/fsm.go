@@ -1,48 +1,50 @@
-package main
+package fsm
 
 import (
 	"strconv"
 	"time"
+
+	"github.com/fmstephe/countdown/counter/counters"
 )
 
 type fsmCounters struct {
 	idx      int
-	counters []counter
+	counters []counters.Counter
 }
 
-func (cs *fsmCounters) current() counter {
+func (cs *fsmCounters) current() counters.Counter {
 	if cs.idx >= len(cs.counters) {
-		return &nilCounter{}
+		return counters.NewNilCounter()
 	}
 	return cs.counters[cs.idx]
 }
 
 func (cs *fsmCounters) display() []string {
 	disp := []string{strconv.Itoa((cs.idx+2)/2) + " of " + strconv.Itoa(len(cs.counters)/2) + " " + cs.remaining().String() + " left"}
-	disp = append(disp, cs.current().display()...)
+	disp = append(disp, cs.current().Display()...)
 	return disp
 }
 
 func (cs *fsmCounters) remaining() time.Duration {
 	var rem time.Duration
 	for i := cs.idx; i < len(cs.counters); i++ {
-		rem += cs.counters[i].duration()
+		rem += cs.counters[i].Duration()
 	}
 	return rem
 }
 
 func (cs *fsmCounters) restart() {
-	cs.current().finish(true)
+	cs.current().Finish(true)
 }
 
 func (cs *fsmCounters) next() {
-	cs.current().finish(true)
+	cs.current().Finish(true)
 	cs.idx++
 	cs.restart()
 }
 
 func (cs *fsmCounters) prev() {
-	cs.current().finish(true)
+	cs.current().Finish(true)
 	cs.idx--
 	if cs.idx < 0 {
 		cs.idx = 0
@@ -51,15 +53,15 @@ func (cs *fsmCounters) prev() {
 }
 
 func (cs *fsmCounters) addElapsed(gap time.Duration) {
-	cs.current().addElapsed(gap)
+	cs.current().AddElapsed(gap)
 }
 
 func (cs *fsmCounters) addPause(gap time.Duration) {
-	cs.current().addPause(gap)
+	cs.current().AddPause(gap)
 }
 
 func (cs *fsmCounters) quit() {
-	cs.current().finish(true)
+	cs.current().Finish(true)
 	cs.idx = len(cs.counters)
 }
 
@@ -67,14 +69,17 @@ func (cs *fsmCounters) finished() bool {
 	if cs.idx >= len(cs.counters) {
 		return true
 	}
-	if cs.current().finished() {
-		cs.current().finish(false)
+	if cs.current().Finished() {
+		cs.current().Finish(false)
 		cs.idx++
 	}
 	return cs.idx >= len(cs.counters)
 }
 
-func runFSM(fsmC *fsmCounters) {
+func Run(counters []counters.Counter) {
+	fsmC := &fsmCounters{
+		counters: counters,
+	}
 	tick := time.Now()
 	f := countFSM
 	for !fsmC.finished() {
@@ -83,6 +88,7 @@ func runFSM(fsmC *fsmCounters) {
 		f = f(fsmC, gap)
 		time.Sleep(100 * time.Millisecond)
 	}
+	clearDisplay()
 }
 
 type counterFSM func(*fsmCounters, time.Duration) counterFSM

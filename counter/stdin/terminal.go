@@ -1,10 +1,8 @@
-package main
+package stdin
 
 import (
-	"log"
 	"os"
 	"os/exec"
-	"time"
 )
 
 const aChar = 97
@@ -34,20 +32,4 @@ func clearDisplay() {
 	cmd := exec.Command("clear")
 	cmd.Stdout = os.Stdout
 	cmd.Run()
-}
-
-func inSeconds(d time.Duration) string {
-	d = ((d / time.Second) * time.Second)
-	if d == 0 {
-		return "0s"
-	}
-	return ((d / time.Second) * time.Second).String()
-}
-
-func playSound() {
-	cmd := exec.Command("paplay", "clap.wav")
-	err := cmd.Start()
-	if err != nil {
-		log.Fatal(err)
-	}
 }

@@ -6,6 +6,9 @@ import (
 	"io/ioutil"
 	"log"
 	"time"
+
+	"github.com/fmstephe/countdown/counter/counters"
+	"github.com/fmstephe/countdown/counter/fsm"
 )
 
 var file = flag.String("f", "", "Optional path to a timer file")
@@ -26,11 +29,8 @@ func main() {
 }
 
 func simple() {
-	c := newDownCounter([]string{*title}, *duration, false)
-	fsmC := &fsmCounters{
-		counters: []counter{c},
-	}
-	runFSM(fsmC)
+	c := counters.NewDown([]string{*title}, *duration, false)
+	fsm.Run([]counters.Counter{c})
 }
 
 func fromFile(fileName string) {
@@ -38,17 +38,20 @@ func fromFile(fileName string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	counters := &multiCounters{}
-	err = json.Unmarshal(bytes, counters)
+	multi := &counters.MultiCounters{}
+	err = json.Unmarshal(bytes, multi)
 	if err != nil {
 		log.Fatal(err)
 	}
-	records := counters.countdown()
-	bytes, err = json.MarshalIndent(records, "", "\t")
+	cs := multi.GenerateCounters()
+	start := time.Now()
+	fsm.Run(cs)
+	wallClock := time.Now().Sub(start)
+	summary := counters.Summarise(wallClock, cs)
+	bytes, err = json.MarshalIndent(summary, "", "\t")
 	if err != nil {
 		log.Fatal(err)
 	}
-	clearDisplay()
 	println(string(bytes))
 }
 
