@@ -1,6 +1,6 @@
 #/bin/bash
 
 go build
-./generator -p lead
-./generator -p rhythm
-./generator -p short_rhythm
+./generator -i lead -t template.json -o ../practice/lead
+./generator -i rhythm -t template.json -o ../practice/rhythm
+./generator -i short_rhythm -t template.json -o ../practice/short_rhythm

@@ -12,28 +12,30 @@ import (
 )
 
 var (
-	path = flag.String("p", "./", "Path to directory with template.json and data files")
+	inDir        = flag.String("i", "./", "Path to directory with template.json and data files")
+	outDir       = flag.String("o", "template.json", "Path to directory where practice files will be written")
+	templateName = flag.String("t", "template.json", "Path to directory with template.json and data files")
 )
 
 func main() {
 	flag.Parse()
-	applyTemplate(*path)
+	applyTemplate(*inDir, *templateName, *outDir)
 }
 
-func applyTemplate(category string) string {
-	bytes, err := ioutil.ReadFile(category + "/template.json")
+func applyTemplate(inDir, templateName, outDir string) string {
+	bytes, err := ioutil.ReadFile(inDir + "/" + templateName)
 	if err != nil {
 		log.Fatal(err)
 	}
 	t := template.Must(template.New("session").Parse(string(bytes)))
-	tMan := newTitleManager(t, category)
+	tMan := newTitleManager(t, inDir)
 	for d := time.Sunday; d <= time.Saturday; d++ {
 		tMan.makeValues()
-		err = os.MkdirAll("../practice/"+category+"/", 0777)
+		err = os.MkdirAll(outDir, 0777)
 		if err != nil {
 			log.Fatal(err)
 		}
-		fd, err := os.Create("../practice/" + category + "/" + d.String() + ".json")
+		fd, err := os.Create(outDir + "/" + d.String() + ".json")
 		if err != nil {
 			log.Fatal(err)
 		}
