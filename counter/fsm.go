@@ -18,9 +18,17 @@ func (cs *fsmCounters) current() counter {
 }
 
 func (cs *fsmCounters) display() []string {
-	disp := []string{strconv.Itoa((cs.idx+2)/2) + " of " + strconv.Itoa(len(cs.counters)/2)}
+	disp := []string{strconv.Itoa((cs.idx+2)/2) + " of " + strconv.Itoa(len(cs.counters)/2) + " " + cs.remaining().String() + " left"}
 	disp = append(disp, cs.current().display()...)
 	return disp
+}
+
+func (cs *fsmCounters) remaining() time.Duration {
+	var rem time.Duration
+	for i := cs.idx; i < len(cs.counters); i++ {
+		rem += cs.counters[i].duration()
+	}
+	return rem
 }
 
 func (cs *fsmCounters) restart() {

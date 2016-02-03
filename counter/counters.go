@@ -6,6 +6,7 @@ type counter interface {
 	display() []string
 	addElapsed(time.Duration)
 	addPause(time.Duration)
+	duration() time.Duration
 	finish(silent bool)
 	finished() bool
 	getRecords() CounterRecords
@@ -24,6 +25,10 @@ func (c *nilCounter) addElapsed(gap time.Duration) {
 func (c *nilCounter) addPause(gap time.Duration) {
 }
 
+func (c *nilCounter) duration() time.Duration {
+	return 0
+}
+
 func (c *nilCounter) finish(silent bool) {
 }
 
@@ -38,7 +43,7 @@ func (c *nilCounter) getRecords() CounterRecords {
 // Counts down - like a timer
 type downCounter struct {
 	// Config
-	duration     time.Duration
+	dur          time.Duration
 	silent       bool
 	basicDisplay []string
 	// Current State
@@ -49,13 +54,13 @@ type downCounter struct {
 }
 
 func newDownCounter(basicDisplay []string, durationStr string, silent bool) counter {
-	duration, err := time.ParseDuration(durationStr)
+	dur, err := time.ParseDuration(durationStr)
 	if err != nil {
 		panic(err)
 	}
 	c := &downCounter{
-		duration: duration,
-		silent:   silent,
+		dur:    dur,
+		silent: silent,
 	}
 	c.basicDisplay = basicDisplay
 	return c
@@ -69,20 +74,24 @@ func (c *downCounter) addElapsed(gap time.Duration) {
 	c.elapsed += gap
 }
 
+func (c *downCounter) duration() time.Duration {
+	return c.dur
+}
+
 func (c *downCounter) remaining() time.Duration {
-	return c.duration - c.elapsed + time.Second
+	return c.dur - c.elapsed
 }
 
 func (c *downCounter) display() []string {
 	var d []string
-	d = append(d, inSeconds(c.duration))
+	d = append(d, inSeconds(c.dur))
 	d = append(d, inSeconds(c.remaining()))
 	d = append(d, c.basicDisplay...)
 	return d
 }
 
 func (c *downCounter) finished() bool {
-	return c.elapsed > c.duration
+	return c.elapsed > c.dur
 }
 
 func (c *downCounter) finish(silent bool) {
