@@ -48,7 +48,7 @@ func (cs *multiCounters) generateCounters() []counter {
 }
 
 func (cs *multiCounters) summarise(totalClock time.Duration, counters []counter) *CountersSummary {
-	var records []CounterRecords
+	records := make([]CounterRecords, 0)
 	var totalElapsed time.Duration
 	var totalPaused time.Duration
 	for i, c := range counters {
