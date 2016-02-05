@@ -1,20 +1,33 @@
-{"Pause": {"Duration": "15s"},
+{"Pause": {"Duration": "10s"},
 	"Counters" : [
 
-	{"Title": "Warm up", "Duration": "3m"},
+	{"Title": "Warm up", "Duration": "1m"},
 
-	{"Title": "{{.oneChordRhythm1}} Rhythm", "Duration": "1m"},
-	{"Title": "{{.oneChordRhythm2}} Rhythm", "Duration": "1m"},
+	{"Title": "{{.oneChordRhythm1}} Rhythm", "Duration": "30s"},
+	{"Title": "{{.oneChordRhythm2}} Rhythm", "Duration": "30s"},
+
+	{"Title": "{{.oneChordRhythm3}} Rhythm", "Duration": "30s"},
+	{"Title": "{{.oneChordRhythm4}} Rhythm", "Duration": "30s"},
+
+	{"Title": "{{.twoChordRhythm1}} Rhythm", "Duration": "30s"},
+	{"Title": "{{.twoChordRhythm2}} Rhythm", "Duration": "30s"},
+
+	{"Title": "{{.twoChordRhythm3}} Rhythm", "Duration": "30s"},
+	{"Title": "{{.twoChordRhythm4}} Rhythm", "Duration": "30s"},
+
+	{"Title": "Warm up", "Duration": "2m"},
+
 	{"Title": "{{.singleNote1}}", "Duration":"3m"},
 	{"Title": "Fret Jumping Exercises String 1", "Duration":"2m"},
 
-	{"Title": "{{.oneChordRhythm3}} Rhythm", "Duration": "1m"},
-	{"Title": "{{.oneChordRhythm4}} Rhythm", "Duration": "1m"},
+	{"Title": "{{.twoChordRhythm1}} Rhythm", "Duration": "1m"},
+	{"Title": "{{.twoChordRhythm2}} Rhythm", "Duration": "1m"},
+
 	{"Title": "{{.singleNote2}}", "Duration":"3m"},
 	{"Title": "Fret Jumping Exercises String 3", "Duration":"2m"},
 
-	{"Title": "{{.twoChordRhythm1}} Rhythm", "Duration": "1m"},
-	{"Title": "{{.twoChordRhythm2}} Rhythm", "Duration": "1m"},
+	{"Title": "{{.twoChordRhythm3}} Rhythm", "Duration": "1m"},
+	{"Title": "{{.twoChordRhythm4}} Rhythm", "Duration": "1m"},
 	{"Title": "{{.singleNote3}}", "Duration":"3m"},
 	{"Title": "Fret Jumping Exercises String 6", "Duration":"2m"},
 

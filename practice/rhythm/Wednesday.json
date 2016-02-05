@@ -1,15 +1,28 @@
-{"Pause": {"Duration": "15s"},
+{"Pause": {"Duration": "10s"},
 	"Counters" : [
 
-	{"Title": "Warm up", "Duration": "3m"},
+	{"Title": "Warm up", "Duration": "1m"},
 
-	{"Title": "F Rhythm", "Duration": "1m"},
-	{"Title": "B7 neck Rhythm", "Duration": "1m"},
+	{"Title": "F Rhythm", "Duration": "30s"},
+	{"Title": "B7 neck Rhythm", "Duration": "30s"},
+
+	{"Title": "Am Rhythm", "Duration": "30s"},
+	{"Title": "Dm Rhythm", "Duration": "30s"},
+
+	{"Title": "C,F Rhythm", "Duration": "30s"},
+	{"Title": "Am,Dm Rhythm", "Duration": "30s"},
+
+	{"Title": "F,D Rhythm", "Duration": "30s"},
+	{"Title": "Am,D Rhythm", "Duration": "30s"},
+
+	{"Title": "Warm up", "Duration": "2m"},
+
 	{"Title": "Minor Pentatonic, All Positions, Fret 7", "Duration":"3m"},
 	{"Title": "Fret Jumping Exercises String 1", "Duration":"2m"},
 
-	{"Title": "Am Rhythm", "Duration": "1m"},
-	{"Title": "Dm Rhythm", "Duration": "1m"},
+	{"Title": "C,F Rhythm", "Duration": "1m"},
+	{"Title": "Am,Dm Rhythm", "Duration": "1m"},
+
 	{"Title": "Minor Pentatonic, All Positions, Fret 11", "Duration":"3m"},
 	{"Title": "Fret Jumping Exercises String 3", "Duration":"2m"},
 
