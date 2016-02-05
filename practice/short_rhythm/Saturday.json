@@ -3,25 +3,17 @@
 
 	{"Title": "Warm up", "Duration": "1m"},
 
+	{"Title": "Am Rhythm", "Duration": "30s"},
+	{"Title": "Dm Rhythm", "Duration": "30s"},
+
 	{"Title": "G Rhythm", "Duration": "30s"},
 	{"Title": "C Rhythm", "Duration": "30s"},
-
-	{"Title": "B7 barre Rhythm", "Duration": "30s"},
-	{"Title": "E Rhythm", "Duration": "30s"},
-
-	{"Title": "A Rhythm", "Duration": "30s"},
-	{"Title": "D Rhythm", "Duration": "30s"},
-
-	{"Title": "C,F Rhythm", "Duration": "30s"},
-	{"Title": "Am,Dm Rhythm", "Duration": "30s"},
-
-	{"Title": "F,D Rhythm", "Duration": "30s"},
-	{"Title": "Am,D Rhythm", "Duration": "30s"},
 
 	{"Title": "G,C Rhythm", "Duration": "30s"},
 	{"Title": "A,D Rhythm", "Duration": "30s"},
 
-	{"Title": "Warm Down", "Duration": "1m"}
+	{"Title": "F,Am Rhythm", "Duration": "30s"},
+	{"Title": "G,D Rhythm", "Duration": "30s"}
 
 		]
 }
