@@ -7,30 +7,26 @@
 	{{.riff1}},
 	{{.riff1}},
 	{{.riff1}},
-	{"Title": "{{.chordChanges1}} Chord Changes", "Duration": "1m"},
+	{"Title": "Fret Jumping Exercises String 1", "Duration":"2m"},
 
 	{"Title": "{{.classical1}}", "Duration": "1m"},
 	{"Title": "{{.classical2}}", "Duration": "1m"},
 	{"Title": "{{.classical3}}", "Duration": "1m"},
 	{"Title": "{{.classical4}}", "Duration": "1m"},
-	{"Title": "{{.chordChanges2}} Chord Changes", "Duration": "1m"},
+	{"Title": "Fret Jumping Exercises String 3", "Duration":"2m"},
 
 	{{.riff2}},
 	{{.riff2}},
 	{{.riff2}},
 	{{.riff2}},
-	{"Title": "{{.chordChanges3}} Chord Changes", "Duration": "1m"},
+	{"Title": "Fret Jumping Exercises String 6", "Duration":"2m"},
 
 	{"Title": "{{.classical5}}", "Duration": "1m"},
 	{"Title": "{{.classical6}}", "Duration": "1m"},
 	{"Title": "{{.classical7}}", "Duration": "1m"},
 	{"Title": "{{.classical8}}", "Duration": "1m"},
-	{"Title": "{{.chordChanges4}} Chord Changes", "Duration": "1m"},
-
-	{"Title": "{{.chordChanges5}} Chord Changes", "Duration": "1m"},
 
 	{"Title": "{{.classicalLong}}", "Duration": "4m"},
-	{"Title": "{{.chordChanges6}} Chord Changes", "Duration": "1m"},
 
 	{"Title": "Rubber Band Exercises", "Duration": "1m"},
 	{"Title": "Warm Down", "Duration": "1m"}

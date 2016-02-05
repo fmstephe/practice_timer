@@ -18,18 +18,15 @@
 	{"Title": "Warm up", "Duration": "2m"},
 
 	{"Title": "{{.singleNote1}}", "Duration":"3m"},
-	{"Title": "Fret Jumping Exercises String 1", "Duration":"2m"},
 
 	{"Title": "{{.twoChordRhythm1}} Rhythm", "Duration": "1m"},
 	{"Title": "{{.twoChordRhythm2}} Rhythm", "Duration": "1m"},
 
 	{"Title": "{{.singleNote2}}", "Duration":"3m"},
-	{"Title": "Fret Jumping Exercises String 3", "Duration":"2m"},
 
 	{"Title": "{{.twoChordRhythm3}} Rhythm", "Duration": "1m"},
 	{"Title": "{{.twoChordRhythm4}} Rhythm", "Duration": "1m"},
 	{"Title": "{{.singleNote3}}", "Duration":"3m"},
-	{"Title": "Fret Jumping Exercises String 6", "Duration":"2m"},
 
 	{"Title": "{{.neckRhythm1}} Neck Downstrums", "Duration": "2m"},
 	{"Title": "{{.neckRhythm2}} Neck Downstrums", "Duration": "2m"},
