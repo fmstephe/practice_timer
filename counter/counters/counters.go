@@ -91,7 +91,19 @@ func (c *downCounter) Display() []string {
 	d = append(d, inSeconds(c.duration))
 	d = append(d, inSeconds(c.remaining()))
 	d = append(d, c.basicDisplay...)
+	d = append(d, c.progressBoxes())
 	return d
+}
+
+func (c *downCounter) progressBoxes() string {
+	unitSize := int(c.duration) / 80
+	boxes := ""
+	count := 0
+	for i := 0; i < int(c.remaining()); i += unitSize {
+		boxes += "█"
+		count++
+	}
+	return boxes
 }
 
 func (c *downCounter) Finished() bool {
