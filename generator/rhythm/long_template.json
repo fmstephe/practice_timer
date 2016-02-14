@@ -19,30 +19,26 @@
 
 	{"Title": "{{.singleNote1}}", "Duration":"3m"},
 
-	{"Title": "{{.twoChordRhythm1}} Rhythm", "Duration": "1m"},
-	{"Title": "{{.twoChordRhythm2}} Rhythm", "Duration": "1m"},
+	{"Title": "{{.neckRhythm1}} Neck Downstrums", "Duration": "2m"},
+	{"Title": "{{.neckRhythm2}} Neck Downstrums", "Duration": "2m"},
 
 	{"Title": "{{.singleNote2}}", "Duration":"3m"},
 
-	{"Title": "{{.twoChordRhythm3}} Rhythm", "Duration": "1m"},
-	{"Title": "{{.twoChordRhythm4}} Rhythm", "Duration": "1m"},
-	{"Title": "{{.singleNote3}}", "Duration":"3m"},
-
-	{"Title": "{{.neckRhythm1}} Neck Downstrums", "Duration": "2m"},
-	{"Title": "{{.neckRhythm2}} Neck Downstrums", "Duration": "2m"},
-	{"Title": "{{.singleNote4}}", "Duration":"3m"},
 	{"Title": "{{.neckRhythm1}} Neck Rhythm", "Duration": "2m"},
 	{"Title": "{{.neckRhythm2}} Neck Rhythm", "Duration": "2m"},
-	{"Title": "{{.singleNote5}}", "Duration":"3m"},
-	{"Title": "{{.neckRhythm1}} Neck Rhythm No Pick", "Duration": "2m"},
-	{"Title": "{{.neckRhythm2}} Neck Rhythm No Pick", "Duration": "2m"},
+
+	{"Title": "{{.singleNote3}}", "Duration":"3m"},
 
 	{"Title": "{{.barre1}} Barre Downstrums", "Duration": "2m"},
 	{"Title": "{{.neckRhythm3}} Neck Downstrums", "Duration": "2m"},
-	{"Title": "{{.singleNote6}}", "Duration":"3m"},
+
+	{"Title": "{{.singleNote4}}", "Duration":"3m"},
+
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "2m"},
 	{"Title": "{{.neckRhythm3}} Neck Rhythm", "Duration": "2m"},
-	{"Title": "{{.singleNote7}}", "Duration":"3m"},
+
+	{"Title": "{{.singleNote5}}", "Duration":"3m"},
+
 	{"Title": "{{.barre1}} Barre Rhythm No Pick", "Duration": "2m"},
 	{"Title": "{{.neckRhythm3}} Neck Rhythm No Pick", "Duration": "2m"},
 
