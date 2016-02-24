@@ -1,21 +1,7 @@
 {"Pause": {"Duration": "15s"},
 	"Counters" : [
 
-	{"Title": "Warm up", "Duration": "1m"},
-
-	{"Title": "A Rhythm", "Duration": "30s"},
-	{"Title": "D Rhythm", "Duration": "30s"},
-
-	{"Title": "F Rhythm", "Duration": "30s"},
-	{"Title": "B7 neck Rhythm", "Duration": "30s"},
-
-	{"Title": "G,C Rhythm", "Duration": "30s"},
-	{"Title": "A,D Rhythm", "Duration": "30s"},
-
-	{"Title": "F,Am Rhythm", "Duration": "30s"},
-	{"Title": "G,D Rhythm", "Duration": "30s"},
-
-	{"Title": "Warm up", "Duration": "2m"},
+	{"Title": "Warm up", "Duration": "3m"},
 
 	{"Title": "Minor Pentatonic, Up And Down, Fret 13 String 1", "Duration":"3m"},
 

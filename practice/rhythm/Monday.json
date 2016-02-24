@@ -1,21 +1,7 @@
 {"Pause": {"Duration": "15s"},
 	"Counters" : [
 
-	{"Title": "Warm up", "Duration": "1m"},
-
-	{"Title": "Am Rhythm", "Duration": "30s"},
-	{"Title": "Dm Rhythm", "Duration": "30s"},
-
-	{"Title": "G Rhythm", "Duration": "30s"},
-	{"Title": "C Rhythm", "Duration": "30s"},
-
-	{"Title": "C,F Rhythm", "Duration": "30s"},
-	{"Title": "Am,Dm Rhythm", "Duration": "30s"},
-
-	{"Title": "F,D Rhythm", "Duration": "30s"},
-	{"Title": "Am,D Rhythm", "Duration": "30s"},
-
-	{"Title": "Warm up", "Duration": "2m"},
+	{"Title": "Warm up", "Duration": "3m"},
 
 	{"Title": "Major Arpeggio, Position 2, Fret 7", "Duration":"3m"},
 
