@@ -15,17 +15,23 @@
 
 	{"Title": "Minor Pentatonic, Up And Down, Fret 13 String 3", "Duration":"3m"},
 
-	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "2m"},
+	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "1m"},
+	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "1m"},
+	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "1m"},
 	{"Title": "Sitting On The Dock Of The Bay - G,B7,C,A|G,E Neck Downstrums", "Duration": "2m"},
 
 	{"Title": "Minor Pentatonic, Up And Down, Fret 13 String 4", "Duration":"3m"},
 
-	{"Title": "C#m,B,G#m,A Barre Rhythm", "Duration": "2m"},
+	{"Title": "C#m,B,G#m,A Barre Rhythm", "Duration": "1m"},
+	{"Title": "C#m,B,G#m,A Barre Rhythm", "Duration": "1m"},
+	{"Title": "C#m,B,G#m,A Barre Rhythm", "Duration": "1m"},
 	{"Title": "Sitting On The Dock Of The Bay - G,B7,C,A|G,E Neck Rhythm", "Duration": "2m"},
 
 	{"Title": "Minor Pentatonic, Up And Down, Fret 13 String 5", "Duration":"3m"},
 
-	{"Title": "C#m,B,G#m,A Barre Rhythm No Pick", "Duration": "2m"},
+	{"Title": "C#m,B,G#m,A Barre Rhythm No Pick", "Duration": "1m"},
+	{"Title": "C#m,B,G#m,A Barre Rhythm No Pick", "Duration": "1m"},
+	{"Title": "C#m,B,G#m,A Barre Rhythm No Pick", "Duration": "1m"},
 	{"Title": "Sitting On The Dock Of The Bay - G,B7,C,A|G,E Neck Rhythm No Pick", "Duration": "2m"},
 
 	{"Title": "Rubber Band Exercises", "Duration": "1m"},
