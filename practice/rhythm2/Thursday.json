@@ -3,21 +3,21 @@
 
 	{"Title": "Warm up", "Duration": "3m"},
 
-	{"Title": "Minor Scale, All Positions, Fret 9", "Duration":"3m"},
+	{"Title": "Major Arpeggio, Position 2, Fret 7", "Duration":"3m"},
 
 	{"Title": "G,C,G,C,G,C,D,Fmaj7,Am,C Neck Downstrums", "Duration": "2m"},
 	{"Title": "Baby One More Time - Am,E,C,Dm,E Neck Downstrums", "Duration": "2m"},
 
-	{"Title": "Minor Scale, All Positions, Fret 13", "Duration":"3m"},
+	{"Title": "Major Arpeggio, Position 2, Fret 5", "Duration":"3m"},
 
 	{"Title": "G,C,G,C,G,C,D,Fmaj7,Am,C Neck Rhythm", "Duration": "2m"},
 	{"Title": "Baby One More Time - Am,E,C,Dm,E Neck Rhythm", "Duration": "2m"},
 
-	{"Title": "Minor Scale, All Positions, Fret 3", "Duration":"3m"},
+	{"Title": "Major Arpeggio, Position 2, Fret 9", "Duration":"3m"},
 
-	{"Title": "While My Guitar Gently Weeps Barre Downstrums", "Duration": "1m"},
-	{"Title": "While My Guitar Gently Weeps Barre Downstrums", "Duration": "1m"},
-	{"Title": "While My Guitar Gently Weeps Barre Downstrums", "Duration": "1m"},
+	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "1m"},
+	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "1m"},
+	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Barre Downstrums", "Duration": "1m"},
 	{"Title": "Save Tonight - Am,Fmaj7,C,G Neck Downstrums", "Duration": "2m"},
 
 	{"Title": "Warm Down", "Duration": "2m"}
