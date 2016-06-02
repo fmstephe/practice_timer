@@ -1,8 +1,0 @@
-G,C
-A,D
-F,Am
-G,D
-C,F
-Am,Dm
-F,D
-Am,D
