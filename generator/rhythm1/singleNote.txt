@@ -1,11 +1,11 @@
+Minor Pentatonic, Up And Down, Fret 13 String 1
+Minor Pentatonic, Up And Down, Fret 13 String 2
 Minor Pentatonic, Up And Down, Fret 13 String 3
-Minor Pentatonic, Up And Down, Fret 13 String 4
-Minor Pentatonic, Up And Down, Fret 13 String 5
 
-Major Arpeggio, Position 2, Fret 9
-Major Arpeggio, Position 2, Fret 13
-Major Arpeggio, Position 2, Fret 3
+Major Arpeggio, String 1
+Major Arpeggio, String 2
+Major Arpeggio, String 3
 
-Minor Scale, All Positions, Fret 9
-Minor Scale, All Positions, Fret 13
-Minor Scale, All Positions, Fret 3
+Minor Scale, Position 1
+Minor Scale, Position 2
+Minor Scale, Position 3
