@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/fmstephe/countdown/counter/counters"
+	"github.com/fmstephe/countdown/counter/stdin"
 )
 
 type fsmCounters struct {
@@ -96,8 +97,9 @@ type counterFSM func(*fsmCounters, time.Duration) counterFSM
 func countFSM(fsmC *fsmCounters, gap time.Duration) counterFSM {
 	fsmC.addElapsed(gap)
 	replaceText(fsmC.display())
+	charChan := stdin.GetCharChan()
 	select {
-	case b := <-stdinChars:
+	case b := <-charChan:
 		switch b {
 		case spaceChar:
 			return pauseFSM
@@ -124,8 +126,9 @@ func countFSM(fsmC *fsmCounters, gap time.Duration) counterFSM {
 func pauseFSM(fsmC *fsmCounters, gap time.Duration) counterFSM {
 	fsmC.addPause(gap)
 	replaceText(fsmC.display(), "PAUSED")
+	charChan := stdin.GetCharChan()
 	select {
-	case b := <-stdinChars:
+	case b := <-charChan:
 		switch b {
 		case spaceChar:
 			return countFSM

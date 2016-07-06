@@ -3,7 +3,6 @@ package stdin
 import (
 	"log"
 	"os"
-	"os/exec"
 )
 
 var stdinChars chan byte
@@ -11,8 +10,7 @@ var stdinChars chan byte
 func init() {
 	stdinChars = make(chan byte)
 	go func() {
-		// disable input buffering
-		exec.Command("stty", "-F", "/dev/tty", "cbreak", "min", "1").Run()
+		disableInputBuffering()
 		var b []byte = make([]byte, 1)
 		for {
 			_, err := os.Stdin.Read(b)
@@ -22,4 +20,8 @@ func init() {
 			stdinChars <- b[0]
 		}
 	}()
+}
+
+func GetCharChan() <-chan byte {
+	return stdinChars
 }
