@@ -3,22 +3,22 @@
 
 	{"Title": "Warm up", "Duration": "3m"},
 
-	{"Title": "String Jumping String 6", "Duration":"3m"},
+	{"Title": "Major Arpeggio, String 1", "Duration":"3m"},
 
 	{"Title": "Hallelujah Neck Downstrums", "Duration": "2m"},
-	{"Title": "Tahoe Song, C,Am,E,F,G Neck Downstrums", "Duration": "2m"},
+	{"Title": "Brown Eyed Girl Neck Downstrums", "Duration": "2m"},
 
-	{"Title": "Minor Scale, Position 4", "Duration":"3m"},
+	{"Title": "Major Arpeggio, String 2", "Duration":"3m"},
 
 	{"Title": "Hallelujah Neck Rhythm", "Duration": "2m"},
-	{"Title": "Tahoe Song, C,Am,E,F,G Neck Rhythm", "Duration": "2m"},
+	{"Title": "Brown Eyed Girl Neck Rhythm", "Duration": "2m"},
 
-	{"Title": "Minor Scale, Position 5", "Duration":"3m"},
+	{"Title": "Major Arpeggio, String 3", "Duration":"3m"},
 
 	{"Title": "Hallelujah Barre Downstrums", "Duration": "1m"},
 	{"Title": "Hallelujah Barre Downstrums", "Duration": "1m"},
 	{"Title": "Hallelujah Barre Downstrums", "Duration": "1m"},
-	{"Title": "The Passenger - Am,F,C,G Neck Downstrums", "Duration": "2m"},
+	{"Title": "Am,G,F,E/E,F,G,C,Fmaj7,C,E Neck Downstrums", "Duration": "2m"},
 
 	{"Title": "Warm Down", "Duration": "2m"}
 
