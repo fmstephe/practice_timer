@@ -20,7 +20,7 @@
 	{"Title": "{{.barre1}} Barre Downstrums", "Duration": "1m"},
 	{"Title": "{{.neckRhythm3}} Neck Downstrums", "Duration": "2m"},
 
-	{"Title": "Warm Down", "Duration": "2m"}
+	{"Title": "{{.chordChanges1}}", "Duration": "2m"}
 
 		]
 }

@@ -1,0 +1,7 @@
+C -> G
+F- > G
+C -> F
+C -> D
+D -> F
+F -> Am
+D -> Am
