@@ -1,7 +1,10 @@
-C -> G
-F- > G
-C -> F
-C -> D
+E -> A barre
+E- > F
+E -> Am barre
 D -> F
+E -> A barre
+C -> D
+E -> Am barre
+D -> F
+E -> A barre
 F -> Am
-D -> Am

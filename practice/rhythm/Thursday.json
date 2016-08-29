@@ -5,22 +5,24 @@
 
 	{"Title": "String Jumping String 3", "Duration":"3m"},
 
-	{"Title": "G,C,G,C,G,C,D,Fmaj7,Am,C Neck Downstrums", "Duration": "2m"},
-	{"Title": "Baby One More Time - Am,E,C,Dm,E Neck Downstrums", "Duration": "2m"},
+	{"Title": "Hallelujah Neck Downstrums", "Duration": "2m"},
+	{"Title": "I Started a Joke - G,Bm,C,D Neck Downstrums", "Duration": "2m"},
 
 	{"Title": "Major Arpeggio, String 4", "Duration":"3m"},
 
-	{"Title": "G,C,G,C,G,C,D,Fmaj7,Am,C Neck Rhythm", "Duration": "2m"},
-	{"Title": "Baby One More Time - Am,E,C,Dm,E Neck Rhythm", "Duration": "2m"},
+	{"Title": "Hallelujah Neck Rhythm", "Duration": "2m"},
+	{"Title": "I Started a Joke - G,Bm,C,D Neck Rhythm", "Duration": "2m"},
 
 	{"Title": "Major Arpeggio, String 5", "Duration":"3m"},
 
-	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "1m"},
-	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "1m"},
-	{"Title": "C#m,B,G#m,A Barre Downstrums", "Duration": "1m"},
-	{"Title": "Save Tonight - Am,Fmaj7,C,G Neck Downstrums", "Duration": "2m"},
+	{"Title": "Hallelujah Barre Downstrums", "Duration": "1m"},
+	{"Title": "Hallelujah Barre Downstrums", "Duration": "1m"},
+	{"Title": "Hallelujah Barre Downstrums", "Duration": "1m"},
+	{"Title": "Baby One More Time - Am,E,C,Dm,E Neck Downstrums", "Duration": "2m"},
 
-	{"Title": "D -> F", "Duration": "2m"}
+	{"Title": "E -> A barre", "Duration": "1m"},
+	{"Title": "F -> Am", "Duration": "1m"},
+	{"Title": "Pick Rhythm", "Duration": "3m"}
 
 		]
 }
