@@ -5,8 +5,8 @@
 
 	{"Title": "{{.singleNote1}}", "Duration":"3m"},
 
-	{"Title": "{{.neckRhythm1}} Neck Downstrums", "Duration": "2m"},
-	{"Title": "{{.neckRhythm2}} Neck Downstrums", "Duration": "2m"},
+	{"Title": "{{.neckRhythm1}} Neck Rhythm", "Duration": "2m"},
+	{"Title": "{{.neckRhythm2}} Neck Rhythm", "Duration": "2m"},
 
 	{"Title": "{{.singleNote2}}", "Duration":"3m"},
 
@@ -15,10 +15,10 @@
 
 	{"Title": "{{.singleNote3}}", "Duration":"3m"},
 
-	{"Title": "{{.barre1}} Barre Downstrums", "Duration": "1m"},
-	{"Title": "{{.barre1}} Barre Downstrums", "Duration": "1m"},
-	{"Title": "{{.barre1}} Barre Downstrums", "Duration": "1m"},
-	{"Title": "{{.neckRhythm3}} Neck Downstrums", "Duration": "2m"},
+	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
+	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
+	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
+	{"Title": "{{.neckRhythm3}} Neck Rhythm", "Duration": "2m"},
 
 	{"Title": "{{.chordChanges1}}", "Duration": "1m"},
 	{"Title": "{{.chordChanges2}}", "Duration": "1m"},
