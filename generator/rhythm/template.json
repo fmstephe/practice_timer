@@ -18,6 +18,9 @@
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
+	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
+	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
+	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
 	{"Title": "{{.neckRhythm3}} Neck Rhythm", "Duration": "2m"},
 
 	{"Title": "{{.chordChanges1}}", "Duration": "1m"},
