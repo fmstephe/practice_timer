@@ -1,0 +1,11 @@
+{"Pause": {"Duration": "15s"},
+	"Counters" : [
+
+	{"Title": "F - G", "Duration": "2m"},
+	{"Title": "C - G", "Duration": "2m"},
+	{"Title": "C - F - G - Am", "Duration": "2m"},
+	{"Title": "Am - F", "Duration": "2m"},
+	{"Title": "G - Em", "Duration": "2m"}
+
+		]
+}

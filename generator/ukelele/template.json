@@ -1,0 +1,11 @@
+{"Pause": {"Duration": "15s"},
+	"Counters" : [
+
+	{"Title": "{{.chordChanges1}}", "Duration": "2m"},
+	{"Title": "{{.chordChanges2}}", "Duration": "2m"},
+	{"Title": "{{.chordChanges3}}", "Duration": "2m"},
+	{"Title": "{{.chordChanges4}}", "Duration": "2m"},
+	{"Title": "{{.chordChanges5}}", "Duration": "2m"}
+
+		]
+}
