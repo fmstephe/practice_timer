@@ -148,7 +148,7 @@ func inSeconds(d time.Duration) string {
 }
 
 func playSound() {
-	cmd := exec.Command("afplay", "clap.wav")
+	cmd := exec.Command("afplay", "-v", "0.05", "clap.wav")
 	err := cmd.Start()
 	if err != nil {
 		log.Fatal(err)

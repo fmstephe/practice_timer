@@ -5,13 +5,23 @@
 
 	{"Title": "{{.singleNote1}}", "Duration":"3m"},
 
-	{"Title": "{{.neckRhythm1}} Neck Rhythm", "Duration": "2m"},
-	{"Title": "{{.neckRhythm2}} Neck Rhythm", "Duration": "2m"},
+	{"Title": "{{.neckRhythm1}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm2}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm3}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm4}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm5}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm6}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm7}} Neck Rhythm", "Duration": "20s"},
 
 	{"Title": "{{.singleNote2}}", "Duration":"3m"},
 
-	{"Title": "{{.neckRhythm1}} Neck Rhythm", "Duration": "2m"},
-	{"Title": "{{.neckRhythm2}} Neck Rhythm", "Duration": "2m"},
+	{"Title": "{{.neckRhythm1}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm2}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm3}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm4}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm5}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm6}} Neck Rhythm", "Duration": "20s"},
+	{"Title": "{{.neckRhythm7}} Neck Rhythm", "Duration": "20s"},
 
 	{"Title": "{{.singleNote3}}", "Duration":"3m"},
 
@@ -21,7 +31,7 @@
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
-	{"Title": "{{.neckRhythm3}} Neck Rhythm", "Duration": "2m"},
+	{"Title": "{{.neckRhythm8}} Neck Rhythm", "Duration": "2m"},
 
 	{"Title": "{{.chordChanges1}}", "Duration": "1m"},
 	{"Title": "{{.chordChanges2}}", "Duration": "1m"},
