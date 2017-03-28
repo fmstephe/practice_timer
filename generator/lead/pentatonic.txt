@@ -1,0 +1,5 @@
+{"Title": "Pentatonic String 1 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic String 2 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic String 3 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic String 4 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic String 5 65bpm triplets", "Duration": "1m"}

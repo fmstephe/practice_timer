@@ -1,35 +1,30 @@
 {"Pause": {"Duration": "15s"},
 	"Counters" : [
 
-	{"Title": "Warm up", "Duration": "3m"},
+	{"Title": "Pentatonic String 1 65bpm triplets", "Duration": "1m"},
+	{"Title": "Pentatonic String 2 65bpm triplets", "Duration": "1m"},
+	{"Title": "Pentatonic String 3 65bpm triplets", "Duration": "1m"},
+	{"Title": "Pentatonic String 4 65bpm triplets", "Duration": "1m"},
+	{"Title": "Pentatonic String 5 65bpm triplets", "Duration": "1m"},
 
-	{"Title": "Always On The Run Part I", "Duration": "1m"},
-	{"Title": "Always On The Run Part I", "Duration": "1m"},
-	{"Title": "Always On The Run Part I", "Duration": "1m"},
-	{"Title": "Always On The Run Part I", "Duration": "1m"},
-	{"Title": "Fret Jumping Exercises String 1", "Duration":"2m"},
+	{"Title": "Major Arpeggio Short String 1 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major Arpeggio Short String 2 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major Arpeggio Short String 3 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major Arpeggio Long String 1 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major Arpeggio Long String 2 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major Arpeggio Long String 3 65bpm doubles", "Duration": "1m"},
 
-	{"Title": "Prelude In C Major Bar 1", "Duration": "1m"},
-	{"Title": "Prelude In C Major Bar 2", "Duration": "1m"},
-	{"Title": "Prelude In C Major Bar 3", "Duration": "1m"},
-	{"Title": "Prelude In C Major Bar 4", "Duration": "1m"},
-	{"Title": "Fret Jumping Exercises String 3", "Duration":"2m"},
+	{"Title": "Pentatonic String 1 75bpm improv", "Duration": "1m"},
+	{"Title": "Pentatonic String 2 75bpm improv", "Duration": "1m"},
+	{"Title": "Pentatonic String 3 75bpm improv", "Duration": "1m"},
+	{"Title": "Pentatonic String 4 75bpm improv", "Duration": "1m"},
+	{"Title": "Pentatonic String 5 75bpm improv", "Duration": "1m"},
 
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m"},
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m"},
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m"},
-	{"Title": "Blues Lick 2 - Albert King", "Duration": "1m"},
-	{"Title": "Fret Jumping Exercises String 6", "Duration":"2m"},
-
-	{"Title": "Prelude In C Major Bar 5", "Duration": "1m"},
-	{"Title": "Prelude In C Major Bar 6", "Duration": "1m"},
-	{"Title": "Prelude In C Major Bar 7", "Duration": "1m"},
-	{"Title": "Prelude In C Major Bar 8", "Duration": "1m"},
-
-	{"Title": "Prelude In G Minor", "Duration": "4m"},
-
-	{"Title": "Rubber Band Exercises", "Duration": "1m"},
-	{"Title": "Warm Down", "Duration": "1m"}
+	{"Title": "Pentatonic String 1 75bpm improv", "Duration": "1m"},
+	{"Title": "Pentatonic String 2 75bpm improv", "Duration": "1m"},
+	{"Title": "Pentatonic String 3 75bpm improv", "Duration": "1m"},
+	{"Title": "Pentatonic String 4 75bpm improv", "Duration": "1m"},
+	{"Title": "Pentatonic String 5 75bpm improv", "Duration": "1m"}
 
 		]
 }

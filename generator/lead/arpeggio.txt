@@ -1,0 +1,6 @@
+{"Title": "Major Arpeggio Short String 1 65bpm doubles", "Duration": "1m"}
+{"Title": "Major Arpeggio Short String 2 65bpm doubles", "Duration": "1m"}
+{"Title": "Major Arpeggio Short String 3 65bpm doubles", "Duration": "1m"}
+{"Title": "Major Arpeggio Long String 1 65bpm doubles", "Duration": "1m"}
+{"Title": "Major Arpeggio Long String 2 65bpm doubles", "Duration": "1m"}
+{"Title": "Major Arpeggio Long String 3 65bpm doubles", "Duration": "1m"}

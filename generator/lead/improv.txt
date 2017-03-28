@@ -1,0 +1,11 @@
+{"Title": "Pentatonic String 1 85bpm improv", "Duration": "1m"}
+{"Title": "Pentatonic String 2 85bpm improv", "Duration": "1m"}
+{"Title": "Pentatonic String 3 85bpm improv", "Duration": "1m"}
+{"Title": "Pentatonic String 4 85bpm improv", "Duration": "1m"}
+{"Title": "Pentatonic String 5 85bpm improv", "Duration": "1m"}
+
+{"Title": "Pentatonic String 1 75bpm improv", "Duration": "1m"}
+{"Title": "Pentatonic String 2 75bpm improv", "Duration": "1m"}
+{"Title": "Pentatonic String 3 75bpm improv", "Duration": "1m"}
+{"Title": "Pentatonic String 4 75bpm improv", "Duration": "1m"}
+{"Title": "Pentatonic String 5 75bpm improv", "Duration": "1m"}
