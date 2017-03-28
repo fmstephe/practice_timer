@@ -14,7 +14,7 @@ import (
 var file = flag.String("f", "", "Optional path to a timer file")
 var dow = flag.String("dow", "", "Optional path to a directory with a weeks worth of sessions")
 var title = flag.String("h", "", "An optional title to display above timer")
-var duration = flag.String("d", "1m30s", "The length of time for the countdown timer")
+var duration = flag.Duration("d", time.Minute+30*(time.Second), "The length of time for the countdown timer")
 
 func main() {
 	flag.Parse()

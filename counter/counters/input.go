@@ -1,6 +1,10 @@
 package counters
 
-import "github.com/fmstephe/countdown/tab"
+import (
+	"time"
+
+	"github.com/fmstephe/countdown/tab"
+)
 
 type JsonCounter struct {
 	Title    string
@@ -13,7 +17,11 @@ func (c *JsonCounter) generate(title, tabStr string) Counter {
 	if tabStr != "" {
 		displayTab = tab.ExpandMotif(tabStr)
 	}
-	return NewDown([]string{title, displayTab}, c.Duration, false)
+	duration, err := time.ParseDuration(c.Duration)
+	if err != nil {
+		panic(err)
+	}
+	return NewDown([]string{title, displayTab}, duration, false)
 }
 
 type MultiCounters struct {

@@ -61,11 +61,7 @@ type downCounter struct {
 	times []TimeRecord
 }
 
-func NewDown(basicDisplay []string, durationStr string, silent bool) Counter {
-	duration, err := time.ParseDuration(durationStr)
-	if err != nil {
-		panic(err)
-	}
+func NewDown(basicDisplay []string, duration time.Duration, silent bool) Counter {
 	c := &downCounter{
 		duration: duration,
 		silent:   silent,
