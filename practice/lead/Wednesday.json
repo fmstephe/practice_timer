@@ -1,30 +1,36 @@
 {"Pause": {"Duration": "15s"},
 	"Counters" : [
 
-	{"Title": "Pentatonic String 1 65bpm triplets", "Duration": "1m"},
-	{"Title": "Pentatonic String 2 65bpm triplets", "Duration": "1m"},
-	{"Title": "Pentatonic String 3 65bpm triplets", "Duration": "1m"},
-	{"Title": "Pentatonic String 4 65bpm triplets", "Duration": "1m"},
-	{"Title": "Pentatonic String 5 65bpm triplets", "Duration": "1m"},
+	{"Title": "Finger tap 65bpm triplets", "Duration": "1m"},
+	{"Title": "Pentatonic string 1 Fret 9, 65bpm triplets", "Duration": "1m"},
+	{"Title": "Pentatonic string 2 Fret 9, 65bpm triplets", "Duration": "1m"},
+	{"Title": "Pentatonic string 3 Fret 9, 65bpm triplets", "Duration": "1m"},
+	{"Title": "Pentatonic string 4 Fret 9, 65bpm triplets", "Duration": "1m"},
+	{"Title": "Pentatonic string 5 Fret 9, 65bpm triplets", "Duration": "1m"},
 
-	{"Title": "Major Arpeggio Short String 1 65bpm doubles", "Duration": "1m"},
-	{"Title": "Major Arpeggio Short String 2 65bpm doubles", "Duration": "1m"},
-	{"Title": "Major Arpeggio Short String 3 65bpm doubles", "Duration": "1m"},
-	{"Title": "Major Arpeggio Long String 1 65bpm doubles", "Duration": "1m"},
-	{"Title": "Major Arpeggio Long String 2 65bpm doubles", "Duration": "1m"},
-	{"Title": "Major Arpeggio Long String 3 65bpm doubles", "Duration": "1m"},
+	{"Title": "Finger tap 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major arpeggio short string 1 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major arpeggio long string 1 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major arpeggio short string 2 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major arpeggio long string 2 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major arpeggio short string 3 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major arpeggio long string 3 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major arpeggio short string 4 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major arpeggio long string 4 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major arpeggio short string 5 65bpm doubles", "Duration": "1m"},
+	{"Title": "Major arpeggio long string 5 65bpm doubles", "Duration": "1m"},
 
-	{"Title": "Pentatonic String 1 75bpm improv", "Duration": "1m"},
-	{"Title": "Pentatonic String 2 75bpm improv", "Duration": "1m"},
-	{"Title": "Pentatonic String 3 75bpm improv", "Duration": "1m"},
-	{"Title": "Pentatonic String 4 75bpm improv", "Duration": "1m"},
-	{"Title": "Pentatonic String 5 75bpm improv", "Duration": "1m"},
+	{"Title": "Pentatonic String 1 Fret 9, 85bpm improv", "Duration": "2m"},
+	{"Title": "Pentatonic String 2 Fret 9, 85bpm improv", "Duration": "2m"},
+	{"Title": "Pentatonic String 3 Fret 9, 85bpm improv", "Duration": "2m"},
+	{"Title": "Pentatonic String 4 Fret 9, 85bpm improv", "Duration": "2m"},
+	{"Title": "Pentatonic String 5 Fret 9, 85bpm improv", "Duration": "2m"},
 
-	{"Title": "Pentatonic String 1 75bpm improv", "Duration": "1m"},
-	{"Title": "Pentatonic String 2 75bpm improv", "Duration": "1m"},
-	{"Title": "Pentatonic String 3 75bpm improv", "Duration": "1m"},
-	{"Title": "Pentatonic String 4 75bpm improv", "Duration": "1m"},
-	{"Title": "Pentatonic String 5 75bpm improv", "Duration": "1m"}
+	{"Title": "Pentatonic String 1 Fret 9, 75bpm improv", "Duration": "2m"},
+	{"Title": "Pentatonic String 2 Fret 9, 75bpm improv", "Duration": "2m"},
+	{"Title": "Pentatonic String 3 Fret 9, 75bpm improv", "Duration": "2m"},
+	{"Title": "Pentatonic String 4 Fret 9, 75bpm improv", "Duration": "2m"},
+	{"Title": "Pentatonic String 5 Fret 9, 75bpm improv", "Duration": "2m"}
 
 		]
 }

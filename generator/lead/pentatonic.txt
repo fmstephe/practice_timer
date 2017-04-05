@@ -1,5 +1,27 @@
-{"Title": "Pentatonic String 1 65bpm triplets", "Duration": "1m"}
-{"Title": "Pentatonic String 2 65bpm triplets", "Duration": "1m"}
-{"Title": "Pentatonic String 3 65bpm triplets", "Duration": "1m"}
-{"Title": "Pentatonic String 4 65bpm triplets", "Duration": "1m"}
-{"Title": "Pentatonic String 5 65bpm triplets", "Duration": "1m"}
+{"Title": "Finger tap 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 1 Fret 5, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 2 Fret 5, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 3 Fret 5, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 4 Fret 5, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 5 Fret 5, 65bpm triplets", "Duration": "1m"}
+
+{"Title": "Finger tap 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 1 Fret 3, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 2 Fret 3, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 3 Fret 3, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 4 Fret 3, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 5 Fret 3, 65bpm triplets", "Duration": "1m"}
+
+{"Title": "Finger tap 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 1 Fret 7, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 2 Fret 7, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 3 Fret 7, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 4 Fret 7, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 5 Fret 7, 65bpm triplets", "Duration": "1m"}
+
+{"Title": "Finger tap 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 1 Fret 9, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 2 Fret 9, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 3 Fret 9, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 4 Fret 9, 65bpm triplets", "Duration": "1m"}
+{"Title": "Pentatonic string 5 Fret 9, 65bpm triplets", "Duration": "1m"}
