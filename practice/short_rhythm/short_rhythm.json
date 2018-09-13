@@ -1,0 +1,11 @@
+{"Pause": {"Duration": "15s"},
+	"Counters" : [
+
+	{"Title": "1", "Duration": "3m30s"},
+	{"Title": "2", "Duration": "3m30s"},
+	{"Title": "3", "Duration": "3m30s"},
+	{"Title": "4", "Duration": "3m30s"},
+	{"Title": "5", "Duration": "3m30s"}
+
+		]
+}

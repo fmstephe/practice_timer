@@ -3,7 +3,12 @@
 
 	{"Title": "Warm up", "Duration": "3m"},
 
-	{"Title": "String Jumping String 6", "Duration":"3m"},
+	{"Title": "Pick Rhythm", "Duration":"30s"},
+
+	{"Title": "String Jumping String 1 75 bpm", "Duration":"3m"},
+	{"Title": "String Jumping String 1 155 bpm", "Duration":"3m"},
+
+	{"Title": "Pick Rhythm", "Duration":"30s"},
 
 	{"Title": "Love Me Tender - D,E7 Neck Rhythm", "Duration": "20s"},
 	{"Title": "Love Me Tender - A7,D Neck Rhythm", "Duration": "20s"},
@@ -13,17 +18,7 @@
 	{"Title": "Love Me Tender - Gm,D Neck Rhythm", "Duration": "20s"},
 	{"Title": "Love Me Tender - D,B7 Neck Rhythm", "Duration": "20s"},
 
-	{"Title": "Minor Scale, Position 4", "Duration":"3m"},
-
-	{"Title": "Love Me Tender - D,E7 Neck Rhythm", "Duration": "20s"},
-	{"Title": "Love Me Tender - A7,D Neck Rhythm", "Duration": "20s"},
-	{"Title": "Love Me Tender - D,F# Neck Rhythm", "Duration": "20s"},
-	{"Title": "Love Me Tender - Bm,D7 Neck Rhythm", "Duration": "20s"},
-	{"Title": "Love Me Tender - D7,G Neck Rhythm", "Duration": "20s"},
-	{"Title": "Love Me Tender - Gm,D Neck Rhythm", "Duration": "20s"},
-	{"Title": "Love Me Tender - D,B7 Neck Rhythm", "Duration": "20s"},
-
-	{"Title": "Minor Scale, Position 5", "Duration":"3m"},
+	{"Title": "Pick Rhythm", "Duration":"30s"},
 
 	{"Title": "Am,G,F,E etc. Barre Rhythm", "Duration": "1m"},
 	{"Title": "Am,G,F,E etc. Barre Rhythm", "Duration": "1m"},
@@ -33,9 +28,16 @@
 	{"Title": "Am,G,F,E etc. Barre Rhythm", "Duration": "1m"},
 	{"Title": "Can't Help Falling In Love - C,Em,Am,Am|F,C,G7,G7|F,G,Am,F|C,G7,C,C Neck Rhythm", "Duration": "2m"},
 
-	{"Title": "D -> G barre", "Duration": "1m"},
-	{"Title": "D -> F", "Duration": "1m"},
-	{"Title": "Pick Rhythm", "Duration": "3m"}
+	{"Title": "Pick Rhythm", "Duration":"30s"},
+
+	{"Title": "F Blues All 6th string Neck Rhythm", "Duration": "1m"},
+	{"Title": "F Blues All 6th and 5th string Neck Rhythm", "Duration": "1m"},
+	{"Title": "F Blues All 5th and 6th string Neck Rhythm", "Duration": "1m"},
+	{"Title": "A Blues All 6th string Neck Rhythm", "Duration": "1m"},
+	{"Title": "A Blues All 6th and 5th string Neck Rhythm", "Duration": "1m"},
+	{"Title": "A Blues All 5th and 6th string Neck Rhythm", "Duration": "1m"},
+
+	{"Title": "Pick Rhythm", "Duration":"30s"}
 
 		]
 }

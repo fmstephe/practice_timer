@@ -9,8 +9,9 @@ import (
 )
 
 type fsmCounters struct {
-	idx      int
-	counters []counters.Counter
+	idx       int
+	startTime time.Time
+	counters  []counters.Counter
 }
 
 func (cs *fsmCounters) current() counters.Counter {
@@ -21,9 +22,16 @@ func (cs *fsmCounters) current() counters.Counter {
 }
 
 func (cs *fsmCounters) display() []string {
-	disp := []string{strconv.Itoa((cs.idx+2)/2) + " of " + strconv.Itoa(len(cs.counters)/2) + " " + cs.remaining().String() + " left"}
+	disp := []string{strconv.Itoa((cs.idx + 1)) + " of " + strconv.Itoa(len(cs.counters))}
+	disp = append(disp, cs.remaining().String()+" remaining")
+	disp = append(disp, cs.elapsedSeconds().String()+" Elapsed")
 	disp = append(disp, cs.current().Display()...)
 	return disp
+}
+
+func (cs *fsmCounters) elapsedSeconds() time.Duration {
+	running := time.Now().Sub(cs.startTime)
+	return running / time.Second * time.Second
 }
 
 func (cs *fsmCounters) remaining() time.Duration {
@@ -79,7 +87,8 @@ func (cs *fsmCounters) finished() bool {
 
 func Run(counters []counters.Counter) {
 	fsmC := &fsmCounters{
-		counters: counters,
+		startTime: time.Now(),
+		counters:  counters,
 	}
 	tick := time.Now()
 	f := countFSM

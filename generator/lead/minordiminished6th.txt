@@ -1,0 +1,8 @@
+{"Title": "Melodic minor diminished 6th string 1 B Fret 7", "Duration": "3m"}
+
+{"Title": "Melodic minor diminished 6th string 1 D Fret 9", "Duration": "3m"}
+
+{"Title": "Melodic minor diminished 6th string 1 A Fret 5", "Duration": "3m"}
+
+{"Title": "Melodic minor diminished 6th string 1 G Fret 3", "Duration": "3m"}
+

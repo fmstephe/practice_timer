@@ -1,0 +1,5 @@
+{"Title": "Minor string 1 A Fret 5", "Duration": "5m"}
+{"Title": "Minor string 2 A Fret 5", "Duration": "5m"}
+{"Title": "Minor string 3 A Fret 5", "Duration": "5m"}
+{"Title": "Minor string 4 A Fret 5", "Duration": "5m"}
+{"Title": "Minor string 5 A Fret 5", "Duration": "5m"}

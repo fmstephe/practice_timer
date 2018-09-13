@@ -1,2 +1,2 @@
 #!/bin/bash
-go build && ./counter -dow ../practice/short_rhythm/
+go build && ./counter -f ../practice/short_rhythm/short_rhythm.json

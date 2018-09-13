@@ -1,8 +1,8 @@
-{"Title": "Pentatonic String 1 Fret 5, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 2 Fret 5, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 3 Fret 5, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 4 Fret 5, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 5 Fret 5, 85bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 1 Fret 5, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 2 Fret 5, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 3 Fret 5, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 4 Fret 5, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 5 Fret 5, 75bpm improv", "Duration": "2m"}
 
 {"Title": "Pentatonic String 1 Fret 5, 75bpm improv", "Duration": "2m"}
 {"Title": "Pentatonic String 2 Fret 5, 75bpm improv", "Duration": "2m"}
@@ -10,11 +10,11 @@
 {"Title": "Pentatonic String 4 Fret 5, 75bpm improv", "Duration": "2m"}
 {"Title": "Pentatonic String 5 Fret 5, 75bpm improv", "Duration": "2m"}
 
-{"Title": "Pentatonic String 1 Fret 3, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 2 Fret 3, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 3 Fret 3, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 4 Fret 3, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 5 Fret 3, 85bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 1 Fret 3, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 2 Fret 3, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 3 Fret 3, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 4 Fret 3, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 5 Fret 3, 75bpm improv", "Duration": "2m"}
 
 {"Title": "Pentatonic String 1 Fret 3, 75bpm improv", "Duration": "2m"}
 {"Title": "Pentatonic String 2 Fret 3, 75bpm improv", "Duration": "2m"}
@@ -22,11 +22,11 @@
 {"Title": "Pentatonic String 4 Fret 3, 75bpm improv", "Duration": "2m"}
 {"Title": "Pentatonic String 5 Fret 3, 75bpm improv", "Duration": "2m"}
 
-{"Title": "Pentatonic String 1 Fret 7, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 2 Fret 7, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 3 Fret 7, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 4 Fret 7, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 5 Fret 7, 85bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 1 Fret 7, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 2 Fret 7, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 3 Fret 7, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 4 Fret 7, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 5 Fret 7, 75bpm improv", "Duration": "2m"}
 
 {"Title": "Pentatonic String 1 Fret 7, 75bpm improv", "Duration": "2m"}
 {"Title": "Pentatonic String 2 Fret 7, 75bpm improv", "Duration": "2m"}
@@ -34,11 +34,11 @@
 {"Title": "Pentatonic String 4 Fret 7, 75bpm improv", "Duration": "2m"}
 {"Title": "Pentatonic String 5 Fret 7, 75bpm improv", "Duration": "2m"}
 
-{"Title": "Pentatonic String 1 Fret 9, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 2 Fret 9, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 3 Fret 9, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 4 Fret 9, 85bpm improv", "Duration": "2m"}
-{"Title": "Pentatonic String 5 Fret 9, 85bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 1 Fret 9, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 2 Fret 9, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 3 Fret 9, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 4 Fret 9, 75bpm improv", "Duration": "2m"}
+{"Title": "Pentatonic String 5 Fret 9, 75bpm improv", "Duration": "2m"}
 
 {"Title": "Pentatonic String 1 Fret 9, 75bpm improv", "Duration": "2m"}
 {"Title": "Pentatonic String 2 Fret 9, 75bpm improv", "Duration": "2m"}

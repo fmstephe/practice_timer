@@ -3,7 +3,12 @@
 
 	{"Title": "Warm up", "Duration": "3m"},
 
-	{"Title": "{{.singleNote1}}", "Duration":"3m"},
+	{"Title": "Pick Rhythm", "Duration":"30s"},
+
+	{"Title": "{{.singleNote1}} 75 bpm", "Duration":"3m"},
+	{"Title": "{{.singleNote1}} 155 bpm", "Duration":"3m"},
+
+	{"Title": "Pick Rhythm", "Duration":"30s"},
 
 	{"Title": "{{.neckRhythm1}} Neck Rhythm", "Duration": "20s"},
 	{"Title": "{{.neckRhythm2}} Neck Rhythm", "Duration": "20s"},
@@ -13,13 +18,8 @@
 	{"Title": "{{.neckRhythm6}} Neck Rhythm", "Duration": "20s"},
 	{"Title": "{{.neckRhythm7}} Neck Rhythm", "Duration": "20s"},
 
-	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
-	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
-	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
-	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
-	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
-	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
-	{"Title": "{{.neckRhythm8}} Neck Rhythm", "Duration": "2m"},
+	{"Title": "Pick Rhythm", "Duration":"30s"},
+
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
@@ -28,13 +28,16 @@
 	{"Title": "{{.barre1}} Barre Rhythm", "Duration": "1m"},
 	{"Title": "{{.neckRhythm8}} Neck Rhythm", "Duration": "2m"},
 
-	{"Title": "{{.neckRhythm1}} Neck Rhythm", "Duration": "20s"},
-	{"Title": "{{.neckRhythm2}} Neck Rhythm", "Duration": "20s"},
-	{"Title": "{{.neckRhythm3}} Neck Rhythm", "Duration": "20s"},
-	{"Title": "{{.neckRhythm4}} Neck Rhythm", "Duration": "20s"},
-	{"Title": "{{.neckRhythm5}} Neck Rhythm", "Duration": "20s"},
-	{"Title": "{{.neckRhythm6}} Neck Rhythm", "Duration": "20s"},
-	{"Title": "{{.neckRhythm7}} Neck Rhythm", "Duration": "20s"}
+	{"Title": "Pick Rhythm", "Duration":"30s"},
+
+	{"Title": "{{.bluesRhythm1}} Neck Rhythm", "Duration": "1m"},
+	{"Title": "{{.bluesRhythm2}} Neck Rhythm", "Duration": "1m"},
+	{"Title": "{{.bluesRhythm3}} Neck Rhythm", "Duration": "1m"},
+	{"Title": "{{.bluesRhythm4}} Neck Rhythm", "Duration": "1m"},
+	{"Title": "{{.bluesRhythm5}} Neck Rhythm", "Duration": "1m"},
+	{"Title": "{{.bluesRhythm6}} Neck Rhythm", "Duration": "1m"},
+
+	{"Title": "Pick Rhythm", "Duration":"30s"}
 
 		]
 }

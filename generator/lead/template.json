@@ -1,36 +1,34 @@
 {"Pause": {"Duration": "15s"},
 	"Counters" : [
 
-	{{.pentatonic1}},
-	{{.pentatonic2}},
-	{{.pentatonic3}},
-	{{.pentatonic4}},
-	{{.pentatonic5}},
-	{{.pentatonic6}},
+	{"Title": "Flute studies ear training", "Duration": "5m30s"},
+	{"Title": "Flute studies ear training", "Duration": "5m30s"},
+	{{.minor1}},
 
+	{"Title": "Flute studies ear training", "Duration": "5m30s"},
+	{"Title": "Flute studies ear training", "Duration": "5m30s"},
 	{{.arpeggio1}},
 	{{.arpeggio2}},
 	{{.arpeggio3}},
 	{{.arpeggio4}},
 	{{.arpeggio5}},
 	{{.arpeggio6}},
-	{{.arpeggio7}},
-	{{.arpeggio8}},
-	{{.arpeggio9}},
-	{{.arpeggio10}},
-	{{.arpeggio11}},
 
-	{{.improv1}},
-	{{.improv2}},
-	{{.improv3}},
-	{{.improv4}},
-	{{.improv5}},
+	{"Title": "Flute studies ear training", "Duration": "5m30s"},
+	{"Title": "Flute studies ear training", "Duration": "5m30s"},
+	{{.pentatonic1}},
+	{{.pentatonic2}},
+	{{.pentatonic3}},
+	{{.pentatonic4}},
+	{{.pentatonic5}},
 
-	{{.improv6}},
-	{{.improv7}},
-	{{.improv8}},
-	{{.improv9}},
-	{{.improv10}}
+	{"Title": "Flute studies ear training", "Duration": "5m30s"},
+	{"Title": "Flute studies ear training", "Duration": "5m30s"},
+	{{.pentatonic1}},
+	{{.pentatonic2}},
+	{{.pentatonic3}},
+	{{.pentatonic4}},
+	{{.pentatonic5}}
 
 		]
 }

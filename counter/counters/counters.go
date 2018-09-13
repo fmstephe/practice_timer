@@ -84,7 +84,6 @@ func (c *downCounter) Duration() time.Duration {
 
 func (c *downCounter) Display() []string {
 	var d []string
-	d = append(d, inSeconds(c.duration))
 	d = append(d, inSeconds(c.remaining()))
 	d = append(d, c.basicDisplay...)
 	d = append(d, c.progressBoxes())
@@ -99,6 +98,10 @@ func (c *downCounter) progressBoxes() string {
 		boxes += "█"
 		count++
 	}
+	for i := count; i < 79; i++ {
+		boxes += " "
+	}
+	boxes += "█"
 	return boxes
 }
 

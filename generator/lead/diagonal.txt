@@ -1,0 +1,23 @@
+{"Title": "Pentatonic diagonal 80bpm A Fret 5", "Duration": "1m"}
+{"Title": "Major arpeggio diagonal 80bpm A Fret 5", "Duration": "1m"}
+
+{"Title": "Major arpeggio diagonal 80bpm diagonal G Fret 3", "Duration": "1m"}
+{"Title": "Pentatonic diagonal 80bpm G Fret 3", "Duration": "1m"}
+
+{"Title": "Pentatonic diagonal 80bpm B Fret 7", "Duration": "1m"}
+{"Title": "Major arpeggio diagonal 80bpm B Fret 7", "Duration": "1m"}
+
+{"Title": "Pentatonic diagonal 80bpm D Fret 9", "Duration": "1m"}
+{"Title": "Major arpeggio diagonal 80bpm D Fret 9", "Duration": "1m"}
+
+{"Title": "Major arpeggio diagonal 80bpm diagonal A Fret 5", "Duration": "1m"}
+{"Title": "Pentatonic diagonal 80bpm A Fret 5", "Duration": "1m"}
+
+{"Title": "Major arpeggio diagonal 80bpm diagonal G Fret 3", "Duration": "1m"}
+{"Title": "Pentatonic diagonal 80bpm G Fret 3", "Duration": "1m"}
+
+{"Title": "Pentatonic diagonal 80bpm B Fret 7", "Duration": "1m"}
+{"Title": "Major arpeggio diagonal 80bpm B Fret 7", "Duration": "1m"}
+
+{"Title": "Major arpeggio diagonal 80bpm diagonal D Fret 9", "Duration": "1m"}
+{"Title": "Pentatonic diagonal 80bpm D Fret 9", "Duration": "1m"}

@@ -1,11 +1,13 @@
-{"Title": "Finger tap 65bpm doubles", "Duration": "1m"}
-{"Title": "Major arpeggio short string 1 65bpm doubles", "Duration": "1m"}
-{"Title": "Major arpeggio long string 1 65bpm doubles", "Duration": "1m"}
-{"Title": "Major arpeggio short string 2 65bpm doubles", "Duration": "1m"}
-{"Title": "Major arpeggio long string 2 65bpm doubles", "Duration": "1m"}
-{"Title": "Major arpeggio short string 3 65bpm doubles", "Duration": "1m"}
-{"Title": "Major arpeggio long string 3 65bpm doubles", "Duration": "1m"}
-{"Title": "Major arpeggio short string 4 65bpm doubles", "Duration": "1m"}
-{"Title": "Major arpeggio long string 4 65bpm doubles", "Duration": "1m"}
-{"Title": "Major arpeggio short string 5 65bpm doubles", "Duration": "1m"}
-{"Title": "Major arpeggio long string 5 65bpm doubles", "Duration": "1m"}
+{"Title": "Finger tap 80bpm doubles", "Duration": "1m"}
+{"Title": "Major arpeggio short string 1 80bpm doubles", "Duration": "1m"}
+{"Title": "Major arpeggio long string 1 80bpm doubles", "Duration": "1m"}
+{"Title": "Major arpeggio short string 2 80bpm doubles", "Duration": "1m"}
+{"Title": "Major arpeggio long string 2 80bpm doubles", "Duration": "1m"}
+{"Title": "Major arpeggio short string 3 80bpm doubles", "Duration": "1m"}
+
+{"Title": "Finger tap 80bpm doubles", "Duration": "1m"}
+{"Title": "Major arpeggio long string 3 80bpm doubles", "Duration": "1m"}
+{"Title": "Major arpeggio short string 4 80bpm doubles", "Duration": "1m"}
+{"Title": "Major arpeggio long string 4 80bpm doubles", "Duration": "1m"}
+{"Title": "Major arpeggio short string 5 80bpm doubles", "Duration": "1m"}
+{"Title": "Major arpeggio long string 5 80bpm doubles", "Duration": "1m"}
