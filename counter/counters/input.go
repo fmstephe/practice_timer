@@ -3,7 +3,7 @@ package counters
 import (
 	"time"
 
-	"github.com/fmstephe/countdown/tab"
+	"github.com/fmstephe/practice_timer/tab"
 )
 
 type JsonCounter struct {

@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/fmstephe/countdown/counter/counters"
-	"github.com/fmstephe/countdown/counter/fsm"
+	"github.com/fmstephe/practice_timer/counter/counters"
+	"github.com/fmstephe/practice_timer/counter/fsm"
 )
 
 var file = flag.String("f", "", "Optional path to a timer file")

@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/fmstephe/countdown/counter/counters"
-	"github.com/fmstephe/countdown/counter/stdin"
+	"github.com/fmstephe/practice_timer/counter/counters"
+	"github.com/fmstephe/practice_timer/counter/stdin"
 )
 
 type fsmCounters struct {
