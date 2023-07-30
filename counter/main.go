@@ -3,42 +3,64 @@ package main
 import (
 	"encoding/json"
 	"flag"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/fmstephe/practice_timer/counter/counters"
 	"github.com/fmstephe/practice_timer/counter/fsm"
 )
 
-var file = flag.String("f", "", "Optional path to a timer file")
-var dow = flag.String("dow", "", "Optional path to a directory with a weeks worth of sessions")
-var duration = flag.Duration("d", time.Minute+30*(time.Second), "The length of time for the countdown timer")
-var repeats = flag.Int("r", 1, "The number of times to repeat the given duration")
+var fileFlag = flag.String("f", "", "Optional path to a timer file")
+var dowFlag = flag.String("dow", "", "Optional path to a directory with a weeks worth of sessions")
+var durationsFlag = flag.String("d", "15s,2m", "Comma separated list of timer durations")
+var repeatsFlag = flag.Int("r", 1, "The number of times to repeat the given duration")
+
+var durations []time.Duration
 
 func main() {
 	flag.Parse()
+	if err := parseDurations(); err != nil {
+		fmt.Printf("Error parsing timer durations %s - %s", *durationsFlag, err)
+	}
+
 	switch {
-	case *dow != "":
-		todaysPractice(*dow)
-	case *file != "":
-		fromFile(*file)
+	case *dowFlag != "":
+		todaysPractice(*dowFlag)
+	case *fileFlag != "":
+		fromFile(*fileFlag)
 	default:
 		simple()
 	}
 }
 
+func parseDurations() error {
+	durationStrs := strings.Split(*durationsFlag, ",")
+	for _, durationStr := range durationStrs {
+		duration, err := time.ParseDuration(durationStr)
+		if err != nil {
+			return err
+		}
+		durations = append(durations, duration)
+	}
+	return nil
+}
+
 func simple() {
 	/// TODO the use of json everything here is very awkward
 	multi := &counters.MultiCounters{}
-	for i := 0; i < *repeats; i++ {
-		jc := counters.JsonCounter{
-			Title:    strconv.Itoa(i),
-			Duration: (*duration).String(),
-			Tab:      "",
+	for i := 0; i < *repeatsFlag; i++ {
+		for _, dur := range durations {
+			jc := counters.JsonCounter{
+				Title:    strconv.Itoa(i),
+				Duration: dur.String(),
+				Tab:      "",
+			}
+			multi.Counters = append(multi.Counters, jc)
 		}
-		multi.Counters = append(multi.Counters, jc)
 	}
 	runMulti(multi)
 }
